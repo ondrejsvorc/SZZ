@@ -8,6 +8,9 @@ DESCRIPTION = "Automaticky generovaný seznam materiálů z repozitáře."
 QUESTION_LABEL = "Otázka"
 IGNORE_PREFIX = "."
 
+def natural_sort_key(s):
+    return [int(text) if text.isdigit() else text.lower() for text in re.split('([0-9]+)', s)]
+
 def is_hidden(path: str) -> bool:
     return os.path.basename(path).startswith(IGNORE_PREFIX)
 
@@ -34,21 +37,17 @@ def build_index_content(links: List[str]) -> str:
 
 def scan_for_markdown_links() -> List[str]:
     markdown_links = []
+    all_walk = sorted(os.walk("."), key=lambda x: natural_sort_key(x[0]))
 
-    for root, dirs, files in sorted(os.walk(".")):
-        dirs[:] = [d for d in dirs if not is_hidden(d)]
-
-        if root == ".":
+    for root, dirs, files in all_walk:
+        dirs[:] = [d for d in dirs if not d.startswith(".")]
+        
+        if root == "." or TARGET_FILENAME not in files:
             continue
-
-        if TARGET_FILENAME not in files:
-            continue
-
+        
         display_name = get_chapter_display_name(root)
         url = format_url_path(root, TARGET_FILENAME)
-        
-        link_line = create_markdown_line(display_name, url)
-        markdown_links.append(link_line)
+        markdown_links.append(f"- [{display_name}]({url})")
 
     return markdown_links
 
