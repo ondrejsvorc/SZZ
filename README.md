@@ -2,8 +2,6 @@
 
 Tento repozitář poskytuje informace pro základní orientaci a přípravu na státní závěrečné zkoušky (dále jen SZZ).
 
-![CI pipeline](pipeline.png)
-
 ### Relevantní zdroje
 - <https://physics.ujep.cz/~jskvor/SZZ/BcAPI/>
 - <https://github.com/matej-kaska/statnice-oop>
@@ -12,29 +10,8 @@ Tento repozitář poskytuje informace pro základní orientaci a přípravu na s
 - <https://github.com/matej-kaska/statnice-rss>
 - <https://github.com/matej-kaska/statnice-web>
 
-### Struktura SZZ
-```mermaid
-flowchart TB
-    classDef main fill:#1f2937,stroke:#111827,color:#ffffff,stroke-width:2px;
-    classDef section fill:#374151,stroke:#111827,color:#ffffff;
-    classDef subject fill:#e5e7eb,stroke:#6b7280,color:#111827;
-
-    SZZ["SZZ"]:::main
-
-    Oral["Ústní zkouška"]:::section
-    Thesis["Obhajoba Bc. práce"]:::section
-
-    SZZ --> Oral
-    SZZ --> Thesis
-
-    TP["KI/SZZTP<br/>Teoretické základy informatiky"]:::subject
-    PP["KI/SZZPP<br/>Aplikovaná informatika:<br/>povinný základ"]:::subject
-    VP["KI/SZZVP<br/>Aplikovaná informatika:<br/>volitelné bloky"]:::subject
-
-    Oral --> TP
-    Oral --> PP
-    Oral --> VP
-```
+### Pipeline
+![CI pipeline](pipeline.png)
 
 ### KI/SZZTP Teoretické základy informatiky
 #### Algoritmizace a programování I a II
