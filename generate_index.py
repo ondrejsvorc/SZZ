@@ -12,8 +12,9 @@ def is_hidden(path: str) -> bool:
     return os.path.basename(path).startswith(IGNORE_PREFIX)
 
 def format_url_path(root: str, filename: str) -> str:
-    relative_path = os.path.relpath(os.path.join(root, filename), ".")
-    return relative_path.replace(" ", "%20")
+    relative_path = os.path.relpath(root, ".")
+    url_path = relative_path.replace(" ", "%20")
+    return f"{url_path}/"
 
 def get_chapter_display_name(root: str) -> str:
     current_folder = os.path.basename(root)
