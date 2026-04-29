@@ -1,4 +1,5 @@
 import os
+import re
 from typing import List, Optional
 
 TARGET_FILENAME = "README.md"
