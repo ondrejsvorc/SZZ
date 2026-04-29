@@ -1,6 +1,6 @@
 title: SZZ materiály
 description: Digitální rozcestník studijních materiálů pro státní závěrečné zkoušky.
-remote_theme: cotes2020/jekyll-theme-chirpy
+remote_theme: mmistakes/minimal-mistakes
 repository: ondrejsvorc/SZZ
 
 url: "https://szz.ondrejsvorc.cz"
