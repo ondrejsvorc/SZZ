@@ -1,10 +1,13 @@
-title: SZZ
+title: SZZ Materiály
 description: Digitální rozcestník studijních materiálů pro státní závěrečné zkoušky.
 remote_theme: pages-themes/minimal@v0.2.0
 
 exclude:
   - .git
   - .cursor
+  - vendor
   - pipeline.yml
   - generate_index.py
   - README.md
+  - Gemfile
+  - Gemfile.lock
