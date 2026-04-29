@@ -2,6 +2,8 @@
 
 Tento repozitář poskytuje informace pro základní orientaci a přípravu na státní závěrečné zkoušky (dále jen SZZ).
 
+![CI pipeline](pipeline.png)
+
 ### Relevantní zdroje
 - https://physics.ujep.cz/~jskvor/SZZ/BcAPI/
 - https://github.com/matej-kaska/statnice-oop
