@@ -62,11 +62,6 @@ def generate_index() -> None:
     content = "---\nlayout: default\ntitle: SZZ Rozcestník\n---\n\n"
     content += f"{TITLE_HEADER}\n\n{DESCRIPTION}\n\n"
     content += "\n".join(links) + "\n"
-    content += """
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-"""
 
     with open(OUTPUT_INDEX_FILE, "w", encoding="utf-8") as f:
         f.write(content)
