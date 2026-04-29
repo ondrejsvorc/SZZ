@@ -9,6 +9,8 @@ baseurl: ""
 plugins:
   - jekyll-remote-theme
   - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-seo-tag
 
 defaults:
   - scope:
