@@ -5,12 +5,12 @@ Tento repozitář poskytuje informace pro základní orientaci a přípravu na s
 ![CI pipeline](pipeline.png)
 
 ### Relevantní zdroje
-- https://physics.ujep.cz/~jskvor/SZZ/BcAPI/
-- https://github.com/matej-kaska/statnice-oop
-- https://github.com/matej-kaska/statnice-frak
-- https://github.com/matej-kaska/statnice-tk
-- https://github.com/matej-kaska/statnice-rss
-- https://github.com/matej-kaska/statnice-web
+- <https://physics.ujep.cz/~jskvor/SZZ/BcAPI/>
+- <https://github.com/matej-kaska/statnice-oop>
+- <https://github.com/matej-kaska/statnice-frak>
+- <https://github.com/matej-kaska/statnice-tk>
+- <https://github.com/matej-kaska/statnice-rss>
+- <https://github.com/matej-kaska/statnice-web>
 
 ### Struktura SZZ
 ```mermaid

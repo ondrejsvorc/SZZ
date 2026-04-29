@@ -3,11 +3,11 @@
 Základní abstraktní kolekce (jejich klasická implementace \[seznamy, slovníky], iterátory nad nimi, typické elementární operace a jejich časová složitost) a specializované abstraktní kolekce (fronta, zásobník)
 
 ### Užitečné odkazy
-- https://github.com/pavelberanek91/UJEP/blob/main/APR2/2_sekvencni_struktury.ipynb
-- https://ki.ujep.cz/opory/Aplikovana_Informatika/Bc/Algoritmizace_a_programovani_I.html#Seznam
-- https://www.geeksforgeeks.org/dsa/abstract-data-types/
-- https://medium.com/@tssovi/abstract-data-type-adt-in-python-33e6ce1f961e
-- https://bradfieldcs.com/algos/
+- <https://github.com/pavelberanek91/UJEP/blob/main/APR2/2_sekvencni_struktury.ipynb>
+- <https://ki.ujep.cz/opory/Aplikovana_Informatika/Bc/Algoritmizace_a_programovani_I.html#Seznam>
+- <https://www.geeksforgeeks.org/dsa/abstract-data-types/>
+- <https://medium.com/@tssovi/abstract-data-type-adt-in-python-33e6ce1f961e>
+- <https://bradfieldcs.com/algos/>
 
 ### Abstraktní datový typ
 - zkratka ADT (=Abstract Data Type)
