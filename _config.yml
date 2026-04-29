@@ -24,7 +24,6 @@ kramdown:
   hard_wrap: false
   autolink: true
   syntax_highlighter: rouge
-  math_engine: null
 
 exclude:
   - .git
