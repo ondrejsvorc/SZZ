@@ -1,3 +1,8 @@
+---
+layout: default
+title: SZZ Rozcestník
+---
+
 ## SZZ
 
 Automaticky generovaný seznam materiálů z repozitáře.
