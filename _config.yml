@@ -2,9 +2,13 @@ title: SZZ materiály
 description: Digitální rozcestník studijních materiálů pro státní závěrečné zkoušky.
 remote_theme: pages-themes/cayman@v0.2.0
 repository: ondrejsvorc/SZZ
-show_downloads: true
 
 url: "https://szz.ondrejsvorc.cz"
+baseurl: "" 
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-github-metadata
 
 defaults:
   - scope:
@@ -21,3 +25,4 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - node_modules

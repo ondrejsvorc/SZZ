@@ -59,7 +59,9 @@ def generate_index() -> None:
         print("No content found for generation.")
         return
 
-    content = build_index_content(links)
+    content = "---\nlayout: default\ntitle: SZZ Rozcestník\n---\n\n"
+    content += f"{TITLE_HEADER}\n\n{DESCRIPTION}\n\n"
+    content += "\n".join(links) + "\n"
 
     with open(OUTPUT_INDEX_FILE, "w", encoding="utf-8") as f:
         f.write(content)
