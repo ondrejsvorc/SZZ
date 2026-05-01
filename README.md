@@ -1,6 +1,6 @@
 ## Státní závěrečná zkouška
 
-Tento repozitář poskytuje informace pro základní orientaci a přípravu na státní závěrečné zkoušky (dále jen SZZ).
+Obsah repozitáře je automaticky nasazován zde: https://szz.ondrejsvorc.cz/
 
 ### Relevantní zdroje
 - <https://physics.ujep.cz/~jskvor/SZZ/BcAPI/>
