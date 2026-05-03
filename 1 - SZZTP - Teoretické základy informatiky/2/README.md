@@ -55,7 +55,7 @@ Pro $x = 12$ je $P(12)$ pravda.
 
 Výsledek: Prvek nalezen na pozici (indexu) $i = 3$ (při indexování od 0).$$S[i] = x_{target}$$
 
-### Pojmy
+#### Pojmy
 - Identifikátor = unikátní hodnota, která slouží k jednoznačnému odlišení konkrétního prvku od ostatních v rámci dané množiny (např. ID).
 - Identifikace = proces vyhodnocení predikátu.
 - Lokalizace = proces určení přesného umístění identifikovaného prvku.
@@ -88,8 +88,7 @@ Mějme množinu $S = \{15, 5, 12, 1, 8\}$ a relaci uspořádání $\leq$ (vzestu
 $$1 \leq 5 \leq 8 \leq 12 \leq 15$$
 $$|S_{sorted}| = 5$$
 
-
-### Pojmy
+#### Pojmy
 - Transformace = proces změny stavu nebo struktury dat (v tomto případě změna pořadí prvků z původního na seřazené).
 - Permutace = jedno z možných uspořádání prvků dané množiny (přerovnání prvků tak, že žádný nechybí ani nepřebývá)
 - Relace uspořádání = pravidlo, které určuje vzájemnou pozici dvou prvků (např. zda je prvek menší, větší, nebo roven jinému).
