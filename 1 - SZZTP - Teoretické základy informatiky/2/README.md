@@ -3,6 +3,7 @@
 Komplexní algoritmy nad seznamy (filtrování, vyhledávání, třídění/řazení výběrem nebo vkládáním), efektivnější implementace vyhledávání a třídění (binární vyhledávání, merge sort), časová složitost algoritmů
 
 ### Užitečné odkazy
+- <https://szz.ondrejsvorc.cz/1%20-%20SZZTP%20-%20Teoretick%C3%A9%20z%C3%A1klady%20informatiky/2/>
 - <https://visualgo.net/en/sorting> (vizualizace)
 - <https://youtu.be/RfXt_qHDEPw> (řadící algoritmy)
 - <https://youtu.be/LOcfJorH7xs> (Insertion Sort - česky)

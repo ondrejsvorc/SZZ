@@ -3,6 +3,7 @@
 Základní abstraktní kolekce (jejich klasická implementace \[seznamy, slovníky], iterátory nad nimi, typické elementární operace a jejich časová složitost) a specializované abstraktní kolekce (fronta, zásobník)
 
 ### Užitečné odkazy
+- <https://szz.ondrejsvorc.cz/1%20-%20SZZTP%20-%20Teoretick%C3%A9%20z%C3%A1klady%20informatiky/1/>
 - <https://github.com/pavelberanek91/UJEP/blob/main/APR2/2_sekvencni_struktury.ipynb>
 - <https://ki.ujep.cz/opory/Aplikovana_Informatika/Bc/Algoritmizace_a_programovani_I.html#Seznam>
 - <https://www.geeksforgeeks.org/dsa/abstract-data-types/>
