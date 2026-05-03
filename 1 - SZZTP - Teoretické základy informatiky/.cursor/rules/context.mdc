@@ -1,0 +1,25 @@
+---
+description: Kontext a konvence pro přípravu na SZZ – Teoretické základy informatiky (ústní zkoušky, struktura materiálů).
+alwaysApply: true
+---
+
+# SZZ – studijní repozitář
+
+## Účel
+- Repozitář slouží k přípravě na **státní závěrečné zkoušky** (teoretické základy informatiky / TZI).
+- Číslované složky **`1`–`12`** odpovídají **otázkám ze sylabu**; v každé je typicky `README.md` se strukturou nadpisů a poznámkami.
+- Odpovědi pro uživatele piš **česky**, srozumitelně, vhodné k **ústní obhajobě** (cca **15 minut** na otázku), ne jen suché definice bez souvislostí.
+
+## Jak pomáhat
+- Navazuj na **strukturu nadpisů** v příslušném `N/README.md`; doplňuj chybějící body spíš jako odrážky než dlouhé eseje, pokud uživatel nepožádá o rozšíření.
+- U **algoritmů a struktur** dávej k definicím **časovou (a kde dává smysl paměťovou) složitost** a krátkou **intuici** („co invariant platí“, „proč to funguje“).
+- Odkazy v Markdownu ve stylu repa: **`<https://…>`** (autonomní odkaz v ostrých závorkách).
+- Nevytvářej nové `.md` soubory ani velké přepisy napříč repozitářem, pokud o to uživatel **výslovně nepožádá**.
+
+## Konzistence s již vypracovanými otázkami
+- Při rozšiřování nebo doplňování materiálu se **vždy inspiruj** už hotovými `README.md` v repu: **struktura nadpisů** (`##` / `###` / `####`), **způsob definic** (odrážky, příklady, tabulky, matematika v `$` / `$$` tam, kde to už v materiálech je), **hloubka a tón** (jak „hutné“ jsou odrážky, jestli jsou **#### Příklad** / **#### Pojmy** apod.).
+- Ber jako vzor zejména otázky, které jsou **nejlépe vyplněné** (typicky např. **`1/`**, **`2/`**, **`8/`** — ověř aktuální stav ve složkách). Nový text **nepiš záměrně v odlišném stylu** než okolní vypracované části, pokud uživatel nechce záměrně změnu formátu.
+
+## Ukázkový kód (C#)
+- Dema jsou malé konzolové projekty (např. pod `2/BinarySearch/`): **top-level statements**, `TargetFramework` jako v existujících `.csproj`, pojmenované argumenty tam, kde to zlepší čitelnost u zkoušky.
+- Neměň styl jen „pro čistotu“; drž se vzoru okolních souborů v dané složce.
