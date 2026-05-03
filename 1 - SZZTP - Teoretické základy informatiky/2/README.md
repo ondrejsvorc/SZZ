@@ -3,10 +3,10 @@
 Komplexní algoritmy nad seznamy (filtrování, vyhledávání, třídění/řazení výběrem nebo vkládáním), efektivnější implementace vyhledávání a třídění (binární vyhledávání, merge sort), časová složitost algoritmů
 
 ### Užitečné odkazy
-- https://visualgo.net/en/sorting (vizualizace)
-- https://youtu.be/RfXt_qHDEPw (řadící algoritmy)
-- https://youtu.be/LOcfJorH7xs (Insertion Sort - česky)
-- https://youtu.be/g-PGLbMth_g (Selection Sort - anglicky)
+- <https://visualgo.net/en/sorting> (vizualizace)
+- <https://youtu.be/RfXt_qHDEPw> (řadící algoritmy)
+- <https://youtu.be/LOcfJorH7xs> (Insertion Sort - česky)
+- <https://youtu.be/g-PGLbMth_g> (Selection Sort - anglicky)
 
 ### Filtrování
 - proces extrakce prvků ze vstupní množiny na základě specifikovaného predikátu, přičemž výsledkem je podmnožina, jejíž kardinalita je menší nebo rovna kardinalitě množiny původní
