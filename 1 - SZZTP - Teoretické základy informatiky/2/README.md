@@ -74,7 +74,7 @@ $$|S_{sorted}| = |S|$$
 - $S$ = vstupní množina
 - $S_{sorted}$ = výsledná seřazená množina
 - $\leq$ = relace uspořádání
-- $|S|$ = kardinalita
+- $\lvert S \rvert$ = kardinalita
 
 #### Příklad
 
