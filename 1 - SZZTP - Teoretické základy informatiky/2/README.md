@@ -88,13 +88,37 @@ $$|S_{sorted}| = 5$$
 - Relace uspořádání = pravidlo, které určuje vzájemnou pozici dvou prvků (např. zda je prvek menší, větší, nebo roven jinému).
 - Invariantní = vlastnost, která se v průběhu procesu nemění (u třídění je invariantem počet prvků – kardinalita)
 
-
-
 ### Třídění výběrem (Selection Sort)
--
+
+Mějme množinu $S = \{3, 5, 1\}$ a relaci uspořádání $\leq$ (vzestupně).
+
+**1. průchod:**
+   - Prohledáváme celou množinu $\{3, 5, 1\}$ a hledáme minimum.
+   - Minimum je **1**.
+   - Vyměníme ho s prvkem na první pozici (číslo **3**).
+   - Stav: $[1 \mid 5, 3]$ *(levá část od čáry je seřazená)*
+
+**2. průchod:**
+   - Hledáme minimum ve zbývající neseřazené části $\{5, 3\}$.
+   - Minimum je **3**.
+   - Vyměníme ho s prvkem na první volné pozici (číslo **5**).
+   - Stav: $[1, 3 \mid 5]$
+
+Poslední prvek ($5$) již není s čím porovnávat, zůstává na místě.
+
+$$S_{sorted} = \{1, 3, 5\}$$
 
 ### Třídění vkládáním (Insertion Sort)
 -
+
+### Rozdíl mezi tříděním výběrem a vkládáním
+-
+
+### Binární vyhledávání (Binary Search)
+-
+
+### Merge Sort
+- 
 
 ### Časová složitost algoritmů
 -

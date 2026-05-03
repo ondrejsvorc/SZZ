@@ -1,3 +1,9 @@
+// při první iteraci vnějšího cyklu chci zjistit, jaké číslo patří na 1. místo (resp. 0. index)
+// uložím si minimum a hledám v nesetříděné části, jestli náhodou neexistuje ještě menší minimum
+// postupně procházím čísla a pokud je nějaké menší, označím si ho jako nové minimum, a procházím dál
+// jakmile narazím na poslední minimum nesetříděné části, umístím ho na její začátek (prohodím prvky pole)
+// opak metody vkládání (InsertSort)
+
 static void SelectionSort(int[] array)
 {
     for (int sortedBoundary = 0; sortedBoundary < array.Length - 1; sortedBoundary++)
