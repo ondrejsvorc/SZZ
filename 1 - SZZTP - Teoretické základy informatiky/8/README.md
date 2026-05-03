@@ -2,7 +2,7 @@
 
 Náhodná veličina a její charakteristiky (distribuční funkce, druhy, pravděpodobnostní funkce vs. hustota pravděpodobnosti, číselné charakteristiky [střední hodnota, rozptyl, kvantily], vybraná diskrétní a spojitá rozdělení pravděpodobnosti)
 
-## Náhodná veličina
+### Náhodná veličina
 - funkce přiřazující každému náhodnému jevu číselnou hodnotu
 - náhodný jev je výsledek náhodného pokusu
 - náhodný pokus je pokus, u kterého lze jednoznačně rozhodnout, zda nastal nebo nenastal
