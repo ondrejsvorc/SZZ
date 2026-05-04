@@ -192,13 +192,97 @@ Výrokový počet (logické spojky, jejich úplný systém, odvozovací pravidla
   - $A^c = \{ x \mid x ∈ U ∧ x ∉ A \}$
 
 #### Relace mezi množinami
+- **rovnost**
+  - $A = B$
+  - $\forall x \,(x ∈ A ⇔ x ∈ B)$
+
+- **podmnožina**
+  - $A ⊆ B$
+  - $\forall x \,(x ∈ A ⇒ x ∈ B)$
+
+- **vlastní podmnožina**
+  - $A ⊂ B$
+  - $A ⊆ B ∧ A ≠ B$
+
+- **nadmnožina**
+  - $A ⊇ B$
+
+- **disjunktnost**
+  - $A ∩ B = ∅$
 
 ### Binární relace
+- podmnožina kartézského součinu $A \times B$
+- $R ⊆ A \times B$
+- prvek relace je uspořádaná dvojice $(a,b)$
 
-#### Vlastnosti binární relace
+#### Obory relace
+- **definiční obor (první obor)**  
+  - $Dom(R) = \{ a \mid ∃b: (a,b) ∈ R \}$
+- **obor hodnot (druhý obor)**  
+  - $Im(R) = \{ b \mid ∃a: (a,b) ∈ R \}$
+
+#### Kartézský součin
+- množina všech uspořádaných dvojic prvků z množin $A$ a $B$
+- $A \times B = \{ (a,b) \mid a ∈ A ∧ b ∈ B \}$
+- velikost: $|A \times B| = |A| \cdot |B|$
+
+#### Obory relace
+- definiční obor (první obor)
+- obor hodnot (druhý obor)
+
+#### Znázornění relace
+- **kartézský graf**  
+  - body v rovině odpovídající dvojicím $(a,b)$
+- **orientovaný graf**  
+  - vrcholy = prvky množiny  
+  - hrana $a → b$ pokud $(a,b) ∈ R$
+
+#### Vlastnosti relace na množině
+- **reflexivita**  
+  - $\forall x ∈ A: (x,x) ∈ R$
+- **antireflexivita**  
+  - $\forall x ∈ A: (x,x) ∉ R$
+- **symetrie**  
+  - $(x,y) ∈ R ⇒ (y,x) ∈ R$
+- **antisymetrie**  
+  - $(x,y) ∈ R ∧ (y,x) ∈ R ⇒ x = y$
+- **tranzitivita**  
+  - $(x,y) ∈ R ∧ (y,z) ∈ R ⇒ (x,z) ∈ R$
 
 #### Ekvivalence
+- relace, která je:
+  - reflexivní
+  - symetrická
+  - tranzitivní
+- rozděluje množinu na **třídy ekvivalence**
+- **třída ekvivalence prvku $x$**:
+  - $[x] = \{ y ∈ A \mid (x,y) ∈ R \}$
 
 #### Uspořádání
+- relace, která je:
+  - reflexivní (neostré uspořádání) nebo antireflexivní (ostré)
+  - antisymetrická
+  - tranzitivní
+- typy:
+  - **částečné uspořádání**
+  - **lineární (totální) uspořádání** – každý pár prvků je porovnatelný
+
+#### Hasseův diagram
+- grafické znázornění uspořádání
+- pravidla:
+  - neznázorňují se reflexivní hrany
+  - neznázorňují se tranzitivní hrany
+  - kreslí se zdola nahoru
 
 #### Zobrazení
+- speciální binární relace $f ⊆ A \times B$
+- každému prvku $a ∈ A$ přiřazuje právě jeden prvek $b ∈ B$
+- značení:
+  - $f: A → B$
+- vlastnosti:
+  - **injektivní**  
+    - $f(x)=f(y) ⇒ x=y$
+  - **surjektivní**  
+    - $\forall b ∈ B ∃a ∈ A: f(a)=b$
+  - **bijektivní**  
+    - injektivní i surjektivní
