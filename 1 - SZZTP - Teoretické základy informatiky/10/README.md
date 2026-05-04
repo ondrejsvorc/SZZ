@@ -9,19 +9,21 @@ Výrokový počet (logické spojky, jejich úplný systém, odvozovací pravidla
 - synonymum: výroková logika
 - formální logický systém, který z výroků pomocí logických spojek vytváří složené výroky a určuje jejich pravdivost
 
-### Sémantika
-
 ### Tabulka pravdivostních hodnot
+- tabulka, která pro všechny možné kombinace pravdivostních hodnot atomárních výroků uvádí pravdivostní hodnotu dané formule
 
-### Tautologie, kontradikce a splnitelnost
+### Tautologie
+- vždy pravdivý výrok nezávisle na vstupu
+- např.: $u∨¬u$
 
 ### Kontradikce
+- vždy nepravdivý nezávisle na vstupu
+- např.: $u∧¬u$
 
-### Splnitelnost formule
-
-### Sémantický důsledek
-
-### Odvozovací pravidla
+### Splnitelná formule
+- formule, která není kontradikcí
+- např.: $u∧v$
+  - je pravdivá např. pro u=1,v=1 ⇒ splnitelná
 
 ### Výrok
 - sdělení deklarativního typu, u kterého má význam uvažovat o pravdivostní hodnotě
@@ -121,18 +123,73 @@ Výrokový počet (logické spojky, jejich úplný systém, odvozovací pravidla
 - návrh a minimalizace obvodů
 
 ### Predikátový počet
+- rozšíření výrokového počtu o proměnné a kvantifikátory, které umožňuje vyjadřovat vlastnosti objektů a vztahy mezi nimi
+
+#### Doména
+- množina objektů, které v predikátovém počtu uvažujeme
+- např. všichni studenti
+
+#### Predikát
+- výraz s proměnnými, který se po dosazení stává výrokem
+- např.:
+  - $P(x)$: „$x$ je sudé“
+  - $x=y$
+  - $x∈A$
+
+#### Proměnná
+- symbol označující libovolný objekt z domény
+- např.: $x$
+
+#### Kvantifikátor
+- symbol určující, pro kolik objektů z domény výrok platí
+- např.: $∀x(x>0)$
 
 #### Abeceda
-
-#### Konstrukce jazyka
+- množina symbolů, ze kterých se tvoří výrazy
+  - proměnné: $x$, $y$, $z$, ...
+  - konstanty: $a$, $b$, $c$, ...
+  - predikátové symboly: $∈$, $=$, ...
+  - funkční symboly (funktory): sjednocení, průnik, ...
+  - logické spojky: $¬$, $∧$, $∨$, $⇒$, $⇔$
+  - kvantifikátory: $∀$, $∃$
 
 ### Naivní teorie množin
+- neformální přístup k množinám, kde množinu lze chápat jako libovolný soubor prvků daný nějakou vlastností
 
-#### Potenční množina
+### Množina
+- soubor navzájem odlišitelných prvků
+- prvek buď do množiny patří, nebo nepatří (∈ / ∉)
+- prvek se v množině vyskytuje nejvýše jednou
+- na pořadí prvků nezáleží
 
 #### Systém množin
+- množina množin
+
+#### Potenční množina
+- systém množin obsahující všechny podmnožiny dané množiny
+- značí se $Pot(𝐴)$
+  - $A=\{1,2\}$
+  - $P(A)=\{∅,\{1\},\{2\},\{1,2\}\}$
+- počet podmnožin potenční množiny: $|Pot(𝐴)|$ = $2^n$, kde $n$ je počet prvků dané množiny 
+
+#### Univerzum
+- značí se $U$
+- množina všech prvků, o kterých v daném kontextu uvažujeme
+- vždy zadané nebo implicitní
+- všechny množiny jsou podmnožiny $U$
 
 #### Operace na množinách
+- **sjednocení**  
+  - $A ∪ B = \{ x \mid x ∈ A ∨ x ∈ B \}$
+
+- **průnik**  
+  - $A ∩ B = \{ x \mid x ∈ A ∧ x ∈ B \}$
+
+- **rozdíl**  
+  - $A \setminus B = \{ x \mid x ∈ A ∧ x ∉ B \}$
+
+- **doplněk/komplement**  
+  - $A^c = \{ x \mid x ∈ U ∧ x ∉ A \}$
 
 #### Relace mezi množinami
 
