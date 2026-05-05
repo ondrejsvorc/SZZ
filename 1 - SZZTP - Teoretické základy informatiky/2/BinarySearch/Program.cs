@@ -12,15 +12,40 @@
         {
             return middleIndex;
         }
-
-        if (middleValue > target)
+        else if (middleValue > target)
         {
             rightIndex = middleIndex - 1;
         }
-        else
+        else if (middleValue < target)
         {
             leftIndex = middleIndex + 1;
         }
+    }
+
+    return -1;
+}
+
+static int BinarySearchRecursive(int[] sortedArray, int target, int leftIndex, int rightIndex)
+{
+    if (leftIndex > rightIndex)
+    {
+        return -1;
+    }
+
+    int middleIndex = (leftIndex + rightIndex) / 2;
+    int middleValue = sortedArray[middleIndex];
+
+    if (middleValue == target)
+    {
+        return middleIndex;
+    }
+    else if (middleValue > target)
+    {
+        return BinarySearchRecursive(sortedArray, target, leftIndex, rightIndex: middleIndex - 1);
+    }
+    else if (middleValue < target)
+    {
+        return BinarySearchRecursive(sortedArray, target, leftIndex: middleIndex + 1, rightIndex);
     }
 
     return -1;
