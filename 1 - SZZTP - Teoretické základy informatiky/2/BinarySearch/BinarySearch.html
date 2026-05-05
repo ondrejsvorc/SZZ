@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>C# Binary Search Debugger</title>
+    <style>
+        :root { 
+            --bg: #1e1e1e; 
+            --text: #d4d4d4; 
+            --left: #e74c3c;   /* leftIndex - Červená */
+            --right: #3498db;  /* rightIndex - Modrá */
+            --mid: #f1c40f;    /* middleIndex - Žlutá */
+            --match: #2ecc71;  /* Nalezeno - Zelená */
+        }
+        body { font-family: 'Consolas', monospace; background: var(--bg); color: var(--text); padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        
+        .legend { display: flex; gap: 25px; margin-bottom: 20px; font-size: 14px; background: #2d2d2d; padding: 12px 20px; border-radius: 6px; border: 1px solid #444; }
+        .legend-item { display: flex; align-items: center; gap: 8px; }
+        .dot { width: 14px; height: 14px; border-radius: 3px; }
+
+        .viz-space { height: 180px; display: flex; align-items: flex-end; gap: 12px; margin-bottom: 20px; background: #252526; padding: 20px 40px; border-radius: 8px; }
+        .bar { 
+            width: 55px; 
+            background: #3e3e42; 
+            border-radius: 4px 4px 0 0; 
+            transition: all 0.2s ease; 
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-end; 
+            padding-bottom: 8px; 
+            color: #fff; 
+            font-weight: bold;
+            border: 2px solid transparent;
+        }
+        
+        .bar.out-of-bounds { opacity: 0.15; }
+
+        .code-window { background: #1e1e1e; border: 1px solid #333; border-radius: 6px; width: 100%; max-width: 850px; }
+        .line { display: block; padding: 1px 15px; border-left: 4px solid transparent; white-space: pre; font-size: 14px; color: #d4d4d4; }
+        .line.active { background: #37373d; border-left-color: #007acc; color: #fff; }
+        .keyword { color: #569cd6; }
+
+        .controls { margin-top: 20px; display: flex; gap: 15px; align-items: center; }
+        button { padding: 10px 20px; cursor: pointer; background: #333; color: #fff; border: 1px solid #555; border-radius: 4px; font-family: inherit; }
+        button:hover:not(:disabled) { background: #444; }
+        button:disabled { opacity: 0.2; }
+        
+        .target-info { margin-bottom: 10px; font-size: 18px; color: var(--match); }
+    </style>
+</head>
+<body>
+
+    <div class="target-info">Hledaný cíl (target): <strong>4</strong></div>
+
+    <div class="legend">
+        <div class="legend-item"><div class="dot" style="background:var(--left)"></div> <span>leftIndex</span></div>
+        <div class="legend-item"><div class="dot" style="background:var(--mid)"></div> <span>middleIndex</span></div>
+        <div class="legend-item"><div class="dot" style="background:var(--right)"></div> <span>rightIndex</span></div>
+    </div>
+
+    <div class="viz-space" id="bars"></div>
+
+    <div class="code-window">
+<div class="line" data-line="1"><span class="keyword">static int</span> BinarySearch(<span class="keyword">int</span>[] sortedArray, <span class="keyword">int</span> target) {</div>
+<div class="line" data-line="2">    <span class="keyword">int</span> leftIndex = 0;</div>
+<div class="line" data-line="3">    <span class="keyword">int</span> rightIndex = sortedArray.Length - 1;</div>
+<div class="line" data-line="4"></div>
+<div class="line" data-line="5">    <span class="keyword">while</span> (leftIndex <= rightIndex) {</div>
+<div class="line" data-line="6">        <span class="keyword">int</span> middleIndex = (leftIndex + rightIndex) / 2;</div>
+<div class="line" data-line="7">        <span class="keyword">int</span> middleValue = sortedArray[middleIndex];</div>
+<div class="line" data-line="8"></div>
+<div class="line" data-line="9">        <span class="keyword">if</span> (middleValue == target) {</div>
+<div class="line" data-line="10">            <span class="keyword">return</span> middleIndex;</div>
+<div class="line" data-line="11">        }</div>
+<div class="line" data-line="12"></div>
+<div class="line" data-line="13">        <span class="keyword">if</span> (middleValue > target) {</div>
+<div class="line" data-line="14">            rightIndex = middleIndex - 1;</div>
+<div class="line" data-line="15">        } <span class="keyword">else</span> {</div>
+<div class="line" data-line="16">            leftIndex = middleIndex + 1;</div>
+<div class="line" data-line="17">        }</div>
+<div class="line" data-line="18">    }</div>
+<div class="line" data-line="19">    <span class="keyword">return</span> -1;</div>
+<div class="line" data-line="20">}</div>
+    </div>
+
+    <div class="controls">
+        <button onclick="changeStep(-1)" id="prevBtn">← Zpět</button>
+        <span id="stepInfo" style="min-width: 120px; text-align: center;">Krok: 0 / 0</span>
+        <button onclick="changeStep(1)" id="nextBtn">Vpřed →</button>
+        <button onclick="location.reload()">Reset</button>
+    </div>
+
+<script>
+    const array = [1, 2, 3, 4, 5];
+    const target = 4;
+    let steps = [];
+    let currentIdx = 0;
+
+    function buildSteps() {
+        let left = 0;
+        let right = array.length - 1;
+        
+        // Initial setup
+        steps.push({ l: 2, left: 0, right: right, mid: -1, found: false });
+        steps.push({ l: 3, left: 0, right: right, mid: -1, found: false });
+
+        while (left <= right) {
+            steps.push({ l: 5, left: left, right: right, mid: -1, found: false });
+            
+            let mid = Math.floor((left + right) / 2);
+            steps.push({ l: 6, left: left, right: right, mid: mid, found: false });
+            steps.push({ l: 7, left: left, right: right, mid: mid, found: false });
+
+            if (array[mid] === target) {
+                steps.push({ l: 9, left: left, right: right, mid: mid, found: false });
+                steps.push({ l: 10, left: left, right: right, mid: mid, found: true });
+                return;
+            }
+
+            steps.push({ l: 13, left: left, right: right, mid: mid, found: false });
+            if (array[mid] > target) {
+                right = mid - 1;
+                steps.push({ l: 14, left: left, right: right, mid: mid, found: false });
+            } else {
+                left = mid + 1;
+                steps.push({ l: 16, left: left, right: right, mid: mid, found: false });
+            }
+        }
+        steps.push({ l: 19, left: left, right: right, mid: -1, found: false });
+    }
+
+    function render() {
+        const s = steps[currentIdx];
+        const container = document.getElementById('bars');
+        container.innerHTML = '';
+
+        array.forEach((val, idx) => {
+            const bar = document.createElement('div');
+            bar.className = 'bar';
+            bar.style.height = `${val * 25 + 30}px`;
+            bar.innerText = val;
+
+            let activeColors = [];
+            if (idx === s.left) activeColors.push('var(--left)');
+            if (idx === s.mid) activeColors.push(s.found ? 'var(--match)' : 'var(--mid)');
+            if (idx === s.right) activeColors.push('var(--right)');
+
+            if (activeColors.length === 1) {
+                bar.style.background = activeColors[0];
+            } else if (activeColors.length === 2) {
+                bar.style.background = `linear-gradient(to right, ${activeColors[0]} 50%, ${activeColors[1]} 50%)`;
+            } else if (activeColors.length === 3) {
+                bar.style.background = `linear-gradient(to right, ${activeColors[0]} 33%, ${activeColors[1]} 33%, ${activeColors[1]} 66%, ${activeColors[2]} 66%)`;
+            }
+
+            if (idx < s.left || idx > s.right) {
+                bar.classList.add('out-of-bounds');
+            }
+
+            if (s.found && idx === s.mid) {
+                bar.style.boxShadow = "0 0 15px var(--match)";
+                bar.style.borderColor = "white";
+            }
+
+            container.appendChild(bar);
+        });
+
+        document.querySelectorAll('.line').forEach(l => l.classList.remove('active'));
+        const line = document.querySelector(`.line[data-line="${s.l}"]`);
+        if (line) line.classList.add('active');
+
+        document.getElementById('stepInfo').innerText = `Krok: ${currentIdx + 1} / ${steps.length}`;
+        document.getElementById('prevBtn').disabled = currentIdx === 0;
+        document.getElementById('nextBtn').disabled = currentIdx === steps.length - 1;
+    }
+
+    function changeStep(d) {
+        currentIdx = Math.max(0, Math.min(steps.length - 1, currentIdx + d));
+        render();
+    }
+
+    buildSteps();
+    render();
+</script>
+</body>
+</html>

@@ -37,7 +37,7 @@ $$S' = \{x \in S \mid x \pmod 2 = 0\} = \{8, 12\}$$
 Výsledkem bude $S' = \{8, 12\}$, přičemž platí, že počet prvků (kardinalita) výsledku je menší než počet prvků vstupu ($2 \leq 5$).
 
 #### Pojmy
-- Kardinalita = počet prvků dané mnžoiny.
+- Kardinalita = počet prvků dané množiny.
 - Predikát = podmínka/funkce nabývající hodnot pravda nebo nepravda (P(x) - pro daný prvek $x$).
 
 ### Vyhledávání
@@ -95,36 +95,55 @@ $$|S_{sorted}| = 5$$
 - Invariantní = vlastnost, která se v průběhu procesu nemění (u třídění je invariantem počet prvků – kardinalita)
 
 ### Třídění výběrem (Selection Sort)
+- časová složitost: $O(n^2)$
+- prostorová složitost: $O(1)$
 
-Mějme množinu $S = \{3, 5, 1\}$ a relaci uspořádání $\leq$ (vzestupně).
-
-**1. průchod:**
-   - Prohledáváme celou množinu $\{3, 5, 1\}$ a hledáme minimum.
-   - Minimum je **1**.
-   - Vyměníme ho s prvkem na první pozici (číslo **3**).
-   - Stav: $[1 \mid 5, 3]$ *(levá část od čáry je seřazená)*
-
-**2. průchod:**
-   - Hledáme minimum ve zbývající neseřazené části $\{5, 3\}$.
-   - Minimum je **3**.
-   - Vyměníme ho s prvkem na první volné pozici (číslo **5**).
-   - Stav: $[1, 3 \mid 5]$
-
-Poslední prvek ($5$) již není s čím porovnávat, zůstává na místě.
-
-$$S_{sorted} = \{1, 3, 5\}$$
+#### Princip
+- pole se rozdělí na dvě části: seřazenou (vlevo) a neseřazenou (vpravo)
+- v každém kroku se vezme aktuální pozice currentIndex
+- v neseřazené části se najde index nejmenšího prvku (smallestIndex)
+- tento prvek se prohodí s prvkem na currentIndex
+- tím se rozšíří seřazená část o jeden prvek
+- proces se opakuje, dokud není celé pole seřazené
 
 ### Třídění vkládáním (Insertion Sort)
--
+- časová složitost: $O(n^2)$ (nejhorší), $O(n)$ (nejlepší - již seřazené pole)
+- prostorová složitost: $O(1)$
 
-### Rozdíl mezi tříděním výběrem a vkládáním
--
+#### Princip
+- pole se postupně buduje jako seřazené zleva doprava
+- v každém kroku se vezme prvek na currentIndex
+- tento prvek (currentValue) se porovnává s prvky vlevo
+- větší prvky se posouvají o jednu pozici doprava
+- hledá se správné místo pro vložení
+- prvek se vloží na správnou pozici (sortedIndex + 1)
+- levá část pole je po každém kroku seřazená
 
 ### Binární vyhledávání (Binary Search)
--
+- časová složitost: $O(\log n)$
+- prostorová složitost: $O(1)$
+- prerekvizita: pole musí být seřazené
+
+#### Princip
+- udržují se dva indexy: leftIndex a rightIndex, které ohraničují aktuální interval
+- v každém kroku se spočítá middleIndex
+- porovná se hodnota uprostřed s hledaným prvkem (target):
+   - pokud se rovnají -> nalezeno
+   - pokud je prostřední hodnota větší -> hledá se vlevo (zmenší se rightIndex)
+   - pokud je menší -> hledá se vpravo (zvětší se leftIndex)
+- interval se tak v každém kroku zmenší na polovinu
+- končí, když je prvek nalezen nebo interval zanikne (leftIndex > rightIndex)
 
 ### Merge Sort
-- 
+- časová složitost: $O(n \log n)$
+- prostorová složitost: O(n)
+- založen na principu rozděl a panuj (divide and conquer)
 
-### Časová složitost algoritmů
--
+#### Princip
+- pole se rekurzivně dělí na poloviny, dokud nevzniknou podpole o velikosti 1
+tato podpole jsou triviálně seřazená
+- následuje fáze slučování (merge)
+- dvě seřazená pole (left, right) se procházejí současně
+- vždy se vezme menší prvek z obou a vloží se do výsledného pole (target)
+- po vyčerpání jednoho pole se zbytek druhého pouze zkopíruje
+- slučováním vznikají postupně větší seřazené celky, až vznikne celé seřazené pole

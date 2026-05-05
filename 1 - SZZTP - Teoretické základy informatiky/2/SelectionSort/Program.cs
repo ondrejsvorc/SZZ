@@ -6,21 +6,23 @@
 
 static void SelectionSort(int[] array)
 {
-    for (int sortedBoundary = 0; sortedBoundary < array.Length - 1; sortedBoundary++)
-    {
-        int minIndex = sortedBoundary;
+    int length = array.Length;
 
-        for (int j = sortedBoundary + 1; j < array.Length; j++)
+    for (int currentIndex = 0; currentIndex < length - 1; currentIndex++)
+    {
+        int smallestIndex = currentIndex;
+
+        for (int candidateIndex = currentIndex + 1; candidateIndex < length; candidateIndex++)
         {
-            if (array[j] < array[minIndex])
+            if (array[candidateIndex] < array[smallestIndex])
             {
-                minIndex = j;
+                smallestIndex = candidateIndex;
             }
         }
 
-        if (minIndex != sortedBoundary)
+        if (smallestIndex != currentIndex)
         {
-            (array[sortedBoundary], array[minIndex]) = (array[minIndex], array[sortedBoundary]);
+            (array[currentIndex], array[smallestIndex]) = (array[smallestIndex], array[currentIndex]);
         }
     }
 }

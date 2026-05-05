@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>C# Selection Sort Debugger - Extended Array</title>
+    <style>
+        :root { 
+            --bg: #1e1e1e; 
+            --text: #d4d4d4; 
+            --blue: #007acc;    /* currentIndex */
+            --green: #4ec9b0;   /* smallestIndex */
+            --orange: #ce9178;  /* candidateIndex */
+        }
+        body { font-family: 'Consolas', monospace; background: var(--bg); color: var(--text); padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        
+        .legend { display: flex; gap: 25px; margin-bottom: 20px; font-size: 14px; background: #2d2d2d; padding: 12px 20px; border-radius: 6px; border: 1px solid #444; }
+        .legend-item { display: flex; align-items: center; gap: 8px; }
+        .dot { width: 14px; height: 14px; border-radius: 3px; }
+
+        .viz-space { height: 180px; display: flex; align-items: flex-end; gap: 12px; margin-bottom: 20px; background: #252526; padding: 20px 40px; border-radius: 8px; }
+        .bar { 
+            width: 50px; 
+            background: #3e3e42; 
+            border-radius: 4px 4px 0 0; 
+            transition: background 0.15s, height 0.3s; 
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-end; 
+            padding-bottom: 8px; 
+            color: #fff; 
+            font-weight: bold;
+            border: 2px solid transparent;
+        }
+        
+        .bar.sorted { opacity: 0.3; }
+
+        .code-window { background: #1e1e1e; border: 1px solid #333; border-radius: 6px; width: 100%; max-width: 850px; }
+        .line { display: block; padding: 1px 15px; border-left: 4px solid transparent; white-space: pre; font-size: 14px; color: #d4d4d4; }
+        .line.active { background: #37373d; border-left-color: var(--blue); color: #fff; }
+        .keyword { color: #569cd6; }
+
+        .controls { margin-top: 20px; display: flex; gap: 15px; align-items: center; }
+        button { padding: 10px 20px; cursor: pointer; background: #333; color: #fff; border: 1px solid #555; border-radius: 4px; font-family: inherit; }
+        button:hover:not(:disabled) { background: #444; }
+        button:disabled { opacity: 0.2; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+
+    <div class="legend">
+        <div class="legend-item"><div class="dot" style="background:var(--blue)"></div> <span>currentIndex</span></div>
+        <div class="legend-item"><div class="dot" style="background:var(--green)"></div> <span>smallestIndex</span></div>
+        <div class="legend-item"><div class="dot" style="background:var(--orange)"></div> <span>candidateIndex</span></div>
+    </div>
+
+    <div class="viz-space" id="bars"></div>
+
+    <div class="code-window">
+<div class="line" data-line="1"><span class="keyword">static void</span> SelectionSort(<span class="keyword">int</span>[] array) {</div>
+<div class="line" data-line="2">    <span class="keyword">int</span> length = array.Length;</div>
+<div class="line" data-line="3"></div>
+<div class="line" data-line="4">    <span class="keyword">for</span> (<span class="keyword">int</span> currentIndex = 0; currentIndex < length - 1; currentIndex++) {</div>
+<div class="line" data-line="5">        <span class="keyword">int</span> smallestIndex = currentIndex;</div>
+<div class="line" data-line="6"></div>
+<div class="line" data-line="7">        <span class="keyword">for</span> (<span class="keyword">int</span> candidateIndex = currentIndex + 1; candidateIndex < length; candidateIndex++) {</div>
+<div class="line" data-line="8">            <span class="keyword">if</span> (array[candidateIndex] < array[smallestIndex]) {</div>
+<div class="line" data-line="9">                smallestIndex = candidateIndex;</div>
+<div class="line" data-line="10">            }</div>
+<div class="line" data-line="11">        }</div>
+<div class="line" data-line="12"></div>
+<div class="line" data-line="13">        <span class="keyword">if</span> (smallestIndex != currentIndex) {</div>
+<div class="line" data-line="14">            (array[currentIndex], array[smallestIndex]) = (array[smallestIndex], array[currentIndex]);</div>
+<div class="line" data-line="15">        }</div>
+<div class="line" data-line="16">    }</div>
+<div class="line" data-line="17">}</div>
+    </div>
+
+    <div class="controls">
+        <button onclick="changeStep(-1)" id="prevBtn">← Zpět</button>
+        <span id="stepInfo" style="min-width: 120px; text-align: center;">Krok: 0 / 0</span>
+        <button onclick="changeStep(1)" id="nextBtn">Vpřed →</button>
+        <button onclick="reset()" style="background: #4a1a1a;">Reset</button>
+    </div>
+
+<script>
+    const testArray = [1, 3, 2, 5, 1];
+    let steps = [];
+    let currentStepIndex = 0;
+
+    function buildSteps() {
+        steps = [];
+        let arr = [...testArray];
+        let n = arr.length;
+
+        steps.push({ a: [...arr], l: 2, cur: -1, sm: -1, cand: -1 });
+
+        for (let i = 0; i < n - 1; i++) {
+            steps.push({ a: [...arr], l: 4, cur: i, sm: -1, cand: -1 });
+            let sm = i;
+            steps.push({ a: [...arr], l: 5, cur: i, sm: sm, cand: -1 });
+
+            for (let j = i + 1; j < n; j++) {
+                steps.push({ a: [...arr], l: 7, cur: i, sm: sm, cand: j });
+                steps.push({ a: [...arr], l: 8, cur: i, sm: sm, cand: j });
+                if (arr[j] < arr[sm]) {
+                    sm = j;
+                    steps.push({ a: [...arr], l: 9, cur: i, sm: sm, cand: j });
+                }
+            }
+            steps.push({ a: [...arr], l: 13, cur: i, sm: sm, cand: -1 });
+            if (sm !== i) {
+                [arr[i], arr[sm]] = [arr[sm], arr[i]];
+                steps.push({ a: [...arr], l: 14, cur: i, sm: sm, cand: -1 });
+            }
+        }
+        steps.push({ a: [...arr], l: 17, cur: -1, sm: -1, cand: -1, done: true });
+    }
+
+    function render() {
+        const s = steps[currentStepIndex];
+        const container = document.getElementById('bars');
+        container.innerHTML = '';
+
+        const colors = {
+            blue: 'var(--blue)',
+            green: 'var(--green)',
+            orange: 'var(--orange)',
+            default: '#3e3e42'
+        };
+
+        s.a.forEach((val, idx) => {
+            const bar = document.createElement('div');
+            bar.className = 'bar';
+            bar.style.height = `${val * 25 + 30}px`;
+            bar.innerText = val;
+
+            let activeColors = [];
+            if (idx === s.cur) activeColors.push(colors.blue);
+            if (idx === s.sm) activeColors.push(colors.green);
+            if (idx === s.cand) activeColors.push(colors.orange);
+
+            if (activeColors.length === 1) {
+                bar.style.background = activeColors[0];
+                if(idx === s.cur) bar.style.borderColor = "white";
+            } else if (activeColors.length === 2) {
+                bar.style.background = `linear-gradient(to right, ${activeColors[0]} 50%, ${activeColors[1]} 50%)`;
+                if(idx === s.cur) bar.style.borderColor = "white";
+            } else if (activeColors.length === 3) {
+                bar.style.background = `linear-gradient(to right, ${activeColors[0]} 33.3%, ${activeColors[1]} 33.3%, ${activeColors[1]} 66.6%, ${activeColors[2]} 66.6%)`;
+                if(idx === s.cur) bar.style.borderColor = "white";
+            } else {
+                bar.style.background = colors.default;
+            }
+
+            if ((idx < s.cur && s.cur !== -1) || s.done) bar.classList.add('sorted');
+
+            container.appendChild(bar);
+        });
+
+        document.querySelectorAll('.line').forEach(l => l.classList.remove('active'));
+        const line = document.querySelector(`.line[data-line="${s.l}"]`);
+        if (line) line.classList.add('active');
+
+        document.getElementById('stepInfo').innerText = `Krok: ${currentStepIndex + 1} / ${steps.length}`;
+        document.getElementById('prevBtn').disabled = currentStepIndex === 0;
+        document.getElementById('nextBtn').disabled = currentStepIndex === steps.length - 1;
+    }
+
+    function changeStep(d) {
+        currentStepIndex = Math.max(0, Math.min(steps.length - 1, currentStepIndex + d));
+        render();
+    }
+
+    function reset() {
+        currentStepIndex = 0;
+        render();
+    }
+
+    buildSteps();
+    render();
+</script>
+</body>
+</html>

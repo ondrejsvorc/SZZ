@@ -26,7 +26,7 @@
     return -1;
 }
 
-int targetIndex = BinarySearch(sortedArray: [1, 2, 3, 4, 5], target: 3);
+int targetIndex = BinarySearch(sortedArray: [1, 2, 3, 4, 5], target: 4);
 Console.WriteLine(targetIndex);
 
 // Other valid middleIndex calculations:
