@@ -4,6 +4,7 @@ Rekurence (vymezení, základní metody řešení [iterační a substituční me
 
 ### Užitečné odkazy
 - <https://szz.ondrejsvorc.cz/1%20-%20SZZTP%20-%20Teoretick%C3%A9%20z%C3%A1klady%20informatiky/11/>
+- <https://kam.fit.cvut.cz/deploy/bi-pkm/mirror/textbook/sec-dolni-a-horni-cela-cast.html>
 
 ### Rekurence
 - vztah, který definuje hodnotu funkce (typicky posloupnosti) pomocí jejích předchozích hodnot
@@ -40,7 +41,7 @@ $$
 (1, 3, 5, 7, 9, \ldots)
 $$
 
-#### Uzavřený tvar
+#### Vzorec pro n-tý člen
 
 $$
 a_n = 1 + 2n
@@ -100,7 +101,7 @@ $$
 \sum_{i=1}^{n} i
 $$
 
-Uzavřený vzorec: součet získáme přímo pomocí vzorce bez postupného sčítání, tedy jako funkci závislou pouze na $n$.
+Součet získáme přímo pomocí vzorce bez postupného sčítání, tedy jako funkci závislou pouze na $n$.
 ```csharp
 int Sum(int n)
 {
@@ -118,11 +119,12 @@ $$
 |------------------|------------------|----------------------|
 | Rekurentní       | O(n)             | O(n)                 |
 | Iterativní       | O(n)             | O(1)                 |
-| Uzavřený vzorec  | O(1)             | O(1)                 |
+| Vzorec pro n-tý člen  | O(1)             | O(1)                 |
 
 ### Iterační metoda
 
 ### Substituční metoda
+- 
 
 ### Řešení převodem na algebraické rovnice
 
@@ -144,6 +146,8 @@ $$
 \lfloor x \rfloor = \max \{ m \in \mathbb{Z} \mid m \le x \}
 $$
 
+![](https://kam.fit.cvut.cz/deploy/bi-pkm/mirror/textbook/figures/fig-dolni.svg)
+
 ### Horní celá část
 - zaokrouhlení nahoru
 
@@ -161,6 +165,8 @@ $$
 $$
 \lceil x \rceil = \min \{ m \in \mathbb{Z} \mid m \ge x \}
 $$
+
+![](https://kam.fit.cvut.cz/deploy/bi-pkm/mirror/textbook/figures/fig-horni.svg)
 
 ### Logaritmus
 - inverzní funkce k exponenciále
