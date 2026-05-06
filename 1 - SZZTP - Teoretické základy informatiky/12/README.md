@@ -44,7 +44,7 @@ Slovo incidentní znamená, že hrana je připojená k vrcholu.
 ![](Obrázky/Hrana.png)
 
 ### Sled
-- posloupnost vrcholů
+- posloupnost vrcholů a hran, kde každá hrana spojuje dva po sobě jdoucí vrcholy
 - může projít vrcholem vícekrát
 - může projít hranou vícekrát
 - délka sledu = počet hran
@@ -60,12 +60,14 @@ kde
 ![](Obrázky/Sled.png)
 
 ### Tah
-- sled, ve kterém se neopakují hrany
+- sled, ve kterém se žádná hrana neopakuje
 - nelze použít stejnou hranu dvakrát
 - stejný vrchol může být dosažen vícekrát různými hranami
 
+![](Obrázky/Tah.png)
+
 ### Cesta
-- sled, ve kterém se neopakují vrcholy
+- tah, ve kterém se neopakuje žádný vrchol
 - nelze navštívit stejný vrchol dvakrát
 - každá hrana se tím pádem použije nejvýše jednou
 
@@ -95,8 +97,11 @@ Platí obecně pro:
 
 ![](Obrázky/Uzavřený_Neuzavřený.png)
 
+### Jednoduchý cyklus
+- cyklus, ve kterém se navíc neopakují vrcholy kromě prvního/posledního
+
 ### Cyklus
-- uzavřená cesta
+- uzavřený tah (začíná a končí ve stejném vrcholu a neopakují se hrany)
 
 ### Neorientovaný graf
 - graf, ve kterém hrany nemají směr
@@ -115,9 +120,117 @@ Platí obecně pro:
 - hrana $(u, v)$ znamená orientované spojení z vrcholu $u$ do vrcholu $v$
 
 ### Reprezentace grafů
-- seznamy sousedů
+- seznam sousedů
 - matice sousednosti
 - matice incidence
+
+### Seznam sousedů
+- reprezentace grafu, ve které je ke každému vrcholu uložen seznam vrcholů, se kterými je spojen hranou
+
+#### Příklad
+- $V = \{ A, B, C, D \}$
+- $E = \{(A, B), (A, C), (B, D)\}$
+
+```csharp
+// Neorientovaný graf
+Dictionary<string, string[]> graph = new()
+{
+    ["A"] = ["B", "C"],
+    ["B"] = ["A", "D"],
+    ["C"] = ["A"],
+    ["D"] = ["B"]
+};
+```
+```csharp
+// Orientovaný graf
+Dictionary<string, string[]> graph = new()
+{
+    ["A"] = ["B", "C"],
+    ["B"] = ["D"],
+    ["C"] = [],
+    ["D"] = []
+};
+```
+
+### Matice sousednosti
+- reprezentace grafu pomocí čtvercové matice, ve které prvek na pozici $(i, j)$ určuje, zda mezi vrcholy i a j existuje hrana
+- $i$ označuje řádek matice a $j$ sloupec matice, tedy konkrétní dvojici vrcholů
+
+#### Příklad
+- $V = \{ A, B, C, D \}$
+- $E = \{(A, B), (A, C), (B, D)\}$
+
+```
+    A B C D
+A [ 0 1 1 0 ]
+B [ 1 0 0 1 ]
+C [ 1 0 0 0 ]
+D [ 0 1 0 0 ]
+```
+
+```csharp
+// Neorientovaný graf
+int[,] graph =
+{
+    { 0, 1, 1, 0 },
+    { 1, 0, 0, 1 },
+    { 1, 0, 0, 0 },
+    { 0, 1, 0, 0 }
+};
+```
+
+```csharp
+// Orientovaný graf
+int[,] graph =
+{
+    { 0, 1, 1, 0 },
+    { 0, 0, 0, 1 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 }
+};
+```
+
+### Matice incidence
+- reprezentace grafu pomocí matice, ve které řádky odpovídají vrcholům, sloupce hranám a hodnoty určují, zda daný vrchol inciduje s danou hranou
+- „inciduje“ znamená, že vrchol je součástí dané hrany, tedy že je touto hranou spojen
+
+#### Příklad
+- $V = \{ A, B, C, D \}$
+- $E = \{ e_1=(A,B), e_2=(A,C), e_3=(B,D) \}$
+
+```
+      e₁ e₂ e₃
+A  [  1  1  0 ]
+B  [  1  0  1 ]
+C  [  0  1  0 ]
+D  [  0  0  1 ]
+```
+
+```csharp
+// Neorientovaný graf
+int[,] graph =
+{
+    { 1, 1, 0 },
+    { 1, 0, 1 },
+    { 0, 1, 0 },
+    { 0, 0, 1 }
+};
+```
+
+```csharp
+// Orientovaný graf
+int[,] graph =
+{
+    { -1, -1,  0 },
+    {  1,  0, -1 },
+    {  0,  1,  0 },
+    {  0,  0,  1 }
+};
+```
+U orientovaného grafu se často používá:
+- $-1$ pro počáteční vrchol hrany
+- $1$ pro koncový vrchol hrany
+- $0$ pokud vrchol s hranou nesouvisí
 
 ### Význačné typy grafů
 - úplný

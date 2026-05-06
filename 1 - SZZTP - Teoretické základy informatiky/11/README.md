@@ -5,6 +5,7 @@ Rekurence (vymezení, základní metody řešení [iterační a substituční me
 ### Užitečné odkazy
 - <https://szz.ondrejsvorc.cz/1%20-%20SZZTP%20-%20Teoretick%C3%A9%20z%C3%A1klady%20informatiky/11/>
 - <https://kam.fit.cvut.cz/deploy/bi-pkm/mirror/textbook/sec-dolni-a-horni-cela-cast.html>
+- <https://www.cs.vsb.cz/kot/download/uti2006/uti-pr-09.pdf>
 
 ### Rekurence
 - vztah, který definuje hodnotu funkce (typicky posloupnosti) pomocí jejích předchozích hodnot
