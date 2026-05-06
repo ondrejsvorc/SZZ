@@ -33,8 +33,6 @@ kde:
 - prvek grafu reprezentující objekt, mezi nímž a ostatními vrcholy mohou existovat vztahy vyjádřené hranami
 - prvek množiny $V$
 
-![](Obrázky/Vrchol.png)
-
 ### Hrana
 - prvek grafu reprezentující vztah mezi dvěma vrcholy
 - prvek množiny $E$
