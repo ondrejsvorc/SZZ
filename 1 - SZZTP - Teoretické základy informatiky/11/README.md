@@ -129,6 +129,7 @@ $$
 ### Dolní celá část
 - zaokrouhlení dolů
 
+Značení:
 $$
 \lfloor x \rfloor
 $$
@@ -138,9 +139,15 @@ $$
 \lfloor 3.7 \rfloor = 3
 $$
 
+Formálně:
+$$
+\lfloor x \rfloor = \max \{ m \in \mathbb{Z} \mid m \le x \}
+$$
+
 ### Horní celá část
 - zaokrouhlení nahoru
 
+Značení:
 $$
 \lceil x \rceil
 $$
@@ -148,6 +155,11 @@ $$
 Příklad:
 $$
 \lceil 3.2 \rceil = 4
+$$
+
+Formálně:
+$$
+\lceil x \rceil = \min \{ m \in \mathbb{Z} \mid m \ge x \}
 $$
 
 ### Logaritmus
