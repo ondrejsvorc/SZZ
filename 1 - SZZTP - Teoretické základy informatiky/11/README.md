@@ -202,17 +202,125 @@ $$
 
 ### Euklidův algoritmus
 - algoritmus pro výpočet největšího společného dělitele ($gcd$)
+- největší číslo, které beze zbytku dělí obě daná čísla
+
+$$
+m, n \in \mathbb{Z}, \quad 0 \leq m < n
+$$
+
+$$
+\gcd(0, n) = n
+$$
+
+$$
+\gcd(m, n) = \gcd(n \bmod m,\; m), \quad \text{pro } m > 0
+$$
+
+#### Postup
+
+$$
+\gcd(m, n) = \gcd(n \bmod m,\; m)
+$$
+
+opakujeme, dokud nedostaneme:
+
+$$
+\gcd(0, k) = k
+$$
+
+*$mod$ = dělení se zbytkem (např. 10 mod 3 = 1, protože 10 děleno 3 je 9 a zbytek je 1 a mod vrací právě ten zbytek po dělení)*
+
+#### Příklad
+
+$$
+\begin{aligned}
+\gcd(12,18)
+&= \gcd(18 \bmod 12,\;12) \\
+&= \gcd(6,\;12) \\
+&= \gcd(12 \bmod 6,\;6) \\
+&= \gcd(0,\;6) \\
+&= 6
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+18 \bmod 12 &= 6 \\
+12 \bmod 6 &= 0
+\end{aligned}
+$$
 
 ### Prvočísla
 - čísla dělitelná pouze 1 a sama sebou
 
 ### Největší společný dělitel
-- největší číslo, které dělí obě čísla
+- největší číslo, které beze zbytku dělí všechna zadaná čísla
 - GCD = Greatest Common Divisor
 
+#### Příklad
+
+Dělitelé čísla $12$:
+
 $$
-\gcd(a,b)
+\{1, 2, 3, 4, 6, 12\}
+$$
+
+Dělitelé čísla $18$:
+
+$$
+\{1, 2, 3, 6, 9, 18\}
+$$
+
+Společní dělitelé:
+
+$$
+\{1, 2, 3, 6\}
+$$
+
+Největší z nich:
+
+$$
+6
+$$
+
+tedy:
+
+$$
+\gcd(12,18)=6
 $$
 
 ### Nejmenší společný násobek
-- nejmenší číslo, které je násobkem obou
+- nejmenší číslo, které je násobkem obou čísel
+- LCM = Least Common Multiple
+
+#### Příklad
+
+Násobky čísla $4$:
+
+$$
+\{4, 8, 12, 16, 20, 24, \dots\}
+$$
+
+Násobky čísla $6$:
+
+$$
+\{6, 12, 18, 24, 30, \dots\}
+$$
+
+Společné násobky:
+
+$$
+\{12, 24, \dots\}
+$$
+
+Nejmenší z nich:
+
+$$
+12
+$$
+
+tedy:
+
+$$
+\operatorname{lcm}(4,6)=12
+$$
