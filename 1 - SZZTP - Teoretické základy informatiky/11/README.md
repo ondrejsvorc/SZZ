@@ -60,12 +60,12 @@ int Sum(int n)
 }
 ```
 
-Rekurentní vztah:
+#### Rekurentní vztah:
 $$
 S(n) = S(n-1) + n,\quad S(0) = 0
 $$
 
-Rekurentní vztah pro součet do 4:
+#### Rekurentní vztah pro součet do 4:
 $$
 \begin{aligned}
 S(4) &= S(3) + 4 \\
@@ -76,7 +76,7 @@ S(4) &= S(3) + 4 \\
 \end{aligned}
 $$
 
-Jiný zápis rekurentního vztahu:
+#### Jiný zápis rekurentního vztahu:
 $$
 S(n) = 1 + 2 + 3 + \cdots + n
 $$
@@ -129,17 +129,17 @@ $$
 ### Dolní celá část
 - zaokrouhlení dolů
 
-Značení:
+#### Značení
 $$
 \lfloor x \rfloor
 $$
 
-Příklad:
+#### Příklad
 $$
 \lfloor 3.7 \rfloor = 3
 $$
 
-Formálně:
+#### Definice
 $$
 \lfloor x \rfloor = \max \{ m \in \mathbb{Z} \mid m \le x \}
 $$
@@ -147,17 +147,17 @@ $$
 ### Horní celá část
 - zaokrouhlení nahoru
 
-Značení:
+#### Značení
 $$
 \lceil x \rceil
 $$
 
-Příklad:
+#### Příklad
 $$
 \lceil 3.2 \rceil = 4
 $$
 
-Formálně:
+#### Definice
 $$
 \lceil x \rceil = \min \{ m \in \mathbb{Z} \mid m \ge x \}
 $$
@@ -169,9 +169,21 @@ $$
 \log_b a = c \Leftrightarrow b^c = a
 $$
 
-Základní pravidla:
+#### Základní pravidla
 - $\log(ab) = \log a + \log b$
+- $\log\!\left(\frac{a}{b}\right) = \log a - \log b$
 - $\log(a^k) = k \log a$
+- $\log(\sqrt[k]{a}) = \frac{1}{k}\log a$
+- $\log_b a = \frac{\log a}{\log b}$
+- $\log_b a = \frac{\ln a}{\ln b}$
+- $\log_b 1 = 0$
+- $\log_b b = 1$
+- $\log_b (b^k) = k$
+- $b^{\log_b a} = a$
+
+#### Monotonicita
+- pro $b \in (1, \infty)$ je $\log_b x$ rostoucí  
+- pro $b \in (0, 1)$ je $\log_b x$ klesající
 
 ### Asymptotická notace
 
