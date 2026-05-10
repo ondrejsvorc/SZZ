@@ -169,9 +169,63 @@ $$
 \lim_{x \to a} f(x)=f(a)
 $$
 
-### Polynomy
+### Polynom
+- synonymum: mnohočlen
+- funkce tvořená součtem členů ve tvaru konstanty násobené nezápornou celočíselnou mocninou proměnné
 
-### Vlastnosti polynomů
+Polynom je výraz ve tvaru:
+
+$$
+p(x)=\sum_{i=0}^{n} a_i x^i = a_0 + a_1x + a_2x^2 + \dots + a_nx^n
+$$
+
+kde:
+
+- $a_0, a_1, \dots, a_n$ jsou reálná čísla (tzv. koeficienty)
+- $n$ je nezáporné celé číslo
+- proměnná $x$ vystupuje pouze v celočíselných nezáporných mocninách
+
+### Stupeň polynomu
+- nejvyšší exponent proměnné $x$ s nenulovým koeficientem
+
+$$
+\deg(p)
+$$
+
+#### Příklad
+
+$$
+p(x)=x^2-4
+$$
+
+$$
+\deg(p)=2
+$$
+
+Polynom $p(x)$ je polynom druhého stupně.
+
+#### Terminologie
+- polynom 1. stupně = lineární polynom
+- polynom 2. stupně = kvadratický polynom
+- polynom 3. stupně = kubický polynom
+- polynom 4. stupně = kvartický polynom
+- ...
+
+### Vlastnosti polynomu
+- polynom stupně $n$ může mít maximálně $n$ kořenů
+- polynom lze sčítat, odčítat, násobit i derivovat a výsledkem je opět polynom
+- člen s nejvyšší mocninou nejvíce ovlivňuje chování grafu
+
+### Rovnost polynomů
+Polynomy $p(x)$ a $q(x)$ jsou si rovny právě tehdy, když mají stejné koeficienty u členů se stejnými exponenty proměnné $x$.
+
+### Operace s polynomy
+- polynomy můžeme sčítat, odčítat a násobit
+- při sčítání a odčítání se sčítají koeficienty členů se stejnými exponenty
+- při násobení se exponenty sčítají
+- derivací polynomu vznikne opět polynom
+- součinem dvou polynomů vznikne opět polynom
+- součet dvou polynomů je opět polynom
 
 ### Hornerovo schéma
 
