@@ -56,7 +56,68 @@ $$
 f(x) \in \mathbb{R}
 $$
 
-### Limita funkce
+### Limita
+- číslo, ke kterému se funkce v nějakém bodě blíží
+- popisuje chování funkce v okolí daného bodu, nikoliv nutně přímo v tomto bodě
+
+$$
+\lim_{x \to a} f(x)=L
+$$
+
+To znamená, že pokud se:
+$$
+x \to a
+$$
+
+pak se odpovídající funkční hodnoty:
+$$
+f(x) \to L
+$$
+
+přičemž „$\to$“ v tomto kontextu čteme jako „se blíží k“.
+
+### Limita zleva
+
+$$
+\lim_{x \to a^-} f(x)
+$$
+
+- hodnota, ke které se funkce blíží při přibližování k bodu $a$ zleva
+
+### Limita zprava
+
+$$
+\lim_{x \to a^+} f(x)
+$$
+
+- hodnota, ke které se funkce blíží při přibližování k bodu $a$ zprava
+
+### Existence limity
+- limita existuje právě tehdy, když existuje limita zleva i limita zprava a vychází stejně
+
+$$
+\lim_{x \to a^-} f(x)=\lim_{x \to a^+} f(x)=L
+\Rightarrow
+\lim_{x \to a} f(x)=L
+$$
+
+Například funkce:
+
+$$
+f(x)=\frac{1}{x}
+$$
+
+nemá v bodě $x=0$ limitu, protože:
+
+$$
+\lim_{x \to 0^-} \frac{1}{x}=-\infty
+$$
+
+$$
+\lim_{x \to 0^+} \frac{1}{x}=+\infty
+$$
+
+limita zleva a limita zprava nejsou stejné.
 
 ### Derivace
 
