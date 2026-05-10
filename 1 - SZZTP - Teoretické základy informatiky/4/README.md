@@ -267,6 +267,41 @@ Polynomy $p(x)$ a $q(x)$ jsou si rovny právě tehdy, když mají stejné koefic
 - součet dvou polynomů je opět polynom
 
 ### Hornerovo schéma
+- efektivní způsob výpočtu hodnoty polynomu bez opakovaného počítání mocnin
+- používá pouze násobení a sčítání
+- vhodné pro numerické výpočty i implementaci v programu
+
+![](Obrázky/Hornerovo_schéma.png)
+
+Bez Hornerova schématu bychom hodnotu polynomu počítali přímým dosazením:
+
+$$
+P(x)=2x^3-3x^2+4x-5
+$$
+
+pro $x=2$:
+
+$$
+P(2)=2 \cdot 2^3 - 3 \cdot 2^2 + 4 \cdot 2 - 5
+$$
+
+$$
+=2 \cdot 8 - 3 \cdot 4 + 8 - 5
+$$
+
+$$
+=16 -12 +8 -5
+$$
+
+$$
+=7
+$$
+
+Musíme zde opakovaně počítat mocniny:
+- $2^2$
+- $2^3$
+
+U polynomů vysokého stupně by byl tento výpočet pomalý.
 
 ### Numerické řešení nelineárních rovnic
 
