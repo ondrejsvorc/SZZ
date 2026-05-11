@@ -360,7 +360,7 @@
     - Platinum
 - vyšší účinnost, méně ztrát, méně tepla, nižší spotřeba
 
-#### Důležité kontektory
+#### Důležité konektory
 - 24-pin ATX (základní deska)
 - EPS 8-pin (CPU napájení)
 - PCIe power (GPU)
