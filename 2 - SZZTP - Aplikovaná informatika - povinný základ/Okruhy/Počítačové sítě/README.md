@@ -8,8 +8,75 @@
 6. schopnost návrhu počítačové sítě
 
 ### MAC
+- unikátní fyzická adresa síťového rozhraní používaná pro identifikaci zařízení v lokální síti na 2. vrstvě OSI modelu
+- délka 48 bitů (6 bytů)
+- patří síťovému rozhraní, ne počítači jako celku
+- jeden počítač může mít více síťových rozhraní (=> více MAC adres)
+    - Ethernet - první MAC adresa
+    - Wi-Fi - druhá MAC adresa
+    - Bluetooth - třetí MAC adresa
+    - ...
+- každé síťové rozhraní má vlastní MAC adresu
+
+#### Příklad
+- 00:1A:2B:3C:4D:5E
+- každá dvojice (00, 1A, ...) představuje 1 byte (8 bitů)
+- celkem 6 dvojic hexadecimálních čísel
+- rozdělena na 2 části (24 bitů + 24 bitů)
+    - část 1.: výrobce (např. Cisco, Dell, ...) - https://www.wireshark.org/tools/oui-lookup.html
+    - část 2.: konkrétní identifikátor síťové rozhraní daného výrobce
 
 ### IP
+- veřejná
+- privátní
+- IPv4
+- IPv6
+
+### IPv4
+- Internet Protocol version 4
+- délka 32 bitů (4 oktety)
+- zapsaná v desítkové soustavě
+- problém: pouze $2^{32}$  = 4 294 967 296 (≈4,3 miliardy) možných adres
+    - proto vznikli NAT a IPv6
+
+#### Příklad
+- 192.168.1.10
+- každý oktet 0-255
+
+#### Privátní IPv4 rozsahy
+- nelze si zvolit úplně libovolný rozsah
+- lze zvolit pouze takové privátní rozsahy, které jsou definované RFC1918
+| Rozsah                        | CIDR |
+| ----------------------------- | ---- |
+| 10.0.0.0 – 10.255.255.255     | /8   |
+| 172.16.0.0 – 172.31.255.255   | /12  |
+| 192.168.0.0 – 192.168.255.255 | /16  |
+
+### IPv6
+- Internet Protocol version 6
+- délka 128 bitů
+
+### Veřejná IP adresa
+- globálně unikátní IP adresa routovatelná přes Internet
+- na Internetu nesmí existovat dvě stejné veřejné IP adresy
+- routery na Internetu musí vědět, kam provoz doručit
+
+### Privátní IP adresa
+- IP adresa určená pro komunikaci uvnitř lokálních sítí, která není routovatelná přes veřejný Internet
+- může se opakovat v různých nezávislých sítích
+- pro přístup do Internetu se typicky překládá pomocí NAT na veřejnou IP adresu
+
+### Router
+- musí mít alespoň dvě síťová rozhraní, protože propojuje minimálně dvě různé sítě
+- každé rozhraní je připojeno do jiné sítě, má vlastní IP adresu a vlastní MAC adresu
+- neposílá pakety uvnitř jedné sítě (to dělá switch)
+- principielně:
+    1. přijme paket na jednom rozhraní
+    2. odešle ho jiným rozhraním
+
+### Výchozí brána
+- privátní IP adresa routeru uvnitř lokální sítě
+- adresa routeru, kam zařízení posílají provoz mimo svou síť
 
 ### Port
 
