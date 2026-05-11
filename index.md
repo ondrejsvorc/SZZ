@@ -17,3 +17,4 @@ Automaticky generovaný seznam materiálů z repozitáře.
 - [1 - SZZTP - Teoretické základy informatiky - Otázka 10](1%20-%20SZZTP%20-%20Teoretické%20základy%20informatiky/10/)
 - [1 - SZZTP - Teoretické základy informatiky - Otázka 11](1%20-%20SZZTP%20-%20Teoretické%20základy%20informatiky/11/)
 - [1 - SZZTP - Teoretické základy informatiky - Otázka 12](1%20-%20SZZTP%20-%20Teoretické%20základy%20informatiky/12/)
+- [Počítačové sítě](2%20-%20SZZTP%20-%20Aplikovaná%20informatika%20-%20povinný%20základ/Okruhy/Počítačové%20sítě/)
