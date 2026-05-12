@@ -43,7 +43,7 @@ public sealed class Node(int data, Node? next = null)
 ### Binární strom
 - strom, ve kterém každý uzel obsahuje hodnotu a nejvýše dva odkazy, a to na levého a pravého potomka
 - z pohledu teorie grafů:
-  - orientovaný graf s jedním vrcholem, z něhož existuje cesta do všech vrcholů grafu
+  - orientovaný graf s jedním vrcholem, z něhož existuje cesta do všech ostatních vrcholů grafu
 
 #### Základní operace
 - vkládání
