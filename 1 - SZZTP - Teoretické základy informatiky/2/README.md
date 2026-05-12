@@ -8,6 +8,7 @@ Komplexní algoritmy nad seznamy (filtrování, vyhledávání, třídění/řaz
 - <https://youtu.be/RfXt_qHDEPw> (řadící algoritmy)
 - <https://youtu.be/LOcfJorH7xs> (Insertion Sort - česky)
 - <https://youtu.be/g-PGLbMth_g> (Selection Sort - anglicky)
+- <https://runestone.academy/ns/books/published/pythonds/SortSearch/TheMergeSort.html> (Merge Sort)
 
 ### Filtrování
 - proces extrakce prvků ze vstupní množiny na základě specifikovaného predikátu, přičemž výsledkem je podmnožina, jejíž kardinalita je menší nebo rovna kardinalitě množiny původní
