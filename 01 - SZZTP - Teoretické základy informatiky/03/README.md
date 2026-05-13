@@ -7,6 +7,7 @@ Spojové datové struktury (jednosměrný spojový seznam, binární strom) a z�
 - <https://ki.ujep.cz/opory/Aplikovana_Informatika/NMgr/Pokrocile_datove_struktury_a_algoritmy.html#Spojov%C3%BD-seznam>
 - <https://cw.fel.cvut.cz/b182/_media/courses/b6b36dsa/dsa-3-slozitostalgoritmu.pdf>
 - <https://www.youtube.com/watch?v=p85ohoV6Z4E> (Binární strom - anglicky)
+- <https://youtu.be/76dhtgZt38A?si=ZHMRrxems4Jc4nt5> (Binární strom - anglicky, přednáška z MIT)
 
 ### Spojový seznam
 - lineární datová struktura tvořená uzly
