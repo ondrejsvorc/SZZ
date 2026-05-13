@@ -21,5 +21,8 @@ alwaysApply: true
 - Ber jako vzor zejména otázky, které jsou **nejlépe vyplněné** (typicky např. **`1/`**, **`2/`**, **`8/`** — ověř aktuální stav ve složkách). Nový text **nepiš záměrně v odlišném stylu** než okolní vypracované části, pokud uživatel nechce záměrně změnu formátu.
 
 ## Ukázkový kód (C#)
-- Dema jsou malé konzolové projekty (např. pod `2/BinarySearch/`): **top-level statements**, `TargetFramework` jako v existujících `.csproj`, pojmenované argumenty tam, kde to zlepší čitelnost u zkoušky.
+- Dema jsou **jeden samostatný `.cs` soubor** přímo v kořeni složky otázky (např. `2/binarySearch.cs`), **bez** `.slnx`, `.csproj`, podsložky na každé demo, `Program.cs` ve vnořené složce ani `bin/` / `obj/`.
+- Používej **top-level statements** a pojmenované argumenty tam, kde to zlepší čitelnost u zkoušky.
+- Spuštění: `dotnet run <názevSouboru>.cs` v dané složce otázky (.NET 10+).
+- Doplňky ke stejnému demu (např. HTML vizualizace) patří také do kořene téže otázky, ne do nových podsložek.
 - Neměň styl jen „pro čistotu“; drž se vzoru okolních souborů v dané složce.

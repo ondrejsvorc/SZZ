@@ -1,4 +1,4 @@
-﻿static int BinarySearch(int[] sortedArray, int target)
+static int BinarySearch(int[] sortedArray, int target)
 {
     int leftIndex = 0;
     int rightIndex = sortedArray.Length - 1;

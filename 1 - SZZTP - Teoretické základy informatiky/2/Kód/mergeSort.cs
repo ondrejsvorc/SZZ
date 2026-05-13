@@ -66,5 +66,5 @@ static void Merge(int[] left, int[] right, int[] target)
 }
 
 int[] values = [3, 1, 4, 1, 5, 9, 2, 6];
-int[] sorted = MergeSort(array: values);
-Console.WriteLine(string.Join(", ", sorted));
+MergeSort(array: values);
+Console.WriteLine(string.Join(", ", values));
