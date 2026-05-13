@@ -3,7 +3,7 @@
 Spojové datové struktury (jednosměrný spojový seznam, binární strom) a základní operace nad nimi (vkládání, výmaz, vyhledávání) včetně časové složitosti
 
 ### Užitečné odkazy
-- <https://szz.ondrejsvorc.cz/1%20-%20SZZTP%20-%20Teoretick%C3%A9%20z%C3%A1klady%20informatiky/3/>
+- <https://szz.ondrejsvorc.cz/01%20-%20SZZTP%20-%20Teoretick%C3%A9%20z%C3%A1klady%20informatiky/03/>
 - <https://ki.ujep.cz/opory/Aplikovana_Informatika/NMgr/Pokrocile_datove_struktury_a_algoritmy.html#Spojov%C3%BD-seznam>
 - <https://cw.fel.cvut.cz/b182/_media/courses/b6b36dsa/dsa-3-slozitostalgoritmu.pdf>
 - <https://www.youtube.com/watch?v=p85ohoV6Z4E> (Binární strom - anglicky)

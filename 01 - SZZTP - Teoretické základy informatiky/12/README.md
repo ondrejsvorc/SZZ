@@ -3,7 +3,7 @@
 Grafy (definice orientovaného a neorientovaného grafu, jejich vlastnosti a reprezentace, význačné typy grafů), stromy (vymezení a základní charakteristiky, binární stromy a jejich reprezentace), eulerovské a hamiltonovské grafy (eulerovský tah, hamiltonovská kružnice a cesta), prohledávání do hloubky a do šířky
 
 ### Užitečné odkazy
-- <https://szz.ondrejsvorc.cz/1%20-%20SZZTP%20-%20Teoretick%C3%A9%20z%C3%A1klady%20informatiky/12/>
+- <https://szz.ondrejsvorc.cz/01%20-%20SZZTP%20-%20Teoretick%C3%A9%20z%C3%A1klady%20informatiky/12/>
 - <https://cw.fel.cvut.cz/b212/_media/courses/b0b01lgr/lectures/grafy-orientovane.pdf>
 - <https://www.youtube.com/watch?v=t5XZ1gc70dw> (Walks, Trails and Paths)
 

@@ -17,7 +17,7 @@ def is_hidden(path: str) -> bool:
 
 def format_url_path(root: str, filename: str) -> str:
     relative_path = os.path.relpath(root, ".")
-    url_path = relative_path.replace(" ", "%20")
+    url_path = relative_path.replace(os.sep, "/").replace(" ", "%20")
     return f"{url_path}/"
 
 def get_chapter_display_name(root: str) -> str:
@@ -27,7 +27,8 @@ def get_chapter_display_name(root: str) -> str:
         return current_folder
 
     parent_folder = os.path.basename(os.path.dirname(root))
-    return f"{parent_folder} - {QUESTION_LABEL} {current_folder}"
+    question_number = int(current_folder)
+    return f"{parent_folder} - {QUESTION_LABEL} {question_number}"
 
 def create_markdown_line(name: str, url: str) -> str:
     return f"- [{name}]({url})"
