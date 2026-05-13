@@ -5,13 +5,15 @@ class Node:
         self.value = value
         self.children = children or []
 
-def bfs(root: Node, index: int) -> bool:
+def bfs(root: Node, target: int) -> bool:
     queue = deque([root])
     while queue:
         node = queue.popleft()
         if node.value == target:
             return True
-        queue.extend(node.children)
+        else:
+            for child in node.children:
+                queue.append(child)
     return False
 
 tree = Node(50, [Node(25, [Node(10), Node(30)]), Node(75, [Node(60), Node(90)])])

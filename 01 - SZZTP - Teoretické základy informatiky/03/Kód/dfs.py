@@ -11,7 +11,9 @@ def dfs(root: Node, target: int) -> bool:
         node = stack.pop()
         if node.value == target:
             return True
-        stack.extend(reversed(node.children))
+        else:
+            for child in reversed(node.children):
+                stack.append(child)
     return False
 
 tree = Node(50, [Node(25, [Node(10), Node(30)]), Node(75, [Node(60), Node(90)])])
