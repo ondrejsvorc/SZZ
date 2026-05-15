@@ -458,3 +458,4 @@ print(root)
 ```
 
 ### Newtonova metoda
+- synonymum: Metoda tečen

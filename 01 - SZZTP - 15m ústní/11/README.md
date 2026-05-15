@@ -193,12 +193,260 @@ $$
 - pro $b \in (0, 1)$ je $\log_b x$ klesající
 
 ### Asymptotická notace
+- formální matematický nástroj pro porovnávání rychlosti růstu funkcí v limitě pro $n \to \infty$
+- v informatice se používá se k vyjadřování asymptotické složitosti algoritmů
 
-### O-notace
+### Asymptotická složitost
+- charakteristika algoritmu popisující, jak roste jeho časová nebo paměťová náročnost v závislosti na velikosti vstupu při $n \to \infty$.
+- vyjadřuje se asymptotickou notací
+- druhy:
+    - časová
+    - paměťová
 
-### Theta-notace
+### Asymptotický růst
+- způsob, jakým se mění hodnota funkce při $n \to \infty$
+- popisuje rychlost růstu funkce pro dostatečně velké hodnoty vstupu
 
-### Omega-notace
+### Časová asymptotická složitost
+- asymptotický růst počtu operací algoritmu
+
+### Paměťová asymptotická složitost
+- asymptotický růst spotřeby paměti algoritmu
+
+### Big-O notace ($O$)
+- též Landauova notace
+- asymptotická notace vyjadřující horní mez růstu funkce
+- používá se pro odhad složitosti algoritmu v nejhorších případech (worst case scenarios)
+
+Formálně:
+
+$$
+f(n) \in O(g(n))
+$$
+
+pokud existují konstanty:
+
+$$
+c > 0,\ n_0
+$$
+
+takové, že:
+
+$$
+f(n) \le c \cdot g(n)
+\quad \text{pro všechna } n \ge n_0
+$$
+
+kde:
+
+- $f(n)$ = skutečná funkce, kterou analyzujeme
+- $g(n)$ = referenční růstová funkce, se kterou $f(n)$ porovnáváme
+- $c$ = konstantní násobek určující tolerovanou horní mez
+- $n_0$ = hranice, od které porovnání začíná platit
+
+Od $n_0$ je $f(n)$ vždy **pod nebo na** křivce $c \cdot g(n)$.
+
+#### Příklad
+
+$$
+f(n) \in O(n^2)
+$$
+
+znamená:
+- funkce má asymptoticky nejvýše kvadratický růst.
+- funkce je asymptoticky omezena shora funkcí $n^2$
+- pro dostatečně velká $n$ je růst funkce nejvýše kvadratický.
+
+### Omega notace ($\Omega$)
+- asymptotická notace vyjadřující dolní asymptotickou mez
+- používá se pro odhad složitosti algoritmu v nejlepších případech (best case scenarios)
+
+Formálně:
+
+$$
+f(n) \in \Omega(g(n))
+$$
+
+pokud existují konstanty:
+
+$$
+c > 0,\ n_0
+$$
+
+takové, že:
+
+$$
+f(n) \ge c \cdot g(n)
+\quad \text{pro všechna } n \ge n_0
+$$
+
+kde:
+
+- $f(n)$ = skutečná funkce, kterou analyzujeme
+- $g(n)$ = referenční růstová funkce, se kterou $f(n)$ porovnáváme
+- $c$ = konstantní násobek určující tolerovanou dolní mez
+- $n_0$ = hranice, od které porovnání začíná platit
+
+Od $n_0$ je $f(n)$ vždy **nad nebo na** křivce $c \cdot g(n)$.
+
+### Theta notace ($\Theta$)
+- asymptotická notace vyjadřující těsnou asymptotickou mez
+- těsná asymptotická mez = současně horní i dolní mez
+- používá se tehdy, kdy je Big-O i Omega notace stejná
+
+$$
+f(n) \in \Theta(g(n))
+\;\Rightarrow\;
+f(n) \in O(g(n))
+\land
+f(n) \in \Omega(g(n))
+$$
+
+Formálně:
+
+$$
+f(n) \in \Theta(g(n))
+$$
+
+pokud existují konstanty:
+
+$$
+c_1 > 0,\ c_2 > 0,\ n_0
+$$
+
+takové, že:
+
+$$
+c_1 \cdot g(n)
+\le
+f(n)
+\le
+c_2 \cdot g(n)
+\quad \text{pro všechna } n \ge n_0
+$$
+
+kde:
+
+- $f(n)$ = skutečná funkce, kterou analyzujeme
+- $g(n)$ = referenční růstová funkce, se kterou $f(n)$ porovnáváme
+- $c_1$ = konstantní násobek určující dolní asymptotickou mez
+- $c_2$ = konstantní násobek určující horní asymptotickou mez
+- $n_0$ = hranice, od které porovnání začíná platit
+
+Od $n_0$ je $f(n)$ vždy **mezi** křivkami $c_1 \cdot g(n) \quad$ a $\quad c_2 \cdot g(n)$
+
+### Dominantní člen
+- člen funkce s nejrychlejším růstem
+- určuje asymptotickou složitost
+
+Příklad:
+
+$$
+3n^2 + 5n + 1
+$$
+
+dominantní člen:
+
+$$
+n^2
+$$
+
+proto:
+
+$$
+3n^2 + 5n + 1 \in \Theta(n^2)
+$$
+
+### Příklad, kde jsou asymptotické notace stejné
+
+```python
+def print_pairs(n: int) -> None:
+    for i in range(n): # n iterací
+        for j in range(n): # n iterací
+            print(i, j)
+```
+Vnější cyklus běží $n$-krát a každou iteraci. vnějšího cyklu běží vnitřní cyklus také $n$-krát.
+
+Počet iterací:
+$$n ⋅ n = n^2$$
+
+Notace:
+- $f(n) \in O(n^2)$ = algoritmus neroste rychleji než kvadraticky
+- $f(n) \in \Theta(n^2)$ = algoritmus roste přesně kvadraticky
+- $f(n) \in \Omega(n^2)$ = algoritmus roste alespoň kvadraticky
+
+### Příklad, kde jsou asymptotické notace odlišné
+
+```python
+def contains_zero(numbers: list[int]) -> bool:
+    for number in numbers:
+        if number == 0:
+            return True
+
+    return False
+```
+
+#### Worst case scenario
+- žádný z prvků není nula (např. [1, 2, 3, 4])
+- algoritmus musí projít celé pole
+- počet operací roste lineárně
+
+Ve worst case scenario proběhne cyklus $n$-krát a podmínka se také vyhodnotí $n$-krát. `return True` v tomto scénáři neproběhne ani jednou, protože žádný prvek není nula. `return False` proběhne jednou po dokončení cyklu. Funkci počtu operací tedy můžeme zapsat jako:
+
+$$
+f(n) = n + n + 1
+$$
+
+Po algebraickém zjednodušení:
+
+$$
+f(n) = 2n + 1
+$$
+
+V asymptotické analýze ignorujeme konstantní násobky i konstantní členy, protože pro velká $n$ nemají významný vliv na růst funkce. Dominantní růst tedy určuje:
+
+$$
+f(n) = n
+$$
+
+proto:
+
+$$
+\Theta(n)
+$$
+
+Protože v nejhorším případě algoritmus roste asymptoticky nejvýše lineárně a zároveň alespoň lineárně. Horní i dolní asymptotické meze jsou tedy stejné (proto je nejpřesnější použít Theta notaci).
+
+#### Best case scenario
+- první prvek je nula (např. [0, 1, 2, 3])
+- algoritmus skončí hned
+- počet operací je konstantní
+
+V best case scenario proběhne cyklus právě jednou a podmínka se také vyhodnotí právě jednou. `return True` proběhne okamžitě při první iteraci a `return False` se již nikdy neprovede. Funkci počtu operací tedy můžeme zapsat jako:
+
+$$
+f(n) = 1 + 1 + 1
+$$
+
+Po algebraickém zjednodušení:
+
+$$
+f(n) = 3
+$$
+
+V asymptotické analýze ignorujeme konstantní násobky i konstantní členy, protože pro velká $n$ nemají významný vliv na růst funkce. Dominantní růst tedy určuje:
+
+$$
+f(n) = 1
+$$
+
+proto:
+
+$$
+\Theta(1)
+$$
+
+Protože v nejlepším případě algoritmus roste asymptoticky nejvýše konstantně a zároveň alespoň konstantně. Horní i dolní asymptotické meze jsou tedy stejné (proto je nejpřesnější použít Theta notaci).
 
 ### Euklidův algoritmus
 - algoritmus pro výpočet největšího společného dělitele ($gcd$)
