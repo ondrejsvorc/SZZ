@@ -301,10 +301,160 @@ Musíme zde opakovaně počítat mocniny:
 - $2^2$
 - $2^3$
 
-U polynomů vysokého stupně by byl tento výpočet pomalý.
+U polynomů vysokého stupně by byl tento výpočet pomalý a numericky nevhodný, protože je nutné opakovaně počítat vysoké mocniny typu $x^n$, které mohou být výpočetně drahé, způsobovat ztrátu přesnosti a u velmi velkých hodnot vést k přetečení (overflow) nebo k práci s extrémně velkými čísly zabírajícími více paměti.
+
+```python
+def horner(coefficients: list[float], x: float) -> float:
+    result = coefficients[0]
+
+    for coefficient in coefficients[1:]:
+        result = result * x + coefficient
+
+    return result
+
+
+# P(x) = 2x^3 - 3x^2 + 4x - 5, x = 2
+result = horner(coefficients=[2, -3, 4, -5], x=2)
+print(result)
+```
 
 ### Numerické řešení nelineárních rovnic
 
+Cílem je najít kořen rovnice ve tvaru:
+
+$$
+f(x)=0
+$$
+
+tedy hodnotu $x$, pro kterou funkce vyjde nula.
+
+Například:
+
+$$
+x^2-2=0
+$$
+
+řešení:
+
+$$
+x=\sqrt{2}\approx1.41421356
+$$
+
+U složitých funkcí neumíme kořen spočítat přesně analyticky. Použijí se numerické metody.
+
+#### Nelineární rovnice
+- rovnice, ve které neznámá nevystupuje pouze v první mocnině a jejíž graf není přímka
+
 ### Metoda půlení intervalu
+- synonymum: metoda bisekce
+
+#### Princip
+
+Máme interval:
+
+$$
+[a,b]
+$$
+
+ve kterém funkce změní znaménko:
+
+$$
+f(a)\cdot f(b)<0
+$$
+
+To znamená:
+- na jednom konci je funkce **kladná**
+- na druhém **záporná**
+
+Takže mezi nimi musí existovat kořen.
+
+#### Postup
+
+1. Spočítáme střed:
+
+$$
+c=\frac{a+b}{2}
+$$
+
+2. Zjistíme znaménko:
+   - pokud je kořen v $[a,c]$, zahodíme pravou část
+   - jinak zahodíme levou
+
+3. Interval stále půlíme.
+
+#### Příklad
+
+Najdi kořen:
+
+$$
+f(x)=x^2-2
+$$
+
+Interval:
+
+$$
+[1,2]
+$$
+
+protože:
+
+$$
+f(1)=-1
+$$
+
+$$
+f(2)=2
+$$
+
+změna znaménka existuje.
+
+#### Iterace
+
+Střed:
+
+$$
+c=\frac{1+2}{2}=1.5
+$$
+
+Výpočet:
+
+$$
+f(1.5)=0.25
+$$
+
+Kořen je tedy vlevo:
+
+$$
+[1,1.5]
+$$
+
+Další krok:
+
+$$
+c=\frac{1+1.5}{2}=1.25
+$$
+
+atd.
+
+```python
+def bisection(f, a: float, b: float, tolerance: float = 1e-10) -> float:
+    while abs(b - a) > tolerance:
+        c: float = (a + b) / 2
+
+        if f(a) * f(b) < 0:
+            a = c
+        else:
+            b = c
+
+    return (a + b) / 2
+
+
+def f(x: float) -> float:
+    return x**2 - 2
+
+
+root = bisection(f=f, a=1.0, b=2.0)
+print(root)
+```
 
 ### Newtonova metoda
