@@ -6,6 +6,9 @@ Rekurence (vymezení, základní metody řešení [iterační a substituční me
 - <https://szz.ondrejsvorc.cz/01%20-%20SZZTP%20-%20Teoretick%C3%A9%20z%C3%A1klady%20informatiky/11/>
 - <https://kam.fit.cvut.cz/deploy/bi-pkm/mirror/textbook/sec-dolni-a-horni-cela-cast.html>
 - <https://www.cs.vsb.cz/kot/download/uti2006/uti-pr-09.pdf>
+- <https://www.bigocheatsheet.com/>
+- <https://www.youtube.com/watch?v=__vX2sjlpXU> (Big-O notation in 5 minutes)
+- <https://www.youtube.com/watch?v=u8AprTUkJjM> (Analyzing algorithms in 7 minutes — Asymptotic Notation)
 
 ### Rekurence
 - vztah, který definuje hodnotu funkce (typicky posloupnosti) pomocí jejích předchozích hodnot
@@ -207,6 +210,22 @@ $$
 - způsob, jakým se mění hodnota funkce při $n \to \infty$
 - popisuje rychlost růstu funkce pro dostatečně velké hodnoty vstupu
 
+$$
+1
+<
+\log n
+<
+n
+<
+n \log n
+<
+n^2
+<
+2^n
+<
+n!
+$$
+
 ### Časová asymptotická složitost
 - asymptotický růst počtu operací algoritmu
 
@@ -217,6 +236,8 @@ $$
 - též Landauova notace
 - asymptotická notace vyjadřující horní mez růstu funkce
 - používá se pro odhad složitosti algoritmu v nejhorších případech (worst case scenarios)
+
+![](Obrázky/Big-O.png)
 
 Formálně:
 

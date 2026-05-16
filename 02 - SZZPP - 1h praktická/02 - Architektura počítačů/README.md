@@ -1,10 +1,25 @@
-## Architektura počítačů – 1. okruh
+## Architektura počítačů
 
-1. Základní principy fungování počítače a jeho komponent (procesor, základní deska, paměť RAM, grafická karta, úložiště, napájecí zdroj atd.).
-1. Kompatibilita komponent a jejich výběr dle zadaného rozpočtu a požadavků.
-1. Principy instalace operačního systému a ovladačů.
-1. Nastavení BIOSu a optimalizace výkonu počítače.
-1. Základní znalosti práce s počítačem a periferními zařízeními.
+### Okruh I (výběr komponent počítače)
+- základní principy fungování počítače a jeho komponent (procesor, základní deska, paměť RAM, grafická karta, úložiště, napájecí zdroj atd.)
+- kompatibilita komponent a jejich výběr dle zadaného rozpočtu a požadavků
+- principy instalace operačního systému a ovladačů
+- nastavení BIOSu a optimalizace výkonu počítače
+- základní znalosti práce s počítačem a periferními zařízeními
+
+### Okruh II (diagnostika a řešení problémů)
+- základní principy fungování počítače a jeho komponent (procesor, základní deska, paměť RAM, grafická karta, úložiště, napájecí zdroj atd.)
+- běžné problémy s hardwarem a jejich příčiny
+- diagnostické nástroje a jejich použití
+- postupy řešení běžných problémů s hardwarem
+- upgrade komponent hardwaru
+- kompatibilita komponent
+- identifikace a diagnostika závad hardwaru
+- použití diagnostických nástrojů
+- řešení běžných problémů s hardwarem
+- provádění upgradu komponent hardwaru
+
+## Okruh I
 
 ### Užitečné odkazy
 - https://www.itnetwork.cz/hardware-pc/stavba-pc
