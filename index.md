@@ -23,7 +23,7 @@ Automaticky generovaný seznam materiálů z repozitáře.
 ## 02 - SZZPP - 1h praktická
 
 - [01 – Algoritmizace a programování I a II](02%20-%20SZZPP%20-%201h%20praktick%C3%A1/01%20-%20Algoritmizace%20a%20programov%C3%A1n%C3%AD%20I%20a%20II/)
-- [02 – Architektura počítačů – 1. okruh](02%20-%20SZZPP%20-%201h%20praktick%C3%A1/02%20-%20Architektura%20po%C4%8D%C3%ADta%C4%8D%C5%AF/)
+- [02 – Architektura počítačů](02%20-%20SZZPP%20-%201h%20praktick%C3%A1/02%20-%20Architektura%20po%C4%8D%C3%ADta%C4%8D%C5%AF/)
 - [03 – Základy elektroniky](02%20-%20SZZPP%20-%201h%20praktick%C3%A1/03%20-%20Z%C3%A1klady%20elektroniky/)
 - [05 – Matematický software](02%20-%20SZZPP%20-%201h%20praktick%C3%A1/05%20-%20Matematick%C3%BD%20software/)
 - [06 – Operační systémy](02%20-%20SZZPP%20-%201h%20praktick%C3%A1/06%20-%20Opera%C4%8Dn%C3%AD%20syst%C3%A9my/)
