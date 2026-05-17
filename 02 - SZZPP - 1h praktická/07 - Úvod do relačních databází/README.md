@@ -6,3 +6,17 @@
 - dotazy: příkaz SELECT, vnitřní a vnější spojení (FROM [INNER/LEFT/RIGHT] JOIN), selekce (WHERE), projekce (SELECT)
 - řazení (ORDER BY)
 - seskupování (GROUP BY)
+
+### Užitečné odkazy
+- <https://physics.ujep.cz/~jskvor/SZZ/BcAPI/SZZPP/Tahaky/URDB-SQL.pdf> (Povolený tahák)
+
+### 1:1
+### 1:N
+### M:N
+
+### 1 NF
+### 2 NF
+### 3 NF
+
+### Vraní nohy
+- anglicky Crow's Foot notation

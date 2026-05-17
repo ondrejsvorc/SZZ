@@ -7,6 +7,7 @@
 
 ### Užitečné odkazy
 - <https://github.com/ondrejsvorc/UJEP/tree/main/1.%20year/OPS> (vypracované BASH skripty)
+- <https://www.onworks.net/playonline/index.php> (online emulátor Ubuntu)
 
 ### man
 - `man` (manual)
@@ -30,6 +31,7 @@ man ls
 
 ### Rychlá nápověda
 - mnoho příkazů podporuje parametr `--help`
+- další nápověda `help if`, `help for`, ...
 - alternativa k `man`
 
 ```bash
