@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Pravdivostní tabulka</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 24px;
+        }
+
+        input {
+            width: 100px;
+            margin-right: 12px;
+        }
+
+        button {
+            padding: 4px 12px;
+        }
+
+        .info {
+            margin-top: 20px;
+        }
+
+        .error {
+            margin-top: 20px;
+            color: red;
+            font-weight: bold;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 24px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 4px 10px;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        .highlight {
+            background-color: #dbeafe;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Generování pravdivostní tabulky</h2>
+
+    <div>
+        <label>
+            Počet vstupních proměnných (n):
+            <input
+                id="inputN"
+                type="number"
+                min="1"
+                max="10"
+                value="3">
+        </label>
+
+        <label>
+            Pořadí proměnné zleva (k):
+            <input
+                id="inputK"
+                type="number"
+                min="1"
+                placeholder="volitelné">
+        </label>
+
+        <button onclick="generate()">Generovat</button>
+    </div>
+
+    <div class="info" id="info"></div>
+
+    <div class="error" id="error"></div>
+
+    <div id="tableContainer"></div>
+
+    <script>
+        const tableCache = new Map();
+
+        precomputeTables();
+
+        function precomputeTables() {
+            for (let n = 1; n <= 10; n++) {
+                const table =
+                    buildTableData(n);
+
+                tableCache.set(n, table);
+            }
+        }
+
+        function buildTableData(n) {
+            const totalRows =
+                1 << n;
+
+            const rows =
+                new Array(totalRows);
+
+            for (let rowIndex = 0; rowIndex < totalRows; rowIndex++) {
+                const row =
+                    new Array(n);
+
+                for (let variableIndex = 0; variableIndex < n; variableIndex++) {
+                    const shift =
+                        n - variableIndex - 1;
+
+                    row[variableIndex] =
+                        (rowIndex >> shift) & 1;
+                }
+
+                rows[rowIndex] = row;
+            }
+
+            return rows;
+        }
+
+        function generate() {
+            const infoElement =
+                document.getElementById("info");
+
+            const errorElement =
+                document.getElementById("error");
+
+            const tableContainerElement =
+                document.getElementById("tableContainer");
+
+            infoElement.innerHTML = "";
+            errorElement.innerHTML = "";
+            tableContainerElement.innerHTML = "";
+
+            const n =
+                Number(document.getElementById("inputN").value);
+
+            const inputKValue =
+                document.getElementById("inputK").value.trim();
+
+            const hasSelectedK =
+                inputKValue !== "";
+
+            const k =
+                hasSelectedK
+                    ? Number(inputKValue)
+                    : null;
+
+            if (
+                !Number.isInteger(n) ||
+                n < 1 ||
+                n > 10
+            ) {
+                errorElement.textContent =
+                    "Počet vstupních proměnných musí být v rozsahu 1 až 10.";
+
+                return;
+            }
+
+            if (
+                hasSelectedK &&
+                (
+                    !Number.isInteger(k) ||
+                    k < 1 ||
+                    k > n
+                )
+            ) {
+                errorElement.textContent =
+                    "Pořadí proměnné zleva musí být v rozsahu 1 až n.";
+
+                return;
+            }
+
+            const rows =
+                tableCache.get(n);
+
+            const totalRows =
+                rows.length;
+
+            if (hasSelectedK) {
+                const blockSize =
+                    2 ** (n - k);
+
+                infoElement.innerHTML = `
+                    <div>
+                        <strong>Výpočet:</strong>
+                        2<sup>${n} - ${k}</sup> = ${blockSize}
+                    </div>
+
+                    <div>
+                        Vybraná proměnná se mění po
+                        <strong>${blockSize}</strong> řádcích.
+                    </div>
+
+                    <div>
+                        Celkový počet řádků:
+                        <strong>${totalRows}</strong>
+                    </div>
+                `;
+            }
+            else {
+                infoElement.innerHTML = `
+                    <div>
+                        Celkový počet řádků:
+                        <strong>${totalRows}</strong>
+                    </div>
+                `;
+            }
+
+            let html = "<table>";
+
+            html += "<tr>";
+            html += "<th>i</th>";
+
+            for (let variableIndex = 1; variableIndex <= n; variableIndex++) {
+                const shouldHighlight =
+                    hasSelectedK &&
+                    variableIndex === k;
+
+                if (shouldHighlight) {
+                    html += `<th class="highlight">x${variableIndex}</th>`;
+                }
+                else {
+                    html += `<th>x${variableIndex}</th>`;
+                }
+            }
+
+            html += "</tr>";
+
+            for (let rowIndex = 0; rowIndex < totalRows; rowIndex++) {
+                html += "<tr>";
+
+                html += `<td>${rowIndex}</td>`;
+
+                const row =
+                    rows[rowIndex];
+
+                for (let variableIndex = 0; variableIndex < n; variableIndex++) {
+                    const shouldHighlight =
+                        hasSelectedK &&
+                        variableIndex + 1 === k;
+
+                    if (shouldHighlight) {
+                        html += `
+                            <td class="highlight">
+                                ${row[variableIndex]}
+                            </td>
+                        `;
+                    }
+                    else {
+                        html += `
+                            <td>
+                                ${row[variableIndex]}
+                            </td>
+                        `;
+                    }
+                }
+
+                html += "</tr>";
+            }
+
+            html += "</table>";
+
+            tableContainerElement.innerHTML = html;
+        }
+
+        generate();
+    </script>
+
+</body>
+</html>
