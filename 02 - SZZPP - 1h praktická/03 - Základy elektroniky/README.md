@@ -36,8 +36,6 @@ Dle $f(2,3,5,6)$ jsou jedničky na výstupu na indexech $2$, $3$, $5$:
 - $x_n$ ... vstupy
 - $y=f$ ... výstup
 
-<div align="center">
-
 | i | x₁ | x₂ | x₃ | f      |
 |---|----|----|----|--------|
 | 0 |    |    |    |        |
@@ -49,8 +47,6 @@ Dle $f(2,3,5,6)$ jsou jedničky na výstupu na indexech $2$, $3$, $5$:
 | 6 |    |    |    | **1**  |
 | 7 |    |    |    |        |
 
-</div>
-
 Vyplňování hodnot u proměnných ($x₁$, $x₂$, $x₃$) se řídí jednoduchými pravidly:
 
 1. U první proměnné ($x₁$) vyplníme první polovinu indexů nulami, druhou polovinu jedničkami. Protože máme $8$ řádků, zapíšeme nejprve $4$ nuly a potom $4$ jedničky.
@@ -58,8 +54,6 @@ Vyplňování hodnot u proměnných ($x₁$, $x₂$, $x₃$) se řídí jednoduc
 3. U třetí proměnné ($x₃$) střídáme nuly a jedničky po jednom řádku. Zapíšeme tedy $1$ nulu, $1$ jedničku a tento vzor opakujeme.
 
 Každá další proměnná střídá hodnoty dvakrát rychleji než předchozí. Poslední proměnná se mění na každém řádku. První proměnná se mění nejpomaleji.
-
-<div align="center">
 
 | i | x₁ | x₂ | x₃ | f |
 |---|----|----|----|---|
@@ -71,8 +65,6 @@ Každá další proměnná střídá hodnoty dvakrát rychleji než předchozí.
 | 5 | 1  | 0  | 1  | 1 |
 | 6 | 1  | 1  | 0  | 1 |
 | 7 | 1  | 1  | 1  | 0 |
-
-</div>
 
 Existuje dokonce univerzální uzavřený vzorec, který nám řekne, po kolika řádcích se mají hodnoty $0$ a $1$ střídat:
 
