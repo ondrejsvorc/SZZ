@@ -1,3 +1,156 @@
+<style>
+  :root {
+    color-scheme: light only;
+
+    --read-bg: #f7f7f7;
+    --read-bg-elevated: #fafafa;
+    --read-bg-code: #f0f0f0;
+    --read-text: #2b2b2b;
+    --read-text-heading: #222222;
+    --read-text-muted: #555555;
+    --read-border: #e0e0e0;
+    --read-border-subtle: #ebebeb;
+    --read-link: #1a5a9e;
+    --read-link-hover: #134a82;
+    --read-selection-bg: #d6e8f7;
+    --read-selection-text: #222222;
+  }
+
+  html {
+    background-color: var(--read-bg);
+  }
+
+  body {
+    color: var(--read-text) !important;
+    background-color: var(--read-bg) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--read-selection-bg);
+    color: var(--read-selection-text);
+  }
+
+  a {
+    color: var(--read-link);
+  }
+
+  a:hover {
+    color: var(--read-link-hover);
+  }
+
+  .container-lg.markdown-body {
+    color: var(--read-text);
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .markdown-body {
+    color: var(--read-text);
+  }
+
+  .markdown-body h1,
+  .markdown-body h2,
+  .markdown-body h3,
+  .markdown-body h4,
+  .markdown-body h5,
+  .markdown-body h6 {
+    color: var(--read-text-heading);
+    font-weight: 600;
+  }
+
+  .markdown-body h1,
+  .markdown-body h2 {
+    border-bottom-color: var(--read-border);
+  }
+
+  .markdown-body h1 > a,
+  .markdown-body h1 > a:hover {
+    color: var(--read-text-heading);
+    text-decoration: none;
+  }
+
+  .markdown-body a {
+    color: var(--read-link);
+  }
+
+  .markdown-body a:hover {
+    color: var(--read-link-hover);
+  }
+
+  .markdown-body hr {
+    background-color: var(--read-border);
+  }
+
+  .markdown-body blockquote {
+    color: var(--read-text-muted);
+    border-left-color: var(--read-border);
+  }
+
+  .markdown-body table th,
+  .markdown-body table td {
+    border-color: var(--read-border);
+  }
+
+  .markdown-body table tr {
+    background-color: var(--read-bg-elevated);
+    border-top-color: var(--read-border);
+  }
+
+  .markdown-body table tr:nth-child(2n) {
+    background-color: var(--read-bg);
+  }
+
+  .markdown-body pre,
+  .markdown-body code,
+  .highlight pre {
+    background-color: var(--read-bg-code) !important;
+    color: var(--read-text);
+  }
+
+  .markdown-body :not(pre) > code {
+    background-color: var(--read-bg-code);
+    border: 1px solid var(--read-border-subtle);
+    border-radius: 3px;
+    padding: 0.15em 0.35em;
+  }
+
+  .markdown-body pre,
+  .highlight pre {
+    border: 1px solid var(--read-border-subtle);
+  }
+
+  .markdown-body kbd {
+    color: var(--read-text);
+    background-color: var(--read-bg-elevated);
+    border-color: var(--read-border);
+  }
+
+  .markdown-body img {
+    background-color: var(--read-bg-elevated);
+    border-radius: 4px;
+  }
+
+  mjx-container {
+    color: var(--read-text) !important;
+  }
+
+  /* Zachovat světlé čtení i při systémovém dark mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: light only;
+    }
+
+    html,
+    body,
+    .markdown-body,
+    .container-lg.markdown-body {
+      background-color: var(--read-bg) !important;
+      color: var(--read-text) !important;
+    }
+  }
+</style>
 <script>
   MathJax = {
     tex: {

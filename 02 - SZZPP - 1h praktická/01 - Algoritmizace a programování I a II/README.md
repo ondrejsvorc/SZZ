@@ -31,3 +31,6 @@
 - vlastní jednoduché třídy (konstruktor, metody, speciální metoda __str/repr__. __contains__)
 - vyvolávání výjimek
 - vstup a výstup na konzoli (print, input)
+
+### Užitečné odkazy
+- <https://physics.ujep.cz/~jskvor/SZZ/BcAPI/SZZPP/Tahaky/APR-Python.pdf> (Povolený tahák)

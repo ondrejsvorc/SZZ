@@ -22,7 +22,7 @@
 ## Okruh I
 
 ### Užitečné odkazy
-- https://www.itnetwork.cz/hardware-pc/stavba-pc
+- <https://www.itnetwork.cz/hardware-pc/stavba-pc>
 
 ### Procesor
 - CPU = Central Processing Unit
