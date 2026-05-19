@@ -30,7 +30,7 @@ Automaticky generovaný seznam materiálů z repozitáře.
 - [07 – Úvod do relačních databází](02%20-%20SZZPP%20-%201h%20praktick%C3%A1/07%20-%20%C3%9Avod%20do%20rela%C4%8Dn%C3%ADch%20datab%C3%A1z%C3%AD/)
 - [09 – Základy zpracování dat](02%20-%20SZZPP%20-%201h%20praktick%C3%A1/09%20-%20Z%C3%A1klady%20zpracov%C3%A1n%C3%AD%20dat/)
 - [10 – Multimédia a základy počítačové grafiky](02%20-%20SZZPP%20-%201h%20praktick%C3%A1/10%20-%20Multim%C3%A9dia%20a%20z%C3%A1klady%20po%C4%8D%C3%ADta%C4%8Dov%C3%A9%20grafiky/)
-- [11 – Projektové řízení](02%20-%20SZZPP%20-%201h%20praktick%C3%A1/11%20-%20Projektov%C3%A9%20%C5%99%C3%ADzen%C3%AD/)
+- [11 – Ukázková úloha](02%20-%20SZZPP%20-%201h%20praktick%C3%A1/11%20-%20Projektov%C3%A9%20%C5%99%C3%ADzen%C3%AD/)
 
 ## 03 - SZZVP - 5h praktická
 
