@@ -141,6 +141,8 @@ public sealed class Node(int data, Node? next = null)
 - nejprve navštíví všechny uzly na aktuální úrovni, poté pokračuje níže
 - typicky využívá frontu
 
+![](Obrázky/bfs.png)
+
 ### Binární strom
 - speciální případ stromu, v němž každý uzel může mít maximálně dva potomky:
   - levého potomka (`left child`)
