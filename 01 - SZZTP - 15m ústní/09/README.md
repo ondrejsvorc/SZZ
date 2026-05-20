@@ -3,9 +3,11 @@
 Intervaly spolehlivosti, jejich význam, interpretace a konstrukce (definice, typy, interpretace spolehlivosti, resp. hladiny významnosti, výpočet [pro střední hodnotu, rozptyl, relativní četnost], vliv rozsahu výběru, využití v praxi)
 
 ### Užitečné odkazy
-- <https://szz.ondrejsvorc.cz/01%20-%20SZZTP%20-%20Teoretick%C3%A9%20z%C3%A1klady%20informatiky/09/>
+- https://youtu.be/ENnlSlvQHO0?si=AdIjiFf65G5pjjNY (Intervaly spolehlivosti - v angličtině)
+- https://youtu.be/5q2ac412hv4?si=ni0Gm9lBzqd6KsX0 (Intervaly spolehlivosti - v angličtině)
+- https://youtu.be/IhqLdaJE27Q?si=hKEeYwf7LP7DUo1K (Intervaly spolehlivosti - v češtině)
 
-## Ke zkoušce
+### Obecné poznatky
 - interval spolehlivosti pro rozptyl nezkouší
 - interval spolehlivosti pro průměr teoreticky stačí, ostatní je bonus
 - umět nakreslit dis

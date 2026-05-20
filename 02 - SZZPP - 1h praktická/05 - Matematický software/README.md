@@ -109,16 +109,12 @@ $$
 
 - uzdravení přibývají
 
----
-
 #### Význam parametrů
 
 | Parametr | Význam |
 |---|---|
 | β | rychlost šíření infekce |
 | γ | rychlost uzdravení |
-
----
 
 #### Celý model
 
@@ -129,6 +125,8 @@ $$
 \frac{dR}{dt} = \gamma I
 \end{cases}
 $$
+
+$$\frac{dS}{dt} = -\beta \frac{S \cdot I}{N}$$
 
 #### Reprodukční číslo
 - určuje, kolik dalších lidí průměrně nakazí jeden nakažený člověk

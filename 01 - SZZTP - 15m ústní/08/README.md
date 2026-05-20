@@ -3,13 +3,41 @@
 Náhodná veličina a její charakteristiky (distribuční funkce, druhy, pravděpodobnostní funkce vs. hustota pravděpodobnosti, číselné charakteristiky [střední hodnota, rozptyl, kvantily], vybraná diskrétní a spojitá rozdělení pravděpodobnosti)
 
 ### Užitečné odkazy
-- <https://szz.ondrejsvorc.cz/01%20-%20SZZTP%20-%20Teoretick%C3%A9%20z%C3%A1klady%20informatiky/08/>
+- <https://physics.ujep.cz/~mmaly/vyuka/poc_fyz_1/zdroje/NahodnaVelicina_zaklady.pdf> (Náhodná veličina)
 
 ### Náhodná veličina
-- funkce přiřazující každému náhodnému jevu číselnou hodnotu
-- náhodný jev je výsledek náhodného pokusu
-- náhodný pokus je pokus, u kterého lze jednoznačně rozhodnout, zda nastal nebo nenastal
+- funkce přiřazující každému elementárnímu jevu číselnou hodnotu
 - např. hod mincí (máme pana nebo orel, tak pana bude třeba 0 a orel 1)
+
+#### Elementární jev
+- výsledek náhodného pokusu
+
+#### Náhodný pokus
+- pokus, u kterého lze jednoznačně rozhodnout, zda nastal nebo nenastal
+
+![](Obrázky/NahodnaVelicina.png)
+
+### Matematický zápis náhodné veličiny
+
+![](Obrázky/NahodnaVelicina2.png)
+
+kde:
+
+- $X$: označení náhodné veličiny (funkce)
+- $\Omega$ (Omega): prostor všech možných elementárních jevů (všechny výsledky, které mohou nastat)
+- $\omega$ (malé omega): jeden konkrétní elementární jev ($\omega \in \Omega$), který do funkce vstupuje
+- $x$: konkrétní výsledná hodnota, která z funkce vyleze (reálné číslo, $x \in \mathbb{R}$)
+
+$$X: \Omega \rightarrow \mathbb{R}$$
+$$X(\omega) = x$$
+$$\omega \in \Omega \qquad x \in \mathbb{R}$$
+### Příklad náhodné veličiny
+
+Provedeme nějaký náhodný pokus (např. hod mincí). Výsledek náhodné pokusu nazýváme náhodný jev, jemuž náhodná veličina, jakožto funkce, přiřadí číselnou hodnotu (např. pana = 0, orel = 1).
+
+![](Obrázky/NahodnaVelicina3.png)
+
+Zápis $P(X = 1)$ pak vyjadřuje otázku: *„Jaká je pravděpodobnost, že náhodná veličina nabude hodnoty 1?“*
 
 ### Rozdělení náhodné veličiny
 - předpis, který nám říká, jak jsou pravděpodobnosti rozděleny mezi jednotlivé možné výsledky
