@@ -41,9 +41,8 @@ Zápis $P(X = 1)$ pak vyjadřuje otázku: *„Jaká je pravděpodobnost, že ná
 
 ### Rozdělení náhodné veličiny
 - předpis, který nám říká, jak jsou pravděpodobnosti rozděleny mezi jednotlivé možné výsledky
-- odpovídá na otázku „Jak moc je která hodnota pravděpodobná?“
+- odpovídá na otázku *„Jak moc je která hodnota pravděpodobná?“*
 - rozdělení je funkce, které každému výsledku přiřadí jeho šanci na úspěch
-- bez rozdělení je náhodná veličina jen prázdná proměnná; rozdělení jí dává „charakter“ (říká nám, co se děje často a co skoro vůbec)
 
 ### Způsoby popisu rozdělení náhodné veličiny
 - diskrétní
@@ -132,25 +131,37 @@ Příklad: Kostka (šestistěnka)
 - Výsledek: $F(3) = 0,5$
 - Tedy je šance 50 %, že hodím trojku nebo méně.
 
-## Číselné charakteristiky
+### Číselné charakteristiky náhodné veličiny
+- střední hodnota
+- rozptyl
+- kvantyly
 
 ### Střední hodnota
-- vzorec
+- popisuje „průměrnou“ hodnotu náhodné veličiny
+- říká, jaka hodnota by v průměru vycházela při velmi mnoha náhodných pokusech
+
+#### Pro diskrétní náhodnou veličinu
+#### Pro spojitou náhodnou veličinu
+
 ### Rozptyl
-- vzorec
+- popisuje, jak moc jsou hodnoty rozptýlené kolem střední hodnoty
+
+#### Pro diskrétní náhodnou veličinu
+#### Pro spojitou náhodnou veličinu
+
 ### Kvantily
+- rozdělují pravděpodobnostní rozdělení na části
+- medián
+- dolní kvartil
+- horní kvartil
+- percentil
+
+#### Kvartil
 
 ## Typy diskrétního rozdělení
 ### BONUS? Poissonovo rozdělení
 ### BONUS? Binomické rozdělení
 
-## Typy spojitého rozdělení
-
-### CHCE: Normální (Gaussovo) rozdělení
-### BONUS? Studentovo t-rozdělení
-### BONUS? Rovnoměrné rozdělení
-### BONUS? Log-normální rozdělení
-### BONUS? Chí-kvadrát ($\chi^2$) rozdělení
-### BONUS? F-rozdělení
+### Normální (Gaussovo) rozdělení
 
 ### Distribuční funkce normálního rozdělení
