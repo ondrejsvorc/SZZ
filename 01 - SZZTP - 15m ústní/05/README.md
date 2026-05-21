@@ -56,6 +56,8 @@ $$
 f(x) \in \mathbb{R}
 $$
 
+### Primitivní funkce
+
 ### Limita
 - číslo, ke kterému se funkce v nějakém bodě blíží
 - popisuje chování funkce v okolí daného bodu, nikoliv nutně přímo v tomto bodě
@@ -124,3 +126,13 @@ limita zleva a limita zprava nejsou stejné.
 ### Integrál
 
 ### Určitý integrál
+
+### Obdelníkové pravidlo
+
+### Lichoběžníkové pravidlo
+
+### Simpsonovo pravidlo
+
+### Určení lokálního extrému
+
+### Objem rotačního tělesa
