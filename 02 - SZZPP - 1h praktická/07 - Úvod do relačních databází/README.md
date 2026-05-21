@@ -9,8 +9,12 @@
 
 ### Užitečné odkazy
 - <https://physics.ujep.cz/~jskvor/SZZ/BcAPI/SZZPP/Tahaky/URDB-SQL.pdf> (Povolený tahák)
+- <https://www.youtube.com/watch?v=Oxda-LTLTOc> (Vraní nohy - v angličtině)
 
 ### 1:1
+- vztah typu jedna ku jedné
+- jednomu záznamu první entity odpovídá právě jeden záznam druhé entity
+
 ### 1:N
 ### M:N
 
@@ -20,3 +24,28 @@
 
 ### Vraní nohy
 - anglicky Crow's Foot notation
+- notace používaná v ER diagramech pro vyjádření kardinality vztahů mezi entitami
+
+Symboly:
+- ○
+    - 0
+    - záznam je nepovinný
+- |
+    - 1
+    - právě jeden záznam
+- < 
+    - n
+    - více záznamů
+
+Kombinace symbolů:
+- ||
+    - právě 1
+- ○|
+    - 0 nebo 1
+- |<
+    - 1 nebo více
+- ○<
+    - 0 nebo více
+
+
+![](Obrázky/crows-notation.png)
