@@ -3,27 +3,11 @@
 Výrokový počet (logické spojky, jejich úplný systém, odvozovací pravidla, splnitelnost, aplikace v logických obvodech), predikátový počet (abeceda a konstrukce jazyka), naivní teorie množin (potenční množina, systém množin, operace na množinách, relace mezi množinami), binární relace (vlastnosti a speciální typy [ekvivalence, uspořádání, zobrazení])
 
 ### Užitečné odkazy
-- <https://szz.ondrejsvorc.cz/01%20-%20SZZTP%20-%20Teoretick%C3%A9%20z%C3%A1klady%20informatiky/10/>
+- <https://seriouscomputerist.atariverse.com/media/pdf/book/Concrete%20Mathematics.pdf>
 
 ### Výrokový počet
 - synonymum: výroková logika
 - formální logický systém, který z výroků pomocí logických spojek vytváří složené výroky a určuje jejich pravdivost
-
-### Tabulka pravdivostních hodnot
-- tabulka, která pro všechny možné kombinace pravdivostních hodnot atomárních výroků uvádí pravdivostní hodnotu dané formule
-
-### Tautologie
-- vždy pravdivý výrok nezávisle na vstupu
-- např.: $u∨¬u$
-
-### Kontradikce
-- vždy nepravdivý nezávisle na vstupu
-- např.: $u∧¬u$
-
-### Splnitelná formule
-- formule, která není kontradikcí
-- např.: $u∧v$
-  - je pravdivá např. pro u=1,v=1 ⇒ splnitelná
 
 ### Výrok
 - sdělení deklarativního typu, u kterého má význam uvažovat o pravdivostní hodnotě
@@ -73,15 +57,15 @@ Výrokový počet (logické spojky, jejich úplný systém, odvozovací pravidla
 - $u ∨ v$
 - způsob čtení: $u$ **nebo** $v$
 
-#### Ekvivalence
-- $u ⇔ v$
-- způsob čtení č. 1: $u$ **je ekvivalentní s** $v$
-- způsob čtení č. 2: $u$ **právě tehdy, když** $v$
-
 #### Implikace
 - $u ⇒ v$
 - způsob čtení č. 1: $u$ **implikuje** $v$
 - způsob čtení č. 2: **jestliže** $u$, **pak** $v$
+
+#### Ekvivalence
+- $u ⇔ v$
+- způsob čtení č. 1: $u$ **je ekvivalentní s** $v$
+- způsob čtení č. 2: $u$ **právě tehdy, když** $v$
 
 ### Ternární spojka
 - $k = 3$
@@ -107,6 +91,22 @@ Výrokový počet (logické spojky, jejich úplný systém, odvozovací pravidla
 
 **Počet všech $k$-árních pravdivostních funkcí je $2^{2^k}$**
 
+### Tabulka pravdivostních hodnot
+- tabulka, která pro všechny možné kombinace pravdivostních hodnot atomárních výroků uvádí pravdivostní hodnotu dané formule
+
+### Tautologie
+- vždy pravdivý výrok nezávisle na vstupu
+- např.: $u∨¬u$
+
+### Kontradikce
+- vždy nepravdivý nezávisle na vstupu
+- např.: $u∧¬u$
+
+### Splnitelná formule
+- formule, která není kontradikcí
+- např.: $u∧v$
+  - je pravdivá např. pro u=1,v=1 ⇒ splnitelná
+
 ### Úplný systém spojek
 - množina logických spojek, pomocí které lze vyjádřit každý složený výrok
 - příklady:
@@ -122,37 +122,6 @@ Výrokový počet (logické spojky, jejich úplný systém, odvozovací pravidla
   - ¬ → NOT
 - návrh a minimalizace obvodů
 
-### Predikátový počet
-- rozšíření výrokového počtu o proměnné a kvantifikátory, které umožňuje vyjadřovat vlastnosti objektů a vztahy mezi nimi
-
-#### Doména
-- množina objektů, které v predikátovém počtu uvažujeme
-- např. všichni studenti
-
-#### Predikát
-- výraz s proměnnými, který se po dosazení stává výrokem
-- např.:
-  - $P(x)$: „$x$ je sudé“
-  - $x=y$
-  - $x∈A$
-
-#### Proměnná
-- symbol označující libovolný objekt z domény
-- např.: $x$
-
-#### Kvantifikátor
-- symbol určující, pro kolik objektů z domény výrok platí
-- např.: $∀x(x>0)$
-
-#### Abeceda
-- množina symbolů, ze kterých se tvoří výrazy
-  - proměnné: $x$, $y$, $z$, ...
-  - konstanty: $a$, $b$, $c$, ...
-  - predikátové symboly: $∈$, $=$, ...
-  - funkční symboly (funktory): sjednocení, průnik, ...
-  - logické spojky: $¬$, $∧$, $∨$, $⇒$, $⇔$
-  - kvantifikátory: $∀$, $∃$
-
 ### Naivní teorie množin
 - neformální přístup k množinám, kde množinu lze chápat jako libovolný soubor prvků daný nějakou vlastností
 
@@ -162,6 +131,12 @@ Výrokový počet (logické spojky, jejich úplný systém, odvozovací pravidla
 - prvek se v množině vyskytuje nejvýše jednou
 - na pořadí prvků nezáleží
 
+#### Univerzum
+- značí se $U$
+- množina všech prvků, o kterých v daném kontextu uvažujeme
+- vždy zadané nebo implicitní
+- všechny množiny jsou podmnožiny $U$
+
 #### Systém množin
 - množina množin
 
@@ -170,13 +145,12 @@ Výrokový počet (logické spojky, jejich úplný systém, odvozovací pravidla
 - značí se $Pot(𝐴)$
   - $A=\{1,2\}$
   - $P(A)=\{∅,\{1\},\{2\},\{1,2\}\}$
-- počet podmnožin potenční množiny: $|Pot(𝐴)|$ = $2^n$, kde $n$ je počet prvků dané množiny 
-
-#### Univerzum
-- značí se $U$
-- množina všech prvků, o kterých v daném kontextu uvažujeme
-- vždy zadané nebo implicitní
-- všechny množiny jsou podmnožiny $U$
+- počet podmnožin potenční množiny:
+    $$
+    |Pot(A)| = 2^n
+    $$
+    kde:
+    - $n$ je počet prvků dané množiny
 
 #### Operace na množinách
 - **sjednocení**  
@@ -210,21 +184,55 @@ Výrokový počet (logické spojky, jejich úplný systém, odvozovací pravidla
 - **disjunktnost**
   - $A ∩ B = ∅$
 
+### Predikátový počet
+- rozšíření výrokového počtu o proměnné a kvantifikátory, které umožňuje vyjadřovat vlastnosti objektů a vztahy mezi nimi
+
+#### Doména
+- množina objektů, které v predikátovém počtu uvažujeme
+- např. všichni studenti
+
+#### Abeceda
+- množina symbolů, ze kterých se tvoří výrazy
+  - proměnné: $x$, $y$, $z$, ...
+  - konstanty: $a$, $b$, $c$, ...
+  - predikátové symboly: $∈$, $=$, ...
+  - funkční symboly (funktory): sjednocení, průnik, ...
+  - logické spojky: $¬$, $∧$, $∨$, $⇒$, $⇔$
+  - kvantifikátory: $∀$, $∃$
+
+#### Proměnná
+- symbol označující libovolný objekt z domény
+- např.: $x$
+
+#### Predikát
+- výraz s proměnnými, který se po dosazení stává výrokem
+- např.:
+  - $P(x)$: „$x$ je sudé“
+  - $x=y$
+  - $x∈A$
+
+#### Kvantifikátor
+- symbol určující, pro kolik objektů z domény výrok platí
+- např.: $∀x(x>0)$
+
 ### Binární relace
 - podmnožina kartézského součinu $A \times B$
 - $R ⊆ A \times B$
 - prvek relace je uspořádaná dvojice $(a,b)$
+
+#### Kartézský součin
+- množina všech uspořádaných dvojic prvků z množin $A$ a $B$
+- $A \times B = \{ (a,b) \mid a ∈ A ∧ b ∈ B \}$
+- velikost:
+    $$
+    |A \times B| = |A| \cdot |B|
+    $$
 
 #### Obory relace
 - **definiční obor (první obor)**  
   - $Dom(R) = \{ a \mid ∃b: (a,b) ∈ R \}$
 - **obor hodnot (druhý obor)**  
   - $Im(R) = \{ b \mid ∃a: (a,b) ∈ R \}$
-
-#### Kartézský součin
-- množina všech uspořádaných dvojic prvků z množin $A$ a $B$
-- $A \times B = \{ (a,b) \mid a ∈ A ∧ b ∈ B \}$
-- velikost: $|A \times B| = |A| \cdot |B|$
 
 #### Obory relace
 - definiční obor (první obor)

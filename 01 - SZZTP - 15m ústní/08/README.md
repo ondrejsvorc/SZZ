@@ -158,10 +158,19 @@ Příklad: Kostka (šestistěnka)
 
 #### Kvartil
 
-## Typy diskrétního rozdělení
-### BONUS? Poissonovo rozdělení
-### BONUS? Binomické rozdělení
+### Rozdělení náhodné veličiny
+- diskrétní
+  - Poissonovo
+  - Binomické
+  - ...
+- spojité
+  - Normální
+  - ...
 
-### Normální (Gaussovo) rozdělení
+### Poissonovo rozdělení
+
+### Binomické rozdělení
+
+### Normální rozdělení
 
 ### Distribuční funkce normálního rozdělení
