@@ -73,6 +73,7 @@ kde:
 Představme si, že chceme zjistit průměrnou výšku českých mužů ve věku 20 let. I když nemáme možnost oslovit a změřit výšku každého českého muže ve věku 20 let, tak můžeme z populace náhodně vybrat vzorek, např. 1000 mužů, u kterých výšku změříme. Prakticky to znamená, že náhodně oslovíme nějaký počet takových mužů. Ti muži, kteří se do našeho průzkumu zapojí, se nazývají respondenti. Na základě náhodného výběru vznikne námi naměřený vzorek (množina výšek českých mužů ve věku 20 let). Na základě vzorku provedeme statistický odhad parametru populace (parametrem je v tomto případě výška) a určíme interval spolehlivosti.
 
 ### Interval spolehlivosti pro střední hodnotu
+- anglicky confidence interval for the mean
 - interval používaný pro odhad skutečné střední hodnoty populace na základě průměru vzorku
 
 $$
@@ -153,10 +154,28 @@ t.test(heights)$conf.int
 ```
 
 ### Interval spolehlivosti pro podíl
+- anglicky confidence interval for a proportion
 - vzorec
 
+#### Příklad
+- **Populace**: čeští muži ve věku 20 let
+- **Vzorek**: 1000 náhodně vybraných českých mužů ve věku 20 let
+- **Zkoumaný parametr**: podíl českých mužů ve věku 20 let vyšších než 180 cm
+
 ### Interval spolehlivosti pro rozdíl
-- vzorec
+- anglicky confidence interval for the difference
+- používá se pro odhad rozdílu mezi dvěma populacemi nebo skupinami
+- odhadujeme:
+    - rozdíl středních hodnot (confidence interval for the difference of means)
+    - rozdíl podílů (confidence interval for the difference of proportions)
+
+#### Příklad
+- **Populace 1**: čeští muži ve věku 20 let
+- **Populace 2**: čeští muži ve věku 30 let
+- **Vzorek 1**: 1000 náhodně vybraných českých mužů ve věku 20 let
+- **Vzorek 2**: 1000 náhodně vybraných českých mužů ve věku 30 let
+
+- **Zkoumaný parametr**: rozdíl průměrné výšky mezi českými muži ve věku 20 let a českými muži ve věku 30 let
 
 ### Šířka intervalu spolehlivosti
 - závisí na:
