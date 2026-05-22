@@ -3,9 +3,9 @@
 Intervaly spolehlivosti, jejich význam, interpretace a konstrukce (definice, typy, interpretace spolehlivosti, resp. hladiny významnosti, výpočet [pro střední hodnotu, rozptyl, relativní četnost], vliv rozsahu výběru, využití v praxi)
 
 ### Užitečné odkazy
-- https://youtu.be/ENnlSlvQHO0?si=AdIjiFf65G5pjjNY (Intervaly spolehlivosti - v angličtině)
-- https://youtu.be/5q2ac412hv4?si=ni0Gm9lBzqd6KsX0 (Intervaly spolehlivosti - v angličtině)
-- https://youtu.be/IhqLdaJE27Q?si=hKEeYwf7LP7DUo1K (Intervaly spolehlivosti - v češtině)
+- <https://youtu.be/ENnlSlvQHO0?si=AdIjiFf65G5pjjNY> (Intervaly spolehlivosti - v angličtině)
+- <https://youtu.be/5q2ac412hv4?si=ni0Gm9lBzqd6KsX0> (Intervaly spolehlivosti - v angličtině)
+- <https://youtu.be/IhqLdaJE27Q?si=hKEeYwf7LP7DUo1K> (Intervaly spolehlivosti - v češtině)
 
 ### Obecné poznatky
 - interval spolehlivosti pro rozptyl nezkouší
@@ -14,6 +14,7 @@ Intervaly spolehlivosti, jejich význam, interpretace a konstrukce (definice, ty
 - umět nakreslit distribuční funkci normálního rozdělení
 
 ### Interval spolehlivosti
+- anglicky confidence interval
 - interval, pomocí kterého odhadujeme skutečnou hodnotu parametru populace na základě vzorku
 - vyjadřuje nejistotu odhadu způsobenou tím, že nezkoumáme celou populaci
 
@@ -71,7 +72,7 @@ kde:
 
 Představme si, že chceme zjistit průměrnou výšku českých mužů ve věku 20 let. I když nemáme možnost oslovit a změřit výšku každého českého muže ve věku 20 let, tak můžeme z populace náhodně vybrat vzorek, např. 1000 mužů, u kterých výšku změříme. Prakticky to znamená, že náhodně oslovíme nějaký počet takových mužů. Ti muži, kteří se do našeho průzkumu zapojí, se nazývají respondenti. Na základě náhodného výběru vznikne námi naměřený vzorek (množina výšek českých mužů ve věku 20 let). Na základě vzorku provedeme statistický odhad parametru populace (parametrem je v tomto případě výška) a určíme interval spolehlivosti.
 
-### Interval spolehlivosti pro průměr
+### Interval spolehlivosti pro střední hodnotu
 - interval používaný pro odhad skutečné střední hodnoty populace na základě průměru vzorku
 
 $$
