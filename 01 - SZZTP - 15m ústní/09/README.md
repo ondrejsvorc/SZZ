@@ -11,15 +11,19 @@ Intervaly spolehlivosti, jejich význam, interpretace a konstrukce (definice, ty
 - interval spolehlivosti pro rozptyl nezkouší
 - interval spolehlivosti pro průměr teoreticky stačí, ostatní je bonus
 - umět říct, na čem závisí šířka intervalu spolehlivosti
-- umět nakreslit distribuční funkci normálního rozdělení
 
 ### Interval spolehlivosti
 - anglicky confidence interval
 - interval, pomocí kterého odhadujeme skutečnou hodnotu parametru populace na základě vzorku
 - vyjadřuje nejistotu odhadu způsobenou tím, že nezkoumáme celou populaci
 
+![](Obrázky/ConfidenceInterval.png)
+
+Uprostřed intervalu se nachází výběrový průměr $\bar{x}$, tedy bodový odhad skutečného populačního průměru $\mu$. Prostředních $95\%$ představuje interval spolehlivosti, tedy oblast nejpravděpodobnějších hodnot pro skutečný populační průměr. Zbývajících $5\%$ tvoří hladina významnosti $\alpha = 0.05$, která je u oboustranného intervalu rozdělena na dvě části: $2.5\%$ vlevo a $2.5\%$ vpravo.
+
 #### Populace
 - anglicky population
+- také základní soubor
 - množina všech objektů, která představuje celý zkoumaný celek
 - skutečné vlastnosti populace většinou neznáme přesně
 - pro odhad populace používáme vzorek a statistické odhady
@@ -38,6 +42,7 @@ kde:
 
 #### Vzorek
 - anglicky sample
+- také výběrový soubor
 - náhodně vybrané objekty z populace
 - podmnožina objektů z populace použitá pro statistický odhad
 - používá se pro odhad vlastností celé populace
@@ -185,9 +190,26 @@ t.test(heights)$conf.int
   - na variabilitě (čím větší, tím větší interval)
 
 ### Populační průměr
+- skutečný průměr celé populace (základního souboru)
+- většinou ho neznáme, protože ho většinou neumíme změřit
+- př.: skutečná průměrná výška všech českých mužů ve věku 20 let
+    - neumíme změřit všechny české muže ve věku 20 let
+- změřit ho můžeme pouze tehdy, máme-li přístup k celé populaci (např. poslední 3 nosorožci na světě v ohradě)
+
+Značí se:
+$$μ$$
+
 ### Výběrový průměr
-### Bodový průměr
+- průměr spočítaný pouze ze vzorku (výběrového souboru)
+- odhad populačního průměru
+
+Značí se:
+$$\bar{x}$$
 
 ### Hladina významnosti
-- pravděpodobnost chyby
-- alfa (jak se počítá, ...)
+- pravděpodobnost chyby I. druhu
+    - pravděpodobnost, že zamítneme nulovou hypotézu, i když je ve skutečnosti pravdivá
+- alfa
+
+Značí se:
+$$α$$

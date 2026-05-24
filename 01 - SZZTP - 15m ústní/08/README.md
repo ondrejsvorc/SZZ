@@ -5,6 +5,9 @@ Náhodná veličina a její charakteristiky (distribuční funkce, druhy, pravd�
 ### Užitečné odkazy
 - <https://physics.ujep.cz/~mmaly/vyuka/poc_fyz_1/zdroje/NahodnaVelicina_zaklady.pdf> (Náhodná veličina)
 
+### Obecné poznatky
+- umět nakreslit distribuční funkci normálního rozdělení
+
 ### Náhodná veličina
 - funkce přiřazující každému elementárnímu jevu číselnou hodnotu
 - např. hod mincí (máme pana nebo orel, tak pana bude třeba 0 a orel 1)
