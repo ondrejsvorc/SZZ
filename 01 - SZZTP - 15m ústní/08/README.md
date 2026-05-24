@@ -170,9 +170,10 @@ Příklad: Kostka (šestistěnka)
   - Normální
   - ...
 
-### Poissonovo rozdělení
-
 ### Binomické rozdělení
+- určuje pravděpodobnost že nastane určitý počet úspěchů v určitém počtu pokusů, kde každý pokus má stejnou pravděpodobnost úspěchu
+- rozdělení si můžeme zapamatovat dle začátku názvu "bi", které naznačuje, že mohou nastat pouze dva případy (úspěch/neúspěch)
+- vybíráme s vracením (narozdíl od hypergeometrického rozdělení)
 
 ### Normální rozdělení
 
