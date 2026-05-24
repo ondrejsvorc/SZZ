@@ -11,21 +11,17 @@ $$f : A \to B$$
 
 Každému prvku z množiny $A$ přiřazuje právě jeden prvek z množiny $B$.
 
-$$
-A,B \subseteq U
-$$
-
-$A$ i $B$ jsou podmnožiny univerza $U$. V kontextu funkce můžeme tvrdit, že:
+V kontextu funkce:
 - $A$ = definiční obor
-- $B$ = obor hodnot
+- $B$ = kodoména (cílová množina)
 
-Univerzum je množina všech prvků uvažovaných v daném kontextu. V kontextu funkce mohou být z univerza vybírány prvky tvořící:
-- definiční obor
-- obor hodnot
-- kartézský součin
-- ...
+Skutečný obor hodnot funkce je množina všech hodnot, kterých funkce skutečně nabývá:
 
-Předpis funkce pak popisuje závislost mezi prvky definičního oboru a odpovídajícími prvky oboru hodnot. Jinými slovy určuje, jakým způsobem se z hodnoty vstupu vypočítá odpovídající hodnota výstupu.
+$$
+f(A)=\{f(x)\ |\ x \in A\}
+$$
+
+Předpis funkce popisuje závislost mezi prvky definičního oboru a odpovídajícími prvky oboru hodnot. Jinými slovy určuje, jakým způsobem se z hodnoty vstupu vypočítá odpovídající hodnota výstupu.
 
 ### Reálná funkce
 - funkce, jejíž definiční obor i obor hodnot jsou tvořeny reálnými čísly
@@ -37,6 +33,8 @@ $$
 $$
 A,B \subseteq \mathbb{R}
 $$
+
+Speciálním případem je:
 
 $$
 f : \mathbb{R} \to \mathbb{R}
