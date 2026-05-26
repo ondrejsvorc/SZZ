@@ -1,0 +1,71 @@
+{
+    "version": 2,
+    "theme": "executive",
+    "schema": {
+      "nodeTypes": {
+        "actor": "Externí aktér.",
+        "usecase": "Případ užití kreslený jako elipsa.",
+        "boundary": "Hranice systému; případy užití mohou mít parentId této hranice."
+      },
+      "edgeTypes": {
+        "association": "Plná čára bez šipky.",
+        "include": "Přerušovaná šipka se štítkem <<include>>.",
+        "extend": "Přerušovaná šipka se štítkem <<extend>>."
+      }
+    },
+    "nodes": [
+      { "id": "b_banking", "type": "boundary", "name": "Banking System", "x": 260, "y": 20, "width": 900, "height": 1050, "parentId": null, "z": 1 },
+      
+      { "id": "a_user", "type": "actor", "name": "User", "x": 40, "y": 300, "width": 100, "height": 120, "parentId": null, "z": 10 },
+      { "id": "a_web_merchant", "type": "actor", "name": "Web Merchant", "x": 20, "y": 550, "width": 100, "height": 120, "parentId": null, "z": 11 },
+      { "id": "a_bank_employee", "type": "actor", "name": "Bank Employee", "x": 140, "y": 620, "width": 100, "height": 120, "parentId": null, "z": 12 },
+      { "id": "a_retail_inst", "type": "actor", "name": "Retail Institution", "x": 1220, "y": 180, "width": 100, "height": 120, "parentId": null, "z": 13 },
+      { "id": "a_bank_db", "type": "actor", "name": "Bank Database", "x": 1220, "y": 500, "width": 100, "height": 120, "parentId": null, "z": 14 },
+      
+      { "id": "uc_transaction", "type": "usecase", "name": "Transaction", "x": 560, "y": 60, "width": 160, "height": 60, "parentId": "b_banking", "z": 20 },
+      { "id": "uc_insert_card", "type": "usecase", "name": "Insert Card", "x": 560, "y": 180, "width": 160, "height": 60, "parentId": "b_banking", "z": 21 },
+      { "id": "uc_invalid_card", "type": "usecase", "name": "Invalid Card", "x": 320, "y": 180, "width": 160, "height": 60, "parentId": "b_banking", "z": 22 },
+      
+      { "id": "uc_atm_trans", "type": "usecase", "name": "ATM Transaction", "x": 540, "y": 340, "width": 160, "height": 60, "parentId": "b_banking", "z": 23 },
+      { "id": "uc_pin_val", "type": "usecase", "name": "PIN Validation", "x": 840, "y": 340, "width": 160, "height": 60, "parentId": "b_banking", "z": 24 },
+      { "id": "uc_invalid_pin", "type": "usecase", "name": "Invalid PIN", "x": 690, "y": 250, "width": 160, "height": 60, "parentId": "b_banking", "z": 25 },
+      
+      { "id": "uc_online_trans", "type": "usecase", "name": "Online Transaction", "x": 540, "y": 550, "width": 170, "height": 60, "parentId": "b_banking", "z": 26 },
+      { "id": "uc_invalid_login", "type": "usecase", "name": "Invalid Login", "x": 320, "y": 550, "width": 160, "height": 60, "parentId": "b_banking", "z": 27 },
+      
+      { "id": "uc_login", "type": "usecase", "name": "Login", "x": 450, "y": 720, "width": 140, "height": 60, "parentId": "b_banking", "z": 28 },
+      { "id": "uc_logout", "type": "usecase", "name": "Logout", "x": 670, "y": 720, "width": 140, "height": 60, "parentId": "b_banking", "z": 29 },
+      
+      { "id": "uc_client_desktop", "type": "usecase", "name": "Client Desktop Transaction", "x": 510, "y": 880, "width": 220, "height": 60, "parentId": "b_banking", "z": 30 }
+    ],
+    "edges": [
+      { "id": "e_gen_web", "from": "a_web_merchant", "to": "a_user", "type": "association" },
+      { "id": "e_gen_emp", "from": "a_bank_employee", "to": "a_user", "type": "association" },
+      
+      { "id": "e_u_transaction", "from": "a_user", "to": "uc_transaction", "type": "association" },
+      { "id": "e_u_atm", "from": "a_user", "to": "uc_atm_trans", "type": "association" },
+      { "id": "e_u_online", "from": "a_user", "to": "uc_online_trans", "type": "association" },
+      
+      { "id": "e_be_desktop", "from": "a_bank_employee", "to": "uc_client_desktop", "type": "association" },
+      { "id": "e_ri_transaction", "from": "a_retail_inst", "to": "uc_transaction", "type": "association" },
+      
+      { "id": "e_db_transaction", "from": "a_bank_db", "to": "uc_transaction", "type": "association" },
+      { "id": "e_db_atm", "from": "a_bank_db", "to": "uc_atm_trans", "type": "association" },
+      { "id": "e_db_online", "from": "a_bank_db", "to": "uc_online_trans", "type": "association" },
+      
+      { "id": "e_inc_trans_card", "from": "uc_transaction", "to": "uc_insert_card", "type": "include" },
+      { "id": "e_ext_inv_card", "from": "uc_invalid_card", "to": "uc_insert_card", "type": "extend" },
+      
+      { "id": "e_inc_atm_card", "from": "uc_atm_trans", "to": "uc_insert_card", "type": "include" },
+      { "id": "e_inc_atm_pin", "from": "uc_atm_trans", "to": "uc_pin_val", "type": "include" },
+      { "id": "e_ext_inv_pin", "from": "uc_invalid_pin", "to": "uc_pin_val", "type": "extend" },
+      
+      { "id": "e_inc_online_login", "from": "uc_online_trans", "to": "uc_login", "type": "include" },
+      { "id": "e_inc_online_logout", "from": "uc_online_trans", "to": "uc_logout", "type": "include" },
+      { "id": "e_ext_inv_login", "from": "uc_invalid_login", "to": "uc_login", "type": "extend" },
+      
+      { "id": "e_inc_desk_login", "from": "uc_client_desktop", "to": "uc_login", "type": "include" },
+      { "id": "e_inc_desk_logout", "from": "uc_client_desktop", "to": "uc_logout", "type": "include" }
+    ],
+    "viewport": { "x": 0, "y": 0, "zoom": 1 }
+  }
