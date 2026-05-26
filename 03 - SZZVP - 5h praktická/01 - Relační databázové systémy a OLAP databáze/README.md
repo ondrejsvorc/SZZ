@@ -1,5 +1,9 @@
 ﻿## Relační databázové systémy a OLAP databáze
 
+### Užitečné odkazy
+- <https://github.com/ondrejsvorc/UJEP/tree/main/2.%20year/RDBS/zapocet>
+- <https://github.com/ondrejsvorc/UJEP/tree/main/2.%20year/ODM/seminar-project>
+
 ### Ukázková úloha
 
 #### Propojení a vizualizace dat ze dvou datových zdrojů
