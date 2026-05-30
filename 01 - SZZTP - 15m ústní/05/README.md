@@ -638,6 +638,8 @@ print(result)
 2. Vyřeším rovnici $f'(x)=0$.
 3. Zkoumám změnu znaménka derivace.
 
+![](Obrázky/LokalniExtrem.png)
+
 $$
 + \rightarrow - \Rightarrow \text{lokální maximum}
 $$

@@ -6,6 +6,8 @@ Reálná funkce jedné reálné proměnné (definice, definiční obor a obor ho
 - <https://youtu.be/g4JPEa6077E?si=_RmzWPziVyOmowAX> (Definiční obor)
 - <https://www.youtube.com/watch?v=u2qCu6iBnN8> (Definiční obor)
 - <https://www.youtube.com/watch?v=7_vYKrVLEg8> (Definiční obor a obor hodnot)
+- <https://youtu.be/z7pLs2yeo5c?si=McMxOWtg7sJ2L1nx> (Definiční obor)
+- <https://www.youtube.com/watch?v=Gnfs0STbxhY> (Dělení polynomu polynomem)
 
 ### Funkce
 - zobrazení mezi dvěma množinami
@@ -63,6 +65,8 @@ $$
 $$
 D(f) = \{\, x \in A \; ; \; \exists\, y \in B; f(x)=y \,\}
 $$
+
+![](Obrázky/DefinicniObor.png)
 
 #### Příklad
 $$
