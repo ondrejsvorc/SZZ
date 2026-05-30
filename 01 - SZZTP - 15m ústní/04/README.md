@@ -415,10 +415,10 @@ def bisection(f, a: float, b: float, tolerance: float = 1e-10) -> float:
     while abs(b - a) > tolerance:
         c: float = (a + b) / 2
 
-        if f(a) * f(b) < 0:
-            a = c
-        else:
+        if f(a) * f(c) < 0:
             b = c
+        else:
+            a = c
 
     return (a + b) / 2
 
