@@ -377,7 +377,7 @@ limita zleva a limita zprava nejsou stejné.
 - výsledkem je primitivní funkce
 
 $$
-\int f(x)\,dx
+\int f(x)\,dx = F(x) + C
 $$
 
 ### Určitý integrál
@@ -389,11 +389,10 @@ $$
 - výsledkem je konkrétní číslo
 
 $$
-\int_a^b f(x)\,dx
+\int_a^b f(x)\,dx = \left[F(x)\right]_a^b = F(b)-F(a)
 $$
 
 ![](Obrázky/UrcityIntegral1.png)
-
 
 #### Geometrický význam
 - rozdělím plochu pod křivkou na velmi úzké obdélníky

@@ -57,19 +57,8 @@ $$
 - množina všech hodnot vstupní proměnné, pro které je funkce definována a dokáže přiřadit odpovídající hodnotu z oboru hodnot
 - intuitivně představuje všechny hodnoty na ose $x$, pro které má funkce smysl a lze vypočítat její hodnotu
 
-Značí se:
 $$
-D(f)
-$$
-
-Pro každou hodnotu:
-$$
-x \in D(f)
-$$
-
-musí být možné určit odpovídající funkční hodnotu:
-$$
-f(x)
+D(f) = \{\, x \in A \; ; \; \exists\, y \in B; f(x)=y \,\}
 $$
 
 #### Příklad
@@ -93,18 +82,9 @@ nelze určit funkční hodnotu.
 - množina všech hodnot, kterých může funkce nabývat
 - intuitivně představuje všechny hodnoty na ose $y$, které může funkce vytvořit
 
-Značí se:
 $$
-H(f)
+H = \{\, y \in B \; ; \; \exists\, x \in A \; ; \; f(x)=y \,\}
 $$
-
-Každá funkční hodnota:
-
-$$
-f(x)
-$$
-
-patří do oboru hodnot.
 
 #### Příklad
 $$
@@ -120,11 +100,13 @@ protože druhá mocnina reálného čísla nikdy není záporná.
 - množina všech bodů, které reprezentují funkční hodnoty dané funkce v konkrétní soustavě souřadnic (např. kartézské)
 
 Každý bod grafu odpovídá dvojici:
+
 $$
 [x,f(x)]
 $$
 
 Graf funkce tvoří všechny body:
+
 $$
 \{[x,f(x)] \mid x \in D(f)\}
 $$
@@ -156,20 +138,19 @@ $$
 přičemž „$\to$“ v tomto kontextu čteme jako „se blíží k“.
 
 ### Limita zleva
+- hodnota, ke které se funkce blíží při přibližování k bodu $a$ zleva
 
 $$
 \lim_{x \to a^-} f(x)
 $$
 
-- hodnota, ke které se funkce blíží při přibližování k bodu $a$ zleva
 
 ### Limita zprava
+- hodnota, ke které se funkce blíží při přibližování k bodu $a$ zprava
 
 $$
 \lim_{x \to a^+} f(x)
 $$
-
-- hodnota, ke které se funkce blíží při přibližování k bodu $a$ zprava
 
 ### Existence limity
 - limita existuje právě tehdy, když existuje limita zleva i limita zprava a vychází stejně
