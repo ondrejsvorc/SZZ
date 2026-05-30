@@ -3,16 +3,9 @@
 Reálná funkce jedné reálné proměnné (definice, definiční obor a obor hodnot, graf funkce, limita a spojitost funkce), polynomy (definice, vlastnosti, Hornerovo schéma), numerické řešení nelineárních rovnic (metoda půlení intervalu, Newtonova metoda)
 
 ### Užitečné odkazy
-
-$$
-f(x)=
-\begin{cases}
-x^2, & x < -2 \\
-1, & -2 \leq x < 1 \\
-2, & x = 1 \\
-\frac{1}{x}, & x > 1
-\end{cases}
-$$
+- <https://youtu.be/g4JPEa6077E?si=_RmzWPziVyOmowAX> (Definiční obor)
+- <https://www.youtube.com/watch?v=u2qCu6iBnN8> (Definiční obor)
+- <https://www.youtube.com/watch?v=7_vYKrVLEg8> (Definiční obor a obor hodnot)
 
 ### Funkce
 - zobrazení mezi dvěma množinami
