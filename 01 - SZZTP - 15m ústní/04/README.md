@@ -4,6 +4,16 @@ Reálná funkce jedné reálné proměnné (definice, definiční obor a obor ho
 
 ### Užitečné odkazy
 
+$$
+f(x)=
+\begin{cases}
+x^2, & x < -2 \\
+1, & -2 \leq x < 1 \\
+2, & x = 1 \\
+\frac{1}{x}, & x > 1
+\end{cases}
+$$
+
 ### Funkce
 - zobrazení mezi dvěma množinami
 
@@ -161,23 +171,10 @@ $$
 \lim_{x \to a} f(x)=L
 $$
 
-Například funkce:
+#### Příklad
 
-$$
-f(x)=\frac{1}{x}
-$$
-
-nemá v bodě $x=0$ limitu, protože:
-
-$$
-\lim_{x \to 0^-} \frac{1}{x}=-\infty
-$$
-
-$$
-\lim_{x \to 0^+} \frac{1}{x}=+\infty
-$$
-
-limita zleva a limita zprava nejsou stejné.
+![](Obrázky/LimitaPriklad.png)
+![](Obrázky/LimitaPrikladReseni.png)
 
 ### Spojitost funkce
 - funkce je spojitá v bodě $a \in D(f)$, pokud limita funkce v bodě $a$ existuje a je rovna funkční hodnotě v tomto bodě
@@ -230,14 +227,13 @@ Polynom $p(x)$ je polynom druhého stupně.
 
 ### Vlastnosti polynomu
 - polynom stupně $n$ může mít maximálně $n$ kořenů
-- polynom lze sčítat, odčítat, násobit i derivovat a výsledkem je opět polynom
 - člen s nejvyšší mocninou nejvíce ovlivňuje chování grafu
 
 ### Rovnost polynomů
 Polynomy $p(x)$ a $q(x)$ jsou si rovny právě tehdy, když mají stejné koeficienty u členů se stejnými exponenty proměnné $x$.
 
 ### Operace s polynomy
-- polynomy můžeme sčítat, odčítat a násobit
+- polynomy můžeme sčítat, odčítat, dělit, derivovat i násobit
 - při sčítání a odčítání se sčítají koeficienty členů se stejnými exponenty
 - při násobení se exponenty sčítají
 - derivací polynomu vznikne opět polynom
