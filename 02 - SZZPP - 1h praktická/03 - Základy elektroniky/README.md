@@ -20,7 +20,7 @@
 - u M z N je vysoká pravděpodobnost, že se vyskytne 2 ze 3 (přičemž N bude velmi pravděpodobně vždy 3 a M bude 0, 1, nebo 2)
 
 ### AND
-Výstup je $1$ pouze tehdy, když jsou všechny vstupy $1$.
+- výstup je $1$ pouze tehdy, když jsou všechny vstupy $1$
 
 $$
 f = x_1 \land x_2
@@ -34,7 +34,7 @@ $$
 | 1 | 1 | 1 |
 
 ### OR
-Výstup je $1$, pokud je alespoň jeden vstup $1$.
+- výstup je $1$, pokud je alespoň jeden vstup $1$
 
 $$
 f = x_1 \lor x_2
@@ -48,7 +48,7 @@ $$
 | 1 | 1 | 1 |
 
 ### NOT
-Invertuje vstup.
+- invertuje vstup
 
 $$
 f = \neg x
@@ -60,7 +60,7 @@ $$
 | 1 | 0 |
 
 ### NAND
-Negace AND.
+- negace AND
 
 $$
 f = \neg (x_1 \land x_2)
@@ -74,7 +74,7 @@ $$
 | 1 | 1 | 0 |
 
 ### NOR
-Negace OR.
+- negace OR
 
 $$
 f = \neg (x_1 \lor x_2)
@@ -88,7 +88,7 @@ $$
 | 1 | 1 | 0 |
 
 ### XOR
-Výstup je $1$, pokud jsou vstupy různé.
+- výstup je $1$, pokud jsou vstupy různé
 
 $$
 f = x_1 \oplus x_2
@@ -102,7 +102,7 @@ $$
 | 1 | 1 | 0 |
 
 ### XNOR
-Výstup je $1$, pokud jsou vstupy stejné.
+- výstup je $1$, pokud jsou vstupy stejné
 
 $$
 f = \neg (x_1 \oplus x_2)
@@ -116,12 +116,9 @@ $$
 | 1 | 1 | 1 |
 
 ### Pravdivostní tabulka
-
-Pravdivostní tabulka popisuje všechny možné kombinace vstupů a jejich odpovídající výstup.
-
-Každý řádek reprezentuje jednu konkrétní kombinaci hodnot vstupních proměnných.
-
-Počet řádků pravdivostní tabulky určuje vztah: $2^n$
+- popisuje všechny možné kombinace vstupů a jejich odpovídající výstup
+- každý řádek reprezentuje jednu konkrétní kombinaci hodnot vstupních proměnných
+- počet řádků pravdivostní tabulky určuje vztah: $2^n$
 
 kde:
 - $n$ je počet vstupních proměnných
@@ -332,18 +329,19 @@ Další možné varianty zadání:
 ### Dual dekodér na 7segment. displej
 *Navrhněte dekodér Dual na 7segment. displej (3 bit).*
 
-### Kaurnaughova mapa
-#### Minimalizace
+Zde je postup, kde je k minimalizaci použita Kaurnaughkova mapa:
+
+![](Obrázky/KarnaughovaMapa.png)
+
+Zde přibyde ideálně postup, kde je k minimalizaci použit Algoritmus Quine-McCluskey:
+
 ### Algoritmus Quine-McCluskey
-#### minterm
-#### implicant
-#### prime implicant
-#### don't cares
 
-### Gray dekodér
-
-### Gray dekodér na 7segment. displej
-Navrhněte dekodér Gray na 7segment. displej (3 bit).
+#### Minterm
+- součin všech vstupních proměnných (včetně negací), který je roven 1 právě pro jeden řádek pravdivostní tabulky
+#### Implicant
+#### Prime Implicant
+#### Don't cares
 
 ### Multiplexor
 - kombinační obvod, který vybírá jeden z více vstupů a přepošle jej na výstup
