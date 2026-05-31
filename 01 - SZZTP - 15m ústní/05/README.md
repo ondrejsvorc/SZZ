@@ -346,10 +346,102 @@ $$
 limita zleva a limita zprava nejsou stejné.
 
 ### Derivace
+- okamžitá rychlost změny funkce v bodě
+- popisuje, jak strmě klesá nebo roste graf funkce v daném bodě
+
+#### Definice
+
+$$
+f'(x)=\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}
+$$
+
+kde:
+- $f'(x)$ je derivace funkce $f$ v bodě $x$
+- $h$ je malá přírůstková změna argumentu
+
+#### Geometrický význam
+- derivace v bodě $x$ je **směrnice tečny** k grafu funkce v tomto bodě
+- kladná derivace → funkce v okolí bodu roste
+- záporná derivace → funkce v okolí bodu klesá
+- derivace rovna nule → vodorovná tečna (kandidát na lokální extrém)
+
+![](Obrázky/LokalniExtrem.png)
 
 ### Derivace elementárních funkcí
+
+| Funkce $f(x)$ | Derivace $f'(x)$ |
+|---|---|
+| $c$ (konstanta) | $0$ |
+| $x^n$ | $n x^{n-1}$ |
+| $e^x$ | $e^x$ |
+| $\ln x$ | $\dfrac{1}{x}$ |
+| $\sin x$ | $\cos x$ |
+| $\cos x$ | $-\sin x$ |
+| $\tan x$ | $\dfrac{1}{\cos^2 x}$ |
+
+#### Příklad
+
+$$
+f(x)=x^3
+$$
+
+$$
+f'(x)=3x^2
+$$
+
+V bodě $x=2$:
+
+$$
+f'(2)=12
+$$
+
+tečna v tomto bodě roste strměji než v bodě $x=0$, kde je $f'(0)=0$.
+
 ### Derivace součinu
+- pravidlo pro derivaci součinu dvou funkcí
+
+$$
+(f\cdot g)'(x)=f'(x)\,g(x)+f(x)\,g'(x)
+$$
+
+#### Příklad
+
+$$
+f(x)=x^2\cdot \sin x
+$$
+
+$$
+f'(x)=2x\sin x + x^2\cos x
+$$
+
 ### Derivace podílu
+- pravidlo pro derivaci podílu dvou funkcí
+
+$$
+\left(\frac{f}{g}\right)'(x)=\frac{f'(x)\,g(x)-f(x)\,g'(x)}{g(x)^2}
+$$
+
+kde $g(x)\neq 0$.
+
+#### Příklad
+
+$$
+f(x)=\frac{x}{x+1}
+$$
+
+$$
+f'(x)=\frac{1\cdot(x+1)-x\cdot 1}{(x+1)^2}=\frac{1}{(x+1)^2}
+$$
+
+### Souvislost s lokálním extrémem
+- v **interiéru** intervalu, kde má funkce lokální maximum nebo minimum, často platí:
+
+$$
+f'(x)=0
+$$
+
+- samotná podmínka $f'(x)=0$ ještě neznamená extrém (např. inflexní bod u $f(x)=x^3$ v $x=0$)
+- pro rozhodnutí pomůže zkoumat znaménko derivace vlevo a vpravo od bodu
 
 ### Integrál
 - integrace je inverzní operace derivace

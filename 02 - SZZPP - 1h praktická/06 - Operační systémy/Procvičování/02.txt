@@ -1,0 +1,9 @@
+#!/bin/bash
+
+folder="$1"
+
+files_count=$(find "$folder" -type f | wc -l)
+folders_count=$(find "$folder" -type d | wc -l)
+
+echo "Počet souborů: $files_count"
+echo "Počet adresářů: $folders_count"

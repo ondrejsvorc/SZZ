@@ -1,0 +1,6 @@
+#!/bin/bash
+
+folder="$1"
+text="$2"
+
+find "$folder" -type f | grep "$text"

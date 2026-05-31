@@ -429,4 +429,101 @@ print(root)
 ```
 
 ### Newtonova metoda
-- synonymum: Metoda tečen
+- synonymum: metoda tečen
+- iterativní numerická metoda pro hledání kořene rovnice $f(x)=0$
+- využívá aproximaci funkce tečnou v aktuálním bodě
+
+#### Princip
+- v bodě $x_n$ sestavíme tečnu k grafu funkce $f$
+- průsečík tečny s osou $x$ bereme jako další odhad kořene $x_{n+1}$
+- opakujeme, dokud není změna dostatečně malá
+
+#### Vzorec
+
+$$
+x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
+$$
+
+kde:
+- $x_n$ je aktuální odhad kořene
+- $f(x_n)$ je hodnota funkce v bodě $x_n$
+- $f'(x_n)$ je derivace funkce v bodě $x_n$
+
+#### Podmínky použití
+- musíme znát derivaci $f'(x)$
+- v okolí kořene by měla platit $f'(x) \neq 0$
+- počáteční odhad $x_0$ by měl být dostatečně blízko kořene (jinak metoda může divergovat)
+
+#### Porovnání s metodou půlení intervalu
+
+| | Metoda půlení | Newtonova metoda |
+|---|---|---|
+| Rychlost | pomalejší | obvykle rychlejší (kvadratická konvergence v ideálním případě) |
+| Derivace | nepotřebuje | potřebuje $f'(x)$ |
+| Spolehlivost | vždy konverguje při změně znaménka na intervalu | může divergovat při špatném $x_0$ |
+| Počáteční podmínka | interval $[a,b]$ se změnou znaménka | počáteční bod $x_0$ |
+
+#### Příklad
+
+Najdi kořen:
+
+$$
+f(x)=x^2-2
+$$
+
+Derivace:
+
+$$
+f'(x)=2x
+$$
+
+Vzorec iterace:
+
+$$
+x_{n+1}=x_n-\frac{x_n^2-2}{2x_n}
+$$
+
+Počáteční odhad $x_0=2$:
+
+$$
+x_1=2-\frac{4-2}{4}=1.5
+$$
+
+$$
+x_2=1.5-\frac{2.25-2}{3}\approx 1.4167
+$$
+
+Postupně se přibližujeme k $\sqrt{2}\approx 1.4142$.
+
+```python
+def newton(f, df, x0: float, tolerance: float = 1e-10, max_iter: int = 100) -> float:
+    x: float = x0
+
+    for _ in range(max_iter):
+        fx: float = f(x)
+        dfx: float = df(x)
+
+        if abs(dfx) < 1e-12:
+            raise ValueError("Derivace je příliš blízko nule.")
+
+        x_next: float = x - fx / dfx
+
+        if abs(x_next - x) < tolerance:
+            return x_next
+
+        x = x_next
+
+    return x
+
+
+def f(x: float) -> float:
+    return x**2 - 2
+
+
+def df(x: float) -> float:
+    return 2 * x
+
+
+root = newton(f=f, df=df, x0=2.0)
+print(root)
+```

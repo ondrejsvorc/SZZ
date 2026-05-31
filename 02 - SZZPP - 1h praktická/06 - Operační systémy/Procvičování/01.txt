@@ -1,0 +1,9 @@
+#!/bin/bash
+
+from="$1"
+to="$2"
+
+touch "$to"
+echo "path" > "$to"
+
+find "$from" -type f -name "*.txt" >> "$to" 

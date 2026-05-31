@@ -1,0 +1,10 @@
+#!/bin/bash
+
+folder="$1"
+
+jpgs=$(find "$folder" -type f -name "*.jpg" | wc -l)
+pngs=$(find "$folder" -type f -name "*.png" | wc -l)
+bmps=$(find "$folder" -type f -name "*.bmp" | wc -l)
+
+count=$((jpgs + pngs + bmps))
+echo "$count"

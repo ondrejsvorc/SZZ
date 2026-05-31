@@ -252,14 +252,57 @@ U orientovaného grafu se často používá:
 #### Reprezentace binárních stromů
 
 ### Eulerovský graf
+- graf, ve kterém existuje **eulerovský tah** nebo **eulerovská kružnice**
+- jde o procházení **hran**, ne vrcholů
 
 #### Eulerovský tah
+- tah, který projde **každou hranu grafu právě jednou**
+- počáteční a koncový vrchol **nemusí být stejné**
+
+#### Eulerovská kružnice
+- uzavřený eulerovský tah
+- počáteční a koncový vrchol jsou **stejné**
+- každá hrana je použita právě jednou
+
+#### Podmínky (neorientovaný souvislý graf)
+- graf musí být **souvislý**
+- počet vrcholů s **lichým stupněm**:
+  - **0** → existuje eulerovská kružnice
+  - **2** → existuje eulerovský tah (ale ne kružnice)
+  - jinak → eulerovský tah **neexistuje**
+
+#### Příklad
+- graf „domku“ (čtverec + trojúhelník) má eulerovskou kružnici, pokud lze kreslit celý obrazek jednou čarou bez přerušení a bez kreslení stejné hrany dvakrát
+- mosty v Königsbergu: nešlo projít každý most právě jednou → **není** eulerovský graf
 
 ### Hamiltonovský graf
-
-#### Hamiltonovská kružnice
+- graf, ve kterém existuje **hamiltonovská cesta** nebo **hamiltonovská kružnice**
+- jde o procházení **vrcholů**, ne hran
 
 #### Hamiltonovská cesta
+- cesta, která navštíví **každý vrchol grafu právě jednou**
+- počáteční a koncový vrchol jsou **různé**
+
+#### Hamiltonovská kružnice
+- uzavřená cesta, která navštíví **každý vrchol právě jednou**
+- počáteční a koncový vrchol jsou **stejné**
+
+#### Rozdíl oproti eulerovskému grafu
+
+| | Euler | Hamilton |
+|---|---|---|
+| Co procházíme | hrany | vrcholy |
+| Jednoduchá podmínka existence | ano (stupně vrcholů) | obecně **ne** |
+| Obtížnost rozhodnutí | polynomiální | NP-obtížné |
+
+#### Praktické poznámky
+- u hamiltonovské kružnice/cesty často stačí **najít kandidáta zkouškou** nebo využít jednoduché postačující podmínky
+- **Diracova podmínka** (postačující): v grafu s $n \geq 3$ vrcholy, pokud má každý vrchol stupeň alespoň $\dfrac{n}{2}$, pak graf obsahuje hamiltonovskou kružnici
+- u ústní zkoušky je důležité umět **vysvětlit rozdíl Euler vs Hamilton** a uvést alespoň jeden příklad
+
+#### Příklad
+- úplný graf $K_5$ má hamiltonovskou kružnici (projdeš všech 5 vrcholů a vrátíš se)
+- jednoduchá cesta na 4 vrcholech má hamiltonovskou cestu, ale ne kružnici
 
 ### Prohledávání grafu
 

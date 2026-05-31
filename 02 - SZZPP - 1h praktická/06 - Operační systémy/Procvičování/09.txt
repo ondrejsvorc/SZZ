@@ -1,0 +1,13 @@
+#!/bin/bash
+
+input="$1"
+output="$2"
+
+shift 2
+
+touch "$output" > "picture"
+
+for extension in "$@"
+do
+   find "$input" -type f -name "*.$extension" >> "$output"
+done

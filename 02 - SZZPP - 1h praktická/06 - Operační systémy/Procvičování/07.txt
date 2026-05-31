@@ -1,0 +1,13 @@
+#!/bin/bash
+
+folder="$1"
+
+files=$(find "$folder" -type f)
+
+for file in $files
+do
+   if [[ "$file" == *.csv* || "$file" == *.txt* || "$file" == *.jpg* ]]
+   then
+     echo "$file"
+   fi
+done

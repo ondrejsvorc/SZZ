@@ -1,0 +1,6 @@
+#!/bin/bash
+
+folder="$1"
+extension="$2"
+
+find "$folder" -type f -name "*.$extension"
