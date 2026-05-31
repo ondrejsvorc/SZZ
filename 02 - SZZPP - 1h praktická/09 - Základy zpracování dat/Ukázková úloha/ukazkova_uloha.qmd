@@ -1,0 +1,75 @@
+---
+title: "Ukázková úloha"
+author: "Ondřej Švorc"
+format: html
+editor: visual
+---
+
+### Zadání
+
+V adresáři naleznete soubor StudentsPerformance.csv. Soubor načtěte a vyřešte následující úkoly:
+
+- vytvořte nový sloupec avg scorescore, který bude pro každý záznam tabulky obsahovat průměrné skóre dané osoby ze sloupců math.score score, reading.score a writing.score score,
+- z tabulky vyfiltrujte pouze záznamy, kde sloupec parental.level.of.education obsahuje pojem “high school” kdekoliv v textu,
+- vypočtěte průměrnou hodnotu sloupce avg score pro každou kombinaci kategorií gender a race.ethnicity ethnicity,
+- tabulku upravte do tzv. “širokého formátu” tak, aby kategorie ze sloupce gender představovaly vlastní sloupce a vypočtené průměrné hodnoty byly hodnotami v těchto nových sloupcích,
+- pro každou kategorii ze sloupce race.ethnicity vytvořte boxplot ze sloupce avg.score score.
+- Vypracujte protokol s řešením ve formátu Rmd nebo qmd spolu s vyrenderovaným HTML nebo PDF souborem. V protokolu charakterizujte data ve vstupním souboru, popište svůj postup práce a interpretujte získané výsledky. Součástí protokolu je komentovaný kód.
+
+### Knihovny
+
+```{r}
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(tidyr)
+})
+```
+
+### Načtení dat
+
+```{r}
+data <- read.csv("StudentsPerformance.csv")
+```
+
+### Průzkum dat
+
+```{r}
+str(data)
+```
+
+```{r}
+head(data, 5)
+```
+
+- Vytvořte nový sloupec avg scorescore, který bude pro každý záznam tabulky obsahovat průměrné skóre dané osoby ze sloupců math.score, reading.score a writing.score,
+
+```{r}
+data$avg.score <- data %>% select(math.score, reading.score, writing.score) %>% rowMeans()
+```
+
+- z tabulky vyfiltrujte pouze záznamy, kde sloupec parental.level.of.education obsahuje pojem “high school” kdekoliv v textu
+
+```{r}
+filtered <- data %>% filter(parental.level.of.education == "high school")
+head(filtered, 5)
+```
+
+- vypočtěte průměrnou hodnotu sloupce avg.score pro každou kombinaci kategorií gender a race.ethnicity,
+
+```{r}
+average <- data %>% group_by(gender, race.ethnicity) %>% summarise(avg.score = mean(avg.score), .groups = "drop")
+average
+```
+
+- tabulku upravte do tzv. “širokého formátu” tak, aby kategorie ze sloupce gender představovaly vlastní sloupce a vypočtené průměrné hodnoty byly hodnotami v těchto nových sloupcích,
+
+```{r}
+wide_average <- average %>% pivot_wider(names_from = gender, values_from = avg.score)
+wide_average
+```
+
+- pro každou kategorii ze sloupce race.ethnicity vytvořte boxplot ze sloupce avg.score.
+
+```{r}
+boxplot(avg.score ~ gender, data = data)
+```
