@@ -12,6 +12,8 @@ Základní abstraktní kolekce (jejich klasická implementace \[seznamy, slovní
 ### Abstraktní datový typ
 - zkratka ADT (=Abstract Data Type)
 - formální specifikace typu definovaná množinou jeho možných hodnot a množinou operací nad těmito hodnotami, včetně jejich sémantiky, bez určení konkrétní implementace
+- specifikuje, jaké operace jsou k dispozici a jak se mají chovat, neurčuje však, jak budou implementovány
+- vztah mezi abstraktním daotovým typem a konkrétní implementaci můžeme nazývat *specifikace x implementace*
 
 ![Abstraktní datový typ](adt.png)
 
