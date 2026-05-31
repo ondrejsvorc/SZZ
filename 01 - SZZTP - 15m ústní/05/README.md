@@ -7,6 +7,7 @@ Diferenciální a integrální počet funkcí jedné proměnné (definice deriva
 - <https://www.youtube.com/watch?v=ACU3tdGglmA> (Definice derivace - česky)
 - <https://www.youtube.com/watch?v=cMSCIG396A8> (Graf derivace - česky)
 - <https://www.youtube.com/watch?v=x1sXA43rpuI> (Definice derivace - česky)
+- <https://www.youtube.com/watch?v=aMmYJSPER8A> (Asymptoty)
 
 ![](Obrázky/HiearchiePojmu.png)
 
