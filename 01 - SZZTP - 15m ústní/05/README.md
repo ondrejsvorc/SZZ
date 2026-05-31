@@ -278,24 +278,6 @@ $$
 \lim_{x \to -\infty} f(x) = b
 $$
 
-#### Šikmá asymptota
-Přímka ve tvaru:
-
-$$
-y = kx + q
-$$
-
-je šikmou asymptotou funkce, pokud platí:
-
-$$
-\lim_{x \to \pm\infty}
-\left(
-f(x) - (kx+q)
-\right)
-=
-0
-$$
-
 ### Limita
 - číslo, ke kterému se funkce v nějakém bodě blíží
 - popisuje chování funkce v okolí daného bodu, nikoliv nutně přímo v tomto bodě
