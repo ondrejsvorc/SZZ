@@ -181,4 +181,6 @@ Seznam dostupných materiálů a technologií
 - Počítač s operačním systémem Windows a nainstalovaným kancelářským softwarem MS
 Word, MS Powerpoint, MS Excel a jejich Libre varianty
 
-### Mé řešení ukázkové úlohy
+### Ukázkové řešení
+
+![](Obrázky/UkazkoveReseni.png)
