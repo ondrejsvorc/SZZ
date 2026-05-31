@@ -175,5 +175,14 @@ Použití:
 - hry
 - sociální sítě
 
+### Křivka
+- spojitá čára popsaná pomocí řídicích bodů a matematických funkcí
+
+#### Bézierova křivka
+
 ### Warping
+
 ### Morphing
+
+### Warpings vs Morphing
+![](Obrázky/WarpingMorphing.png)
