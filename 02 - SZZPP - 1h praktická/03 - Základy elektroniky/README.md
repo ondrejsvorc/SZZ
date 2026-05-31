@@ -333,15 +333,10 @@ Zde je postup, kde je k minimalizaci použita Kaurnaughkova mapa:
 
 ![](Obrázky/KarnaughovaMapa.png)
 
-Zde přibyde ideálně postup, kde je k minimalizaci použit Algoritmus Quine-McCluskey:
+Zde je postup, kde je k minimalizaci použit Algoritmus Quine-McCluskey:
 
-### Algoritmus Quine-McCluskey
-
-#### Minterm
-- součin všech vstupních proměnných (včetně negací), který je roven 1 právě pro jeden řádek pravdivostní tabulky
-#### Implicant
-#### Prime Implicant
-#### Don't cares
+![](Obrázky/McCluskey1.png)
+![](Obrázky/McCluskey2.png)
 
 ### Multiplexor
 - kombinační obvod, který vybírá jeden z více vstupů a přepošle jej na výstup
