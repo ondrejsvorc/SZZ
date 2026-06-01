@@ -24,6 +24,8 @@ Spojové datové struktury (jednosměrný spojový seznam, binární strom) a z�
 - vyhledávání
     - sekvenční průchod od počátečního uzlu až do nalezení $O(n)$
 
+![](Obrázky/SinglyLinkedList.png)
+
 #### Uzel
 - základní prvek spojového seznamu, který obsahuje data a referenci na další uzel
 - vztah `Node -> Node` představuje rekurzivní asociaci
