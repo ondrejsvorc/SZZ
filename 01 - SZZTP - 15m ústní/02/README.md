@@ -121,6 +121,8 @@ A takhle znovu a znovu.
 - prvek se vloží na správnou pozici (sortedIndex + 1)
 - levá část pole je po každém kroku seřazená
 
+![](Obrázky/InsertionSort.png)
+
 ### Binární vyhledávání (Binary Search)
 - časová složitost: $O(\log n)$
 - prostorová složitost: $O(1)$
@@ -136,6 +138,8 @@ A takhle znovu a znovu.
 - interval se tak v každém kroku zmenší na polovinu
 - končí, když je prvek nalezen nebo interval zanikne (leftIndex > rightIndex)
 
+![](Obrázky/BinarySearch.png)
+
 ### Merge Sort
 - časová složitost: $O(n \log n)$
 - prostorová složitost: O(n)
@@ -149,3 +153,5 @@ tato podpole jsou triviálně seřazená
 - vždy se vezme menší prvek z obou a vloží se do výsledného pole (target)
 - po vyčerpání jednoho pole se zbytek druhého pouze zkopíruje
 - slučováním vznikají postupně větší seřazené celky, až vznikne celé seřazené pole
+
+![](Obrázky/MergeSort.png)
