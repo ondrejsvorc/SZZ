@@ -6,7 +6,12 @@ Náhodná veličina a její charakteristiky (distribuční funkce, druhy, pravd�
 - <https://physics.ujep.cz/~mmaly/vyuka/poc_fyz_1/zdroje/NahodnaVelicina_zaklady.pdf> (Náhodná veličina)
 
 ### Obecné poznatky
-- umět nakreslit distribuční funkci normálního rozdělení
+- umět říct co je to pravděpodobností funkce
+- umět říct co je to distribuční funkce
+- jak vypadají u spojitého a diskrétního rozdělení
+- u spojitého rozdělení bychom měli být schopni načrtnout hustotu normálního rozdělení (tedy Gaussovu křivku) a taky distribuční funkci normálního rozdělení
+
+![](Obrázky/Funkce.png)
 
 ### Náhodná veličina
 - funkce přiřazující každému elementárnímu jevu číselnou hodnotu
@@ -133,6 +138,9 @@ Příklad: Kostka (šestistěnka)
 - Výpočet: $1/6 + 1/6 + 1/6 = 3/6 = 0,5$.
 - Výsledek: $F(3) = 0,5$
 - Tedy je šance 50 %, že hodím trojku nebo méně.
+
+![](Obrázky/HodKostkou.png)
+![](Obrázky/HodKostkouExperiment.png)
 
 ### Číselné charakteristiky náhodné veličiny
 - střední hodnota
