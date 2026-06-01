@@ -359,12 +359,17 @@ kde:
 - $f'(x)$ je derivace funkce $f$ v bodě $x$
 - $h$ je malá přírůstková změna argumentu
 
+![](Obrázky/DefiniceDerivace.png)
+
 #### Geometrický význam
 - derivace v bodě $x$ je **směrnice tečny** k grafu funkce v tomto bodě
 - kladná derivace → funkce v okolí bodu roste
 - záporná derivace → funkce v okolí bodu klesá
 - derivace rovna nule → vodorovná tečna (kandidát na lokální extrém)
 
+![](Obrázky/DerivaceJeSmerniceTecny.png)
+![](Obrázky/DerivaceJeSmerniceTecny2.png)
+![](Obrázky/DerivaceJeSmerniceTecny3.png)
 ![](Obrázky/LokalniExtrem.png)
 
 ### Derivace elementárních funkcí
