@@ -227,6 +227,8 @@ $$A \times B = \{ (a,b) \mid a ∈ A ∧ b ∈ B \}$$
 - $R ⊆ A \times B$
 - prvek relace je uspořádaná dvojice $(a,b)$
 
+![](Obrázky/VlastnostiRelaci.png)
+
 #### Znázornění relace
 - **kartézský graf**  
   - body v rovině odpovídající dvojicím $(a,b)$
