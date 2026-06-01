@@ -215,28 +215,17 @@ Výrokový počet (logické spojky, jejich úplný systém, odvozovací pravidla
 - symbol určující, pro kolik objektů z domény výrok platí
 - např.: $∀x(x>0)$
 
+#### Kartézský součin
+- množina všech uspořádaných dvojic prvků z množin $A$ a $B$
+
+$$A \times B = \{ (a,b) \mid a ∈ A ∧ b ∈ B \}$$
+
+![](Obrázky/KarterskySoucin.png)
+
 ### Binární relace
 - podmnožina kartézského součinu $A \times B$
 - $R ⊆ A \times B$
 - prvek relace je uspořádaná dvojice $(a,b)$
-
-#### Kartézský součin
-- množina všech uspořádaných dvojic prvků z množin $A$ a $B$
-- $A \times B = \{ (a,b) \mid a ∈ A ∧ b ∈ B \}$
-- velikost:
-    $$
-    |A \times B| = |A| \cdot |B|
-    $$
-
-#### Obory relace
-- **definiční obor (první obor)**  
-  - $Dom(R) = \{ a \mid ∃b: (a,b) ∈ R \}$
-- **obor hodnot (druhý obor)**  
-  - $Im(R) = \{ b \mid ∃a: (a,b) ∈ R \}$
-
-#### Obory relace
-- definiční obor (první obor)
-- obor hodnot (druhý obor)
 
 #### Znázornění relace
 - **kartézský graf**  
