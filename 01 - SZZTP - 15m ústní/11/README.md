@@ -50,6 +50,14 @@ $$
 a_n = 1 + 2n
 $$
 
+### Iterační metoda
+
+### Substituční metoda
+
+### Řešení převodem na algebraické rovnice
+![](Obrázky/Rekurence_2_kořeny.jpg)
+![](Obrázky/Rekurence_1_dvojnásobný_kořen.jpg)
+
 ### Praktický příklad
 
 Součet čísel od 1 do n.
@@ -124,13 +132,6 @@ $$
 | Iterativní       | O(n)             | O(1)                 |
 | Vzorec pro n-tý člen  | O(1)             | O(1)                 |
 
-### Iterační metoda
-
-### Substituční metoda
-- 
-
-### Řešení převodem na algebraické rovnice
-
 ### Dolní celá část
 - zaokrouhlení dolů
 
@@ -149,7 +150,11 @@ $$
 \lfloor x \rfloor = \max \{ m \in \mathbb{Z} \mid m \le x \}
 $$
 
-![](https://kam.fit.cvut.cz/deploy/bi-pkm/mirror/textbook/figures/fig-dolni.svg)
+![](Obrázky/Dolni.png)
+![](Obrázky/DolníČast.jpg)
+![](Obrázky/DolníČást2.jpg)
+![](Obrázky/DolníČást2Pokračování.jpg)
+![](Obrázky/DolníČast3.jpg)
 
 ### Horní celá část
 - zaokrouhlení nahoru
@@ -169,7 +174,7 @@ $$
 \lceil x \rceil = \min \{ m \in \mathbb{Z} \mid m \ge x \}
 $$
 
-![](https://kam.fit.cvut.cz/deploy/bi-pkm/mirror/textbook/figures/fig-horni.svg)
+![](Obrázky/Horni.png)
 
 ### Logaritmus
 - inverzní funkce k exponenciále
