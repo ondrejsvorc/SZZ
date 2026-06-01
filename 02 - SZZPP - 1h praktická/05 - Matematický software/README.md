@@ -126,8 +126,6 @@ $$
 \end{cases}
 $$
 
-$$\frac{dS}{dt} = -\beta \frac{S \cdot I}{N}$$
-
 #### Reprodukční číslo
 - určuje, kolik dalších lidí průměrně nakazí jeden nakažený člověk
 
