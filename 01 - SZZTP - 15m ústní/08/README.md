@@ -151,23 +151,12 @@ Příklad: Kostka (šestistěnka)
 - popisuje „průměrnou“ hodnotu náhodné veličiny
 - říká, jaka hodnota by v průměru vycházela při velmi mnoha náhodných pokusech
 
-#### Pro diskrétní náhodnou veličinu
-#### Pro spojitou náhodnou veličinu
+![](Obrázky/StredniHodnota.png)
 
 ### Rozptyl
 - popisuje, jak moc jsou hodnoty rozptýlené kolem střední hodnoty
 
-#### Pro diskrétní náhodnou veličinu
-#### Pro spojitou náhodnou veličinu
-
-### Kvantily
-- rozdělují pravděpodobnostní rozdělení na části
-- medián
-- dolní kvartil
-- horní kvartil
-- percentil
-
-#### Kvartil
+![](Obrázky/Rozptyl.png)
 
 ### Rozdělení náhodné veličiny
 - diskrétní
@@ -184,5 +173,19 @@ Příklad: Kostka (šestistěnka)
 - vybíráme s vracením (narozdíl od hypergeometrického rozdělení)
 
 ### Normální rozdělení
+- spojité rozdělení se **symetrickým zvonem** (Gaussova křivka)
+- modeluje veličiny s hodnotami kolem středu a vzácnými extrémy (výška, chyba měření, …)
+- označení: $X \sim N(\mu,\sigma^2)$
+  - $\mu$ = střední hodnota (střed zvonu)
+  - $\sigma^2$ = rozptyl, $\sigma$ = směrodatná odchylka (šířka zvonu)
 
-### Distribuční funkce normálního rozdělení
+#### Hustota pravděpodobnosti
+- tvar: zvonovitá křivka, maximum v bodě $x=\mu$
+- symetrie kolem $\mu$
+- plocha pod křivkou = 1
+- pravděpodobnost intervalu = plocha pod křivkou na tom intervalu (ne hodnota v jednom bodě)
+
+#### Distribuční funkce
+- $F(x)=P(X \leq x)$
+- tvar: plynulá **sigmoida** od 0 do 1
+- v bodě $\mu$ je $F(\mu)=0{,}5$
