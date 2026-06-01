@@ -98,13 +98,15 @@ $$|S_{sorted}| = 5$$
 - časová složitost: $O(n^2)$
 - prostorová složitost: $O(1)$
 
-#### Princip
-- pole se rozdělí na dvě části: seřazenou (vlevo) a neseřazenou (vpravo)
-- v každém kroku se vezme aktuální pozice currentIndex
-- v neseřazené části se najde index nejmenšího prvku (smallestIndex)
-- tento prvek se prohodí s prvkem na currentIndex
-- tím se rozšíří seřazená část o jeden prvek
-- proces se opakuje, dokud není celé pole seřazené
+Principiálně algoritmus funguje tak, že řekneme, že momentální index je ten nejmenší. Pak se začneme koukat na jeho sousedy napravo a jakmile narazíme na souseda, který je menší, řekneme, že on je ve skutečnosti ten nejmenší index a měli by si vyměnit místo. Není to ale tak, že by narazil na prvního menšího souseda a tím to končilo - on projde všechny sousedy a vybere opravdu toho nejmenšího z nich. Až pak se teprve prohodí s tím opravdu nejmenším. Indexy se pak o jedna posunou a ten stejný proces se jede odznova.
+
+1. Na začátku je na currentIndex trojka a na candidateIndex je jednička. V cyklu je ta podmínka jestli je jednička menší než trojka, což je pravda, takže jednička je smallestIndex. Pak se koukáme na čtyřku, a ptáme se - je čtyřka menší než jednička? Není, takže se ptáme je jednička menší než jednička? Není, takže se ptáme je pětka menší než jednička? Není, takže se ptáme je devítka menší než jednička? Není, takže se ptáme je dvojka menší než jednička? Není, takže se ptáme je šestka menší než jednička? Není, vnitřní cyklus končí, z první iterace vyplynulo, že smallestIndex je ta jednička, a protože smallestIndex není currentIndex (jednička není trojka), tak je prohodíme. Jednička se dostala na nulté místo, trojka se přesunula na první místo.
+
+2. Teď se zvedne currentIndex o jedna, takže původně byl nula, teď je jedna. To samé candidateIndex - původně byl jedna, teď bude dva. Vždycky o jedno větší než currentIndex. Takže teď je na currentIndex trojka a na candidateIndex je čtyřka. A teď stejný proces jako předtím. Je čtyřka menší než trojka? Není, takže se ptáme je jednička menší než trojka? Ano, je, řekneme že smallestIndex je index jedničky. Jdeme dál - je pětka menší než jednička? Není, takže se ptáme je devítka menší než jednička? Není, takže se ptáme je dvojka menší než jednička? Není, takže se ptáme je šestka menší než jednička? Není, vnitřní cyklus končí, z druhé iterace vyplynulo, že smallestIndex je znovu jednička, ale ta další co se nachází v seznamu, takže ji prohodíme s trojkou.
+
+A takhle znovu a znovu.
+
+![](Obrázky/SelectionSort.png)
 
 ### Třídění vkládáním (Insertion Sort)
 - časová složitost: $O(n^2)$ (nejhorší), $O(n)$ (nejlepší - již seřazené pole)
