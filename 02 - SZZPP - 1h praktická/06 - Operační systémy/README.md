@@ -21,6 +21,7 @@ man ls
 ```
 
 #### Navigace v manuálu
+
 | Klávesa | Význam |
 |---|---|
 | `q` | ukončení |
@@ -69,6 +70,7 @@ ls documents
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-l` | detailní výpis |
@@ -112,6 +114,7 @@ cd -
 ```
 
 #### Speciální symboly
+
 | Symbol | Význam |
 |---|---|
 | `.` | aktuální adresář |
@@ -142,6 +145,7 @@ mkdir -p projects/python/app
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-p` | vytvoří i chybějící nadřazené adresáře |
@@ -175,6 +179,7 @@ cp -r projects backups/
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-r` | rekurzivní kopírování adresářů |
@@ -211,6 +216,7 @@ mv projects/ backups/
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-i` | potvrzení před přepsáním |
@@ -246,6 +252,7 @@ rm -f file.txt
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-r` | rekurzivní odstranění adresářů |
@@ -287,6 +294,7 @@ find . -iname "*.jpg"
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-name` | hledání podle názvu |
@@ -320,6 +328,7 @@ cat file1.txt file2.txt > output.txt
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-n` | číslování řádků |
@@ -354,6 +363,7 @@ grep -c "error" log.txt
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-i` | ignoruje velikost písmen |
@@ -381,6 +391,7 @@ cut -d ":" -f 1 /etc/passwd
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-c` | výběr znaků |
@@ -411,6 +422,7 @@ echo "a,b,c" | tr ',' ';'
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-d` | odstranění znaků |
@@ -445,6 +457,7 @@ sort -u names.txt
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-r` | obrácené pořadí |
@@ -475,6 +488,7 @@ uniq -d names.txt
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-c` | počet výskytů |
@@ -505,6 +519,7 @@ wc -c file.txt
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-l` | počet řádků |
@@ -536,6 +551,7 @@ ps -p 1234
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `a` | procesy všech uživatelů |
@@ -557,6 +573,7 @@ q
 ```
 
 #### Důležité informace
+
 | Sloupec | Význam |
 |---|---|
 | `PID` | ID procesu |
@@ -584,6 +601,7 @@ kill -9 1234
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-9` | SIGKILL |
@@ -604,6 +622,7 @@ jobs
 ```
 
 #### Význam výstupu
+
 | Symbol | Význam |
 |---|---|
 | `[1]` | číslo úlohy |
@@ -697,6 +716,7 @@ crontab -r
 ```
 
 #### Důležité parametry
+
 | Parametr | Význam |
 |---|---|
 | `-e` | editace cron úloh |
