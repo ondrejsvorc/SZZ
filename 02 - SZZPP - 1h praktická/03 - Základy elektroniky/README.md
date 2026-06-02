@@ -329,7 +329,7 @@ Další možné varianty zadání:
 ### Dual dekodér na 7segment. displej
 *Navrhněte dekodér Dual na 7segment. displej (3 bit).*
 
-Zde je postup, kde je k minimalizaci použita Kaurnaughkova mapa:
+Zde je postup, kde je k minimalizaci použita Kaurnaughova mapa:
 
 ![](Obrázky/KarnaughovaMapa.png)
 
