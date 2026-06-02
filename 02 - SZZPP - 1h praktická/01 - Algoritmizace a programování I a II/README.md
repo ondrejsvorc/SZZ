@@ -27,7 +27,7 @@ def test_of_parentheses(text: str, parentheses: tuple[str, str]) -> bool:
         if character == left:
             count += 1
         elif character == right:
-            count -= -1
+            count -= 1
         
         if count < 0:
             return False
