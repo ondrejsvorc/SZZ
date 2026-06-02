@@ -35,6 +35,8 @@ def test_of_parentheses(text: str, parentheses: tuple[str, str]) -> bool:
     return count == 0
 ```
 
+![](Obrázky/Zavorky.png)
+
 ### Programování: kolekce
 - literály základních tříd (int, float, bool, string), metody/operace základních tříd
 - import balíčků, základní balíčky (math, random)
@@ -60,6 +62,8 @@ def increment_even(data: list) -> list:
 
     return new_data
 ```
+
+![](Obrázky/LicheIndexy.png)
 
 ### Programování: základy OOP
 - literály základních tříd (int, float, bool, string), metody/operace základních tříd
@@ -100,3 +104,5 @@ class Semaphore:
         self.color = self.colors[(index + 1) % len(self.colors)]
         return self
 ```
+
+![](Obrázky/Semafor.png)
