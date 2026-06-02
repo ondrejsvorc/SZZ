@@ -5,6 +5,7 @@ Grafy (definice orientovaného a neorientovaného grafu, jejich vlastnosti a rep
 ### Užitečné odkazy
 - <https://cw.fel.cvut.cz/b212/_media/courses/b0b01lgr/lectures/grafy-orientovane.pdf>
 - <https://www.youtube.com/watch?v=t5XZ1gc70dw> (Walks, Trails and Paths)
+- <https://www.umimeinformatiku.cz/cviceni-teorie-grafu-pojmy-zakladni>
 
 ### Graf
 - matematická struktura tvořená vrcholy a hranami, která slouží k modelování vztahů mezi vrcholy pomocí hran
