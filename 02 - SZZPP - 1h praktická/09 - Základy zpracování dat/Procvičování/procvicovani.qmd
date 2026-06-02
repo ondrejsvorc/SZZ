@@ -1,0 +1,43 @@
+---
+title: "procvicovani"
+format: html
+editor: visual
+---
+
+```{r}
+library(dplyr)
+```
+
+```{r}
+data <- read.csv("billboard100.csv")
+```
+
+```{r}
+head(data, 10)
+```
+
+```{r}
+songs <- data %>% select(song, artist)
+head(songs, 5)
+```
+
+```{r}
+position <- data %>% select(rank, last.week, peak.rank)
+head(position, 5)
+```
+
+```{r}
+data %>% select(contains("rank")) 
+```
+
+Vyber pouze skladby, které jsou v Top 10.
+
+```{r}
+data %>% select(rank, song) %>% filter(rank <= 10) 
+```
+
+Vyber pouze skladby interpreta `"Taylor Swift"`.
+
+```{r}
+data %>% filter(artist == "Taylor Swift") %>% select(song) %>% distinct()
+```
