@@ -1,5 +1,9 @@
 ## Architektura počítačů
 
+### Užitečné odkazy
+- <https://www.itnetwork.cz/hardware-pc/stavba-pc>
+- <https://www.reddit.com/r/buildapc/comments/1hflgyc/after_years_of_building_and_repairing_pcs_for/>
+
 ### Okruh I (výběr komponent počítače)
 - základní principy fungování počítače a jeho komponent (procesor, základní deska, paměť RAM, grafická karta, úložiště, napájecí zdroj atd.)
 - kompatibilita komponent a jejich výběr dle zadaného rozpočtu a požadavků
@@ -20,9 +24,6 @@
 - provádění upgradu komponent hardwaru
 
 ## Okruh I
-
-### Užitečné odkazy
-- <https://www.itnetwork.cz/hardware-pc/stavba-pc>
 
 ### Procesor
 - CPU = Central Processing Unit
@@ -385,8 +386,6 @@
 - ATX (standardní desktop)
 - SFX (malé PC)
 
-### Instalace OS
+## Okruh II
 
-### Instalace ovladačů
-
-### Nastavení BIOSu
+![](Obrázky/DiagnosisFlowchart.jpeg)
