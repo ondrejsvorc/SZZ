@@ -146,7 +146,7 @@ Symboly:
 - ○
     - 0
     - záznam je nepovinný
-- |
+- `|`
     - 1
     - právě jeden záznam
 - < 
@@ -154,13 +154,13 @@ Symboly:
     - více záznamů
 
 Kombinace symbolů:
-- ||
+- `||`
     - právě 1
-- ○|
+- `○|`
     - 0 nebo 1
-- |<
+- `|<`
     - 1 nebo více
-- ○<
+- `○<`
     - 0 nebo více
 
 
